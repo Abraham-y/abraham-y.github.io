@@ -1,672 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abraham Yeung</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink: #1a1a1a;
-    --paper: #f6f3ee;
-    --accent: #3d5a80;
-    --accent-light: #e8edf3;
-    --muted: #6b6b6b;
-    --rule: #d4cfc7;
-    --serif: 'EB Garamond', Georgia, serif;
-    --sans: 'DM Sans', system-ui, sans-serif;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html {
-    font-size: 18px;
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: var(--sans);
-    background: var(--paper);
-    color: var(--ink);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  ::selection {
-    background: var(--accent);
-    color: white;
-  }
-
-  /* --- NAV --- */
-  nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 1.2rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(246, 243, 238, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s;
-  }
-
-  nav.scrolled {
-    border-bottom-color: var(--rule);
-  }
-
-  nav .name {
-    font-family: var(--serif);
-    font-size: 1.15rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    color: var(--ink);
-    text-decoration: none;
-  }
-
-  nav .links {
-    display: flex;
-    gap: 2rem;
-  }
-
-  nav .links a {
-    font-size: 0.82rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--muted);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-
-  nav .links a:hover { color: var(--ink); }
-
-  /* --- HERO --- */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .hero-inner {
-    padding-top: 5rem;
-  }
-
-  .hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(2.8rem, 5.5vw, 4.5rem);
-    font-weight: 400;
-    line-height: 1.15;
-    letter-spacing: -0.015em;
-    max-width: 16ch;
-    margin-bottom: 1.8rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .hero-subtitle {
-    font-size: 1.05rem;
-    color: var(--muted);
-    max-width: 50ch;
-    line-height: 1.7;
-    margin-bottom: 2.5rem;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.15s forwards;
-  }
-
-  .hero-links {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.3s forwards;
-  }
-
-  .hero-links a {
-    font-size: 0.82rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    color: var(--ink);
-    padding: 0.6rem 1.4rem;
-    border: 1.5px solid var(--ink);
-    border-radius: 2px;
-    transition: all 0.25s;
-  }
-
-  .hero-links a:hover {
-    background: var(--ink);
-    color: var(--paper);
-  }
-
-  .hero-links a.primary {
-    background: var(--ink);
-    color: var(--paper);
-  }
-
-  .hero-links a.primary:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-  }
-
-  /* --- SECTIONS --- */
-  section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 6rem 2.5rem;
-  }
-
-  .section-label {
-    font-size: 0.72rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    margin-bottom: 2.5rem;
-    padding-bottom: 0.8rem;
-    border-bottom: 1.5px solid var(--rule);
-  }
-
-  /* --- ABOUT --- */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-  }
-
-  .about-text p {
-    margin-bottom: 1.2rem;
-    color: var(--ink);
-    font-size: 0.95rem;
-  }
-
-  .about-text p:last-child { margin-bottom: 0; }
-
-  .about-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-content: start;
-  }
-
-  .detail-block h3 {
-    font-family: var(--serif);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  .detail-block p, .detail-block li {
-    font-size: 0.85rem;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .detail-block ul {
-    list-style: none;
-  }
-
-  .detail-block li::before {
-    content: "·";
-    margin-right: 0.5rem;
-    color: var(--accent);
-    font-weight: 700;
-  }
-
-  /* --- PROJECTS --- */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .project-card {
-    padding: 2rem;
-    background: white;
-    border: 1px solid var(--rule);
-    border-radius: 4px;
-    transition: all 0.3s;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-
-  .project-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-  }
-
-  .project-tag {
-    font-size: 0.68rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 0.8rem;
-    display: inline-block;
-  }
-
-  .project-card h3 {
-    font-family: var(--serif);
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 0.6rem;
-  }
-
-  .project-card p {
-    font-size: 0.85rem;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .project-tech {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  .project-tech span {
-    font-size: 0.7rem;
-    font-weight: 500;
-    padding: 0.25rem 0.6rem;
-    background: var(--accent-light);
-    color: var(--accent);
-    border-radius: 2px;
-    letter-spacing: 0.02em;
-  }
-
-  /* --- HONORS --- */
-  .honors-list {
-    columns: 2;
-    column-gap: 4rem;
-  }
-
-  .honor-item {
-    break-inside: avoid;
-    padding: 1.2rem 0;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .honor-item h3 {
-    font-family: var(--serif);
-    font-size: 1.05rem;
-    font-weight: 500;
-    margin-bottom: 0.3rem;
-  }
-
-  .honor-item p {
-    font-size: 0.82rem;
-    color: var(--muted);
-  }
-
-  /* --- EXPERIENCE --- */
-  .experience-list {
-    display: grid;
-    gap: 0;
-  }
-
-  .experience-item {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 2.5rem;
-    padding: 1.8rem 0;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .experience-item:first-child {
-    border-top: 1px solid var(--rule);
-  }
-
-  .exp-date {
-    font-size: 0.82rem;
-    color: var(--muted);
-    padding-top: 0.15rem;
-  }
-
-  .exp-content h3 {
-    font-family: var(--serif);
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin-bottom: 0.2rem;
-  }
-
-  .exp-content .exp-org {
-    font-size: 0.85rem;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
-  }
-
-  .exp-content p {
-    font-size: 0.85rem;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  /* --- FOOTER --- */
-  footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2.5rem 4rem;
-    border-top: 1.5px solid var(--rule);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  footer p {
-    font-size: 0.8rem;
-    color: var(--muted);
-  }
-
-  footer .footer-links {
-    display: flex;
-    gap: 1.5rem;
-  }
-
-  footer .footer-links a {
-    font-size: 0.8rem;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  footer .footer-links a:hover {
-    color: var(--ink);
-  }
-
-  /* --- ANIMATIONS --- */
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* --- RESPONSIVE --- */
-  @media (max-width: 800px) {
-    html { font-size: 16px; }
-    nav { padding: 1rem 1.5rem; }
-    nav .links { gap: 1.2rem; }
-    nav .links a { font-size: 0.75rem; }
-    .hero, section { padding-left: 1.5rem; padding-right: 1.5rem; }
-    section { padding-top: 4rem; padding-bottom: 4rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .honors-list { columns: 1; }
-    .experience-item { grid-template-columns: 1fr; gap: 0.3rem; }
-    footer { flex-direction: column; gap: 1rem; text-align: center; }
-  }
-
-  @media (max-width: 500px) {
-    nav .links { gap: 0.8rem; }
-    .hero-links { flex-direction: column; }
-    .hero-links a { text-align: center; }
-    .about-details { grid-template-columns: 1fr; }
-  }
-</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    body {background-color: #f4f0ea}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.4px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
+    p.p4 {margin: 0.0px 0.0px 40.0px 0.0px; font: 16.8px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.1px 'Helvetica Neue'; color: #f4f0ea; -webkit-text-stroke: #f4f0ea; background-color: #141414}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.1px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.5px 'Helvetica Neue'; color: #2f476d; -webkit-text-stroke: #2f476d}
+    p.p8 {margin: 0.0px 0.0px 19.2px 0.0px; font: 15.2px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 15.2px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.6px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.9px 'Helvetica Neue'; color: #2f476d; -webkit-text-stroke: #2f476d}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.2px 'Helvetica Neue'; color: #2f476d; -webkit-text-stroke: #2f476d; background-color: #e2e8f0}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.1px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.6px 'Helvetica Neue'; color: #2f476d; -webkit-text-stroke: #2f476d}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.8px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
+    li.li11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.6px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
+    span.s1 {font-kerning: none; background-color: rgba(244, 240, 234, 0.85)}
+    span.s2 {font-kerning: none}
+    span.s3 {font-kerning: none; color: #2f476d; -webkit-text-stroke: 0px #2f476d}
+    span.s4 {font: 13.1px 'Helvetica Neue'; font-kerning: none; color: #f4f0ea; -webkit-text-stroke: 0px #f4f0ea}
+    span.s5 {font: 13.1px 'Helvetica Neue'; font-kerning: none}
+    span.s6 {-webkit-text-stroke: 0px #000000}
+    span.s7 {font-kerning: none; background-color: #ffffff}
+    span.s8 {font: 12.8px 'Helvetica Neue'; font-kerning: none; color: #585858; -webkit-text-stroke: 0px #585858}
+    ul.ul1 {list-style-type: disc}
+  </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav id="nav">
-  <a href="#" class="name">Abraham Yeung</a>
-  <div class="links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#honors">Honors</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-inner">
-    <h1>Mathematics, computer science, and <em>building things</em>.</h1>
-    <p class="hero-subtitle">
-      Stanford sophomore studying Math and CS. Interested in reinforcement learning, post-training research, and AI systems. Previously a King's Scholar at Eton College.
-    </p>
-    <div class="hero-links">
-      <a href="mailto:ayeung1616@gmail.com" class="primary">Get in touch</a>
-      <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-    </div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-label fade-in">About</div>
-  <div class="about-grid fade-in">
-    <div class="about-text">
-      <p>
-        I'm Abraham, a sophomore at Stanford pursuing dual degrees in Mathematics and Computer Science. My research interests center on reinforcement learning and post-training methods for large language models.
-      </p>
-      <p>
-        I grew up in Hong Kong and attended Eton College in the UK as a King's Scholar, where I graduated as valedictorian. Outside of academics, I sing tenor with the Mendicants (Stanford's oldest all-male a cappella group), serve as a director at BASES Entrepreneurship, and am a member of Phi Kappa Psi.
-      </p>
-      <p>
-        I care deeply about environmentalism and mentorship. I founded the Climate Changemakers Course, which has reached students in over 15 countries, and served as a Youth Delegate at COP27.
-      </p>
-    </div>
-    <div class="about-details">
-      <div class="detail-block">
-        <h3>Education</h3>
-        <ul>
-          <li>Stanford University, BS Math & CS</li>
-          <li>Eton College, King's Scholar</li>
-        </ul>
-      </div>
-      <div class="detail-block">
-        <h3>Interests</h3>
-        <ul>
-          <li>Reinforcement learning</li>
-          <li>Post-training & RLHF</li>
-          <li>AI systems</li>
-        </ul>
-      </div>
-      <div class="detail-block">
-        <h3>Languages</h3>
-        <ul>
-          <li>English, Cantonese, Mandarin</li>
-          <li>German, Japanese (beginner)</li>
-        </ul>
-      </div>
-      <div class="detail-block">
-        <h3>Activities</h3>
-        <ul>
-          <li>Mendicants A Cappella</li>
-          <li>BASES Entrepreneurship</li>
-          <li>SENSA VC</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-label fade-in">Projects</div>
-  <div class="projects-grid">
-    <div class="project-card fade-in">
-      <span class="project-tag">AI / Music</span>
-      <h3>Maestro</h3>
-      <p>Multimodal AI music coaching app using computer vision and audio analysis to deliver real-time feedback. Built at TreeHacks.</p>
-      <div class="project-tech">
-        <span>Computer Vision</span>
-        <span>Audio ML</span>
-        <span>Real-time</span>
-      </div>
-    </div>
-    <div class="project-card fade-in">
-      <span class="project-tag">Markets / Agents</span>
-      <h3>Prediction Market Agent</h3>
-      <p>Autonomous agent for prediction markets. Top 5 finish at SF Tech Week's World's Shortest Hackathon, sponsored by NVIDIA, Vercel, and Brex.</p>
-      <div class="project-tech">
-        <span>LLM Agents</span>
-        <span>Probabilistic Modeling</span>
-      </div>
-    </div>
-    <div class="project-card fade-in">
-      <span class="project-tag">Structural Biology</span>
-      <h3>CryoViT</h3>
-      <p>Vision transformer pipeline for cryo-EM protein segmentation in Stanford's Chiu Lab, accelerating structural biology workflows.</p>
-      <div class="project-tech">
-        <span>Vision Transformers</span>
-        <span>Segmentation</span>
-        <span>PyTorch</span>
-      </div>
-    </div>
-    <div class="project-card fade-in">
-      <span class="project-tag">Environmental ML</span>
-      <h3>AQI Forecasting</h3>
-      <p>Air quality prediction system using LSTM, GNN, and CNN architectures. CS229 course project exploring spatiotemporal environmental modeling.</p>
-      <div class="project-tech">
-        <span>LSTM</span>
-        <span>GNN</span>
-        <span>CNN</span>
-        <span>Time Series</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-label fade-in">Experience</div>
-  <div class="experience-list fade-in">
-    <div class="experience-item">
-      <div class="exp-date">Summer 2026</div>
-      <div class="exp-content">
-        <h3>Software Engineering Intern</h3>
-        <div class="exp-org">Databricks</div>
-        <p>Incoming SWE intern.</p>
-      </div>
-    </div>
-    <div class="experience-item">
-      <div class="exp-date">2025</div>
-      <div class="exp-content">
-        <h3>CS 106B Section Leader</h3>
-        <div class="exp-org">Stanford University</div>
-        <p>Taught weekly sections for Stanford's core C++ and data structures course. Led office hours, graded assignments, and mentored students.</p>
-      </div>
-    </div>
-    <div class="experience-item">
-      <div class="exp-date">2024</div>
-      <div class="exp-content">
-        <h3>ML Researcher</h3>
-        <div class="exp-org">Chiu Lab, Stanford</div>
-        <p>Developed CryoViT, a vision transformer pipeline for cryo-EM segmentation. Applied deep learning to accelerate structural biology analysis.</p>
-      </div>
-    </div>
-    <div class="experience-item">
-      <div class="exp-date">2023</div>
-      <div class="exp-content">
-        <h3>Director, BASES Entrepreneurship</h3>
-        <div class="exp-org">Stanford University</div>
-        <p>Led programming and outreach for Stanford's largest entrepreneurship organization.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HONORS -->
-<section id="honors">
-  <div class="section-label fade-in">Honors & Awards</div>
-  <div class="honors-list fade-in">
-    <div class="honor-item">
-      <h3>Rabi Scholarship</h3>
-      <p>Columbia University. Top 10 of ~60,000 applicants.</p>
-    </div>
-    <div class="honor-item">
-      <h3>King's Scholar & Valedictorian</h3>
-      <p>Eton College.</p>
-    </div>
-    <div class="honor-item">
-      <h3>UK Chemistry Olympiad</h3>
-      <p>Top 4 nationally.</p>
-    </div>
-    <div class="honor-item">
-      <h3>British Mathematical Olympiad</h3>
-      <p>Top 50 nationally, twice.</p>
-    </div>
-    <div class="honor-item">
-      <h3>World Science Scholars</h3>
-      <p>1 of 48 selected globally.</p>
-    </div>
-    <div class="honor-item">
-      <h3>Youth Delegate, COP27</h3>
-      <p>Climate policy advocacy at the UN Climate Change Conference.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>&copy; 2026 Abraham Yeung</p>
-  <div class="footer-links">
-    <a href="mailto:ayeung1616@gmail.com">Email</a>
-    <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
-  </div>
-</footer>
-
-<script>
-  // Nav scroll effect
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  });
-
-  // Fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Smooth scroll for nav links
-  document.querySelectorAll('nav a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-</script>
-
+<p class="p1"><span class="s1">Abraham Yeung</span></p>
+<p class="p2"><span class="s1">ABOUT</span></p>
+<p class="p2"><span class="s1">PROJECTS</span></p>
+<p class="p2"><span class="s1">EXPERIENCE</span></p>
+<p class="p2"><span class="s1">HONORS</span></p>
+<h1 style="margin: 0.0px 0.0px 28.8px 0.0px; font: 44.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">Mathematics, computer science, and </span><span class="s3">building things</span><span class="s2">.</span></h1>
+<p class="p4"><span class="s2">Stanford sophomore studying Math and CS. Interested in reinforcement learning, post-training research, and AI systems. Previously a King's Scholar at Eton College.</span></p>
+<p class="p5"><span class="s2"><a href="mailto:ayeung1616@gmail.com">GET IN TOUCH<span class="s4"></span></a></span></p>
+<p class="p6"><span class="s2"><a href="https://github.com/Abraham-y">GITHUB<span class="s5"></span></a></span></p>
+<p class="p6"><span class="s2"><a href="https://www.linkedin.com/in/abraham-yeung-11b2941b0/">LINKEDIN<span class="s5"></span></a></span></p>
+<p class="p7"><span class="s2">ABOUT</span></p>
+<p class="p8"><span class="s2">I'm Abraham, a sophomore at Stanford pursuing dual degrees in Mathematics and Computer Science. My research interests center on reinforcement learning and post-training methods for large language models.</span></p>
+<p class="p8"><span class="s2">I grew up in Hong Kong and attended Eton College in the UK as a King's Scholar, where I graduated as valedictorian. Outside of academics, I sing tenor with the Mendicants (Stanford's oldest all-male a cappella group), serve as a director at BASES Entrepreneurship, and am a member of Phi Kappa Psi.</span></p>
+<p class="p9"><span class="s2">I care deeply about environmentalism and mentorship. I founded the Climate Changemakers Course, which has reached students in over 15 countries, and served as a Youth Delegate at COP27.</span></p>
+<h3 style="margin: 0.0px 0.0px 8.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">Education</span></h3>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">Stanford University, BS Math &amp; CS</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Eton College, King's Scholar</span></li>
+</ul>
+<h3 style="margin: 0.0px 0.0px 8.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">Interests</span></h3>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">Reinforcement learning</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">Post-training &amp; RLHF</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">AI systems</span></li>
+</ul>
+<h3 style="margin: 0.0px 0.0px 8.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">Languages</span></h3>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">English, Cantonese, Mandarin</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">German, Japanese (beginner)</span></li>
+</ul>
+<h3 style="margin: 0.0px 0.0px 8.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">Activities</span></h3>
+<ul class="ul1">
+  <li class="li11"><span class="s6"></span><span class="s2">Mendicants A Cappella</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">BASES Entrepreneurship</span></li>
+  <li class="li11"><span class="s6"></span><span class="s2">SENSA VC</span></li>
+</ul>
+<p class="p7"><span class="s2">PROJECTS</span></p>
+<p class="p12"><span class="s7">AI / MUSIC</span></p>
+<h3 style="margin: 0.0px 0.0px 9.6px 0.0px; font: 20.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s7">Maestro</span></h3>
+<p class="p11"><span class="s7">Multimodal AI music coaching app using computer vision and audio analysis to deliver real-time feedback. Built at TreeHacks.</span></p>
+<p class="p14"><span class="s2">Computer Vision</span></p>
+<p class="p14"><span class="s2">Audio ML</span></p>
+<p class="p14"><span class="s2">Real-time</span></p>
+<p class="p12"><span class="s7">MARKETS / AGENTS</span></p>
+<h3 style="margin: 0.0px 0.0px 9.6px 0.0px; font: 20.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s7">Prediction Market Agent</span></h3>
+<p class="p11"><span class="s7">Autonomous agent for prediction markets. Top 5 finish at SF Tech Week's World's Shortest Hackathon, sponsored by NVIDIA, Vercel, and Brex.</span></p>
+<p class="p14"><span class="s2">LLM Agents</span></p>
+<p class="p14"><span class="s2">Probabilistic Modeling</span></p>
+<p class="p12"><span class="s7">STRUCTURAL BIOLOGY</span></p>
+<h3 style="margin: 0.0px 0.0px 9.6px 0.0px; font: 20.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s7">CryoViT</span></h3>
+<p class="p11"><span class="s7">Vision transformer pipeline for cryo-EM protein segmentation in Stanford's Chiu Lab, accelerating structural biology workflows.</span></p>
+<p class="p14"><span class="s2">Vision Transformers</span></p>
+<p class="p14"><span class="s2">Segmentation</span></p>
+<p class="p14"><span class="s2">PyTorch</span></p>
+<p class="p12"><span class="s7">ENVIRONMENTAL ML</span></p>
+<h3 style="margin: 0.0px 0.0px 9.6px 0.0px; font: 20.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s7">AQI Forecasting</span></h3>
+<p class="p11"><span class="s7">Air quality prediction system using LSTM, GNN, and CNN architectures. CS229 course project exploring spatiotemporal environmental modeling.</span></p>
+<p class="p14"><span class="s2">LSTM</span></p>
+<p class="p14"><span class="s2">GNN</span></p>
+<p class="p14"><span class="s2">CNN</span></p>
+<p class="p14"><span class="s2">Time Series</span></p>
+<p class="p7"><span class="s2">EXPERIENCE</span></p>
+<p class="p15"><span class="s2">Summer 2026</span></p>
+<h3 style="margin: 0.0px 0.0px 3.2px 0.0px; font: 17.6px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">Software Engineering Intern</span></h3>
+<p class="p17"><span class="s2">Databricks</span></p>
+<p class="p11"><span class="s2">Incoming SWE intern.</span></p>
+<p class="p15"><span class="s2">2025</span></p>
+<h3 style="margin: 0.0px 0.0px 3.2px 0.0px; font: 17.6px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">CS 106B Section Leader</span></h3>
+<p class="p17"><span class="s2">Stanford University</span></p>
+<p class="p11"><span class="s2">Taught weekly sections for Stanford's core C++ and data structures course. Led office hours, graded assignments, and mentored students.</span></p>
+<p class="p15"><span class="s2">2024</span></p>
+<h3 style="margin: 0.0px 0.0px 3.2px 0.0px; font: 17.6px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">ML Researcher</span></h3>
+<p class="p17"><span class="s2">Chiu Lab, Stanford</span></p>
+<p class="p11"><span class="s2">Developed CryoViT, a vision transformer pipeline for cryo-EM segmentation. Applied deep learning to accelerate structural biology analysis.</span></p>
+<p class="p15"><span class="s2">2023</span></p>
+<h3 style="margin: 0.0px 0.0px 3.2px 0.0px; font: 17.6px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">Director, BASES Entrepreneurship</span></h3>
+<p class="p17"><span class="s2">Stanford University</span></p>
+<p class="p11"><span class="s2">Led programming and outreach for Stanford's largest entrepreneurship organization.</span></p>
+<p class="p7"><span class="s2">HONORS &amp; AWARDS</span></p>
+<h3 style="margin: 0.0px 0.0px 4.8px 0.0px; font: 16.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">Rabi Scholarship</span></h3>
+<p class="p15"><span class="s2">Columbia University. Top 10 of ~60,000 applicants.</span></p>
+<h3 style="margin: 0.0px 0.0px 4.8px 0.0px; font: 16.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">King's Scholar &amp; Valedictorian</span></h3>
+<p class="p15"><span class="s2">Eton College.</span></p>
+<h3 style="margin: 0.0px 0.0px 4.8px 0.0px; font: 16.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">UK Chemistry Olympiad</span></h3>
+<p class="p15"><span class="s2">Top 4 nationally.</span></p>
+<h3 style="margin: 0.0px 0.0px 4.8px 0.0px; font: 16.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">British Mathematical Olympiad</span></h3>
+<p class="p15"><span class="s2">Top 50 nationally, twice.</span></p>
+<h3 style="margin: 0.0px 0.0px 4.8px 0.0px; font: 16.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">World Science Scholars</span></h3>
+<p class="p15"><span class="s2">1 of 48 selected globally.</span></p>
+<h3 style="margin: 0.0px 0.0px 4.8px 0.0px; font: 16.8px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414"><span class="s2">Youth Delegate, COP27</span></h3>
+<p class="p15"><span class="s2">Climate policy advocacy at the UN Climate Change Conference.</span></p>
+<p class="p19"><span class="s2">© 2026 Abraham Yeung</span></p>
+<p class="p19"><span class="s2"><a href="mailto:ayeung1616@gmail.com">Email<span class="s8"></span></a></span></p>
+<p class="p19"><span class="s2"><a href="https://github.com/YOUR_GITHUB">GitHub<span class="s8"></span></a></span></p>
+<p class="p19"><span class="s2"><a href="https://linkedin.com/in/YOUR_LINKEDIN">LinkedIn<span class="s8"></span></a></span></p>
 </body>
 </html>
