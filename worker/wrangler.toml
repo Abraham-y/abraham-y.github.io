@@ -1,0 +1,7 @@
+name = "abraham-chat"
+main = "chat-worker.js"
+compatibility_date = "2025-06-01"
+
+# Binds Cloudflare Workers AI as `env.AI` inside the Worker.
+[ai]
+binding = "AI"
