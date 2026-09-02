@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abraham Yeung</title>
 <meta name="description" content="Abraham Yeung. Stanford student working on reinforcement learning, post-training, and AI safety.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥕</text></svg>">
 </head>
 <body>
 <main>
@@ -21,15 +24,15 @@
         <a href="mailto:ayeung16@stanford.edu">Email</a>
         <a href="https://github.com/Abraham-y" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/abraham-yeung-11b2941b0/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://arxiv.org/a/yeung_a_1" target="_blank" rel="noopener">arXiv</a>
+        <a href="cv.pdf" target="_blank">CV</a>
       </div>
     </div>
   </div>
 
   <nav class="pipe" aria-label="Sections">
-    <a class="node" href="#policy"><span class="em">🤖</span><b>policy</b><span class="sub">about me</span></a>
+    <a class="node" href="#policy"><span class="em"><img src="figures/me.jpg" alt="" onerror="this.replaceWith('🤖')"></span><b>policy</b><span class="sub">about me</span></a>
     <span class="arrow">→</span>
-    <a class="node" href="#reward"><span class="em">🧑‍⚖️</span><b>reward model</b><span class="sub">what I optimize for</span></a>
+    <a class="node" href="#reward"><span class="em">🥕</span><b>reward model</b><span class="sub">what I optimize for</span></a>
     <span class="arrow">→</span>
     <a class="node" href="#updates"><span class="em grad">∇</span><b>updates</b><span class="sub">research</span></a>
     <span class="arrow">→</span>
@@ -40,36 +43,48 @@
   <section id="policy">
     <p class="eyebrow"><span class="em">🤖</span>policy</p>
     <h2>About me</h2>
-    <p>I'm a sophomore at Stanford studying Mathematics and Computer Science. I work on reinforcement learning and post-training, with a focus on what those methods do to a model's safety properties: whether its chain of thought stays honest, whether internal signals stay trustworthy once you train on them, and which design choices quietly trade oversight for capability.</p>
-    <p>I grew up in Hong Kong and went to Eton College as a King's Scholar, graduating as valedictorian. Outside research I sing baritone with the Mendicants, Stanford's oldest a cappella group, direct Hackspace at BASES, and care about environmentalism and mentorship. I speak English, Cantonese, Mandarin, and German, and I'm learning Japanese.</p>
+    <p>I'm a sophomore at Stanford studying Mathematics and Computer Science. I work on reinforcement learning and post-training, with a focus on what those methods do to a model's safety properties: whether its chain of thought stays honest, whether internal signals stay trustworthy once you train on them, and which design choices quietly trade oversight for capability. This fall I'm joining <a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a> part-time as an AI safety research intern, after a summer on the Data Platform team at Databricks.</p>
+    <p>I grew up in Hong Kong and went to Eton College as a King's Scholar, graduating as valedictorian. Outside research I'm a YC Fellow, a TreeHacks Summer Fellow and organizer, and Director of Hackspace at BASES. I sing tenor with the Mendicants, Stanford's oldest a cappella group. I speak English, Cantonese, and Mandarin natively, plus some German and beginner Japanese.</p>
   </section>
 
   <section id="reward">
-    <p class="eyebrow"><span class="em">🧑‍⚖️</span>reward model</p>
+    <p class="eyebrow"><span class="em">🥕</span>reward model</p>
     <h2>What I optimize for</h2>
     <ul>
       <li><b>Models that stay overseeable as they get stronger.</b> Chain-of-thought monitoring only works if the reasoning we read is the reasoning that drove the answer. I want to know which training choices preserve that, and which erode it while the text still looks fine.</li>
       <li><b>Post-training that doesn't trade safety for capability by accident.</b> Reward design, distillation, and RL loops each have side effects on honesty and controllability. Those effects should be measured, not assumed.</li>
       <li><b>Interpretability artifacts wired into training carefully.</b> A probe that is safe to read can be dangerous to optimize against. The access a training loop gives an internal signal should be a deliberate decision.</li>
-      <li><b>Theory and systems together.</b> The interesting questions sit where the RL math meets the actual training run, so I try to work at both ends.</li>
+      <li><b>Measurements that survive scrutiny.</b> Pre-registered designs, placebo controls, bootstrap intervals, and numbers that regenerate from committed artifacts. A safety metric with a hidden confound is worse than no metric.</li>
     </ul>
   </section>
 
   <section id="updates">
     <p class="eyebrow"><span class="em grad">∇</span>gradient updates</p>
     <h2>Research</h2>
-    <p class="lede">Two preprints from 2026, plus a research proposal I'm working towards.</p>
+    <p class="lede">Two preprints, two workshop papers under review, and a proposal I'm working towards.</p>
 
     <div class="paper">
       <h3>Math Distillation Decouples Chain-of-Thought from Behavior on a Reasoning Model</h3>
-      <div class="meta">Abraham Yeung · arXiv cs.LG, June 2026 · <a href="cot-monitorability.pdf" target="_blank">PDF</a></div>
-      <p>After math chain-of-thought fine-tuning, a planted cue moves the model's answers exactly as much as before, but the CoT stops mentioning it, with acknowledgment falling from 25% to 3% while accuracy improves. The behavior stays, the confession disappears, and a capability-only check would pass the model.</p>
+      <div class="meta">Abraham Yeung · preprint, June 2026 · <a href="cot-monitorability.pdf" target="_blank">PDF</a></div>
+      <p>After math chain-of-thought fine-tuning, a planted cue moves the model's answers exactly as much as before, but the CoT stops mentioning it, with acknowledgment falling from 25% to 3% while accuracy improves. The behavior stays, the confession disappears, and a capability-only check would pass the model. Pre-registered, with bootstrap confidence intervals.</p>
     </div>
 
     <div class="paper">
       <h3>Reading vs. Writing a Near-Oracle Internal Verifier: How RL Design Determines Whether a Correctness Probe Is Safe</h3>
-      <div class="meta">Abraham Yeung, Anagha Ramaswamy · arXiv cs.LG, June 2026 · <a href="read-write-probe.pdf" target="_blank">PDF</a><a href="https://github.com/Abraham-y/reader-writer-probe-rl" target="_blank" rel="noopener">Code</a></div>
-      <p>Outcome RL grows a near-perfect linear correctness probe inside a small model. Used read-only, it gives large deployment gains. Used as the reward, it Goodharts badly. The less policy-gradient access the probe gets, the safer it is, which bounds how interpretability signals should be wired into RL.</p>
+      <div class="meta">Abraham Yeung, Anagha Ramaswamy · preprint, June 2026 · <a href="read-write-probe.pdf" target="_blank">PDF</a><a href="https://github.com/Abraham-y/reader-writer-probe-rl" target="_blank" rel="noopener">Code</a></div>
+      <p>Outcome RL grows a near-perfect linear correctness probe inside a small model. Used read-only, as a best-of-n selector, it gives large gains. Used as the reward, it Goodharts badly. The less policy-gradient access the probe gets, the safer it is, which bounds how interpretability signals should be wired into RL.</p>
+    </div>
+
+    <div class="paper">
+      <h3>Alembic: Auditing Cue-Injection Faithfulness Metrics</h3>
+      <div class="meta">2026 · workshop paper under review</div>
+      <p>The most-cited chain-of-thought faithfulness measurement inherits its headline conclusion, that smaller models are less faithful, from size-dependent error terms. A content-free placebo insertion reproduces up to 85% of the measured cue influence at the smallest scale. Replicated in an independent run, with up to half the effect traced to an unset serving default and to task-family sampling.</p>
+    </div>
+
+    <div class="paper">
+      <h3>Activation Cache Compression for Sparse Autoencoder Training</h3>
+      <div class="meta">2026 · workshop paper under review</div>
+      <p>How aggressively can cached LLM activations be compressed before sparse autoencoders retrained on them diverge, and how do you measure that validly? About 170 GPU-hours of pre-registered experiments on a 97-test library of codecs, SAE trainers, and streaming fidelity metrics. Every published number regenerates from committed artifacts.</p>
     </div>
 
     <div class="note">
@@ -82,10 +97,11 @@
     <p class="eyebrow"><span class="em">📝</span>rollouts</p>
     <h2>Projects</h2>
     <div class="roll">
-      <div><b>Maestro</b><span class="tag">ai / music · TreeHacks</span><p>Multimodal AI music coach: computer vision and audio analysis for real-time feedback. <a href="https://devpost.com/software/maestro-n0uqyz" target="_blank" rel="noopener">Devpost</a></p></div>
-      <div><b>Prediction Market Agent</b><span class="tag">agents · SF Tech Week</span><p>Autonomous agent for prediction markets. Top 5 at SF Tech Week (NVIDIA, Vercel, Brex).</p></div>
-      <div><b>CryoViT</b><span class="tag">structural biology · Chiu Lab</span><p>Vision transformer pipeline for cryo-EM protein segmentation.</p></div>
-      <div><b>AQI Forecasting</b><span class="tag">environmental ml · CS229</span><p>Air quality prediction with LSTM, GNN, and CNN models over spatiotemporal data.</p></div>
+      <div><b>Research Frontier Miner</b><span class="tag">agents · in progress</span><p>A resumable agent that mines recent ML papers, walks the citation graph to find proposed extensions nobody has attempted, and ranks the open problems. SQLite plus vector search, content-addressed caching, best-first frontier.</p></div>
+      <div><b>Prediction Markets Agent</b><span class="tag">markets · top 5 of 100+</span><p>Agent that evaluates live Polymarket prices and flags mispriced contracts from incoming information and microstructure signals. Finalist at the NVIDIA, Vercel, and Brex hackathon.</p></div>
+      <div><b>Multi-Agent Causal Modeling</b><span class="tag">agents · Bridgewater AI Hackathon</span><p>Selected as 1 of 24. A multi-agent system that maps causal graphs for policy-impact scenarios by decomposing macro questions into testable sub-claims.</p></div>
+      <div><b>Maestro</b><span class="tag">ai / music · TreeHacks runner-up</span><p>Multimodal music coach that analyzes instrument audio and video with NVIDIA vision and audio models. <a href="https://devpost.com/software/maestro-n0uqyz" target="_blank" rel="noopener">Devpost</a></p></div>
+      <div><b>AQI Forecasting</b><span class="tag">time series · CS 229</span><p>LSTM, GNN, and CNN models over 545k+ observations for spatiotemporal air quality forecasting, with robustness testing under distribution shift.</p></div>
     </div>
   </section>
 
@@ -93,11 +109,11 @@
     <p class="eyebrow"><span class="em">📈</span>training history</p>
     <h2>Experience</h2>
     <ul class="tl">
-      <li><div class="d">Jun – Sep 2026</div><div><b>Software Engineering Intern, Databricks</b><span>San Francisco.</span></div></li>
-      <li><div class="d">Sep 2025 – now</div><div><b>Math 104 Grader, Stanford Mathematics</b><span>Linear algebra, about 100 students' homework each week.</span></div></li>
-      <li><div class="d">Sep 2025 – now</div><div><b>Director of Hackspace, BASES</b><span>Programming and outreach for hacker hours.</span></div></li>
-      <li><div class="d">Jun – Sep 2025</div><div><b>Software &amp; ML Intern, Chiu Lab, Stanford</b><span>Built CryoViT, a ViT pipeline for cryo-EM segmentation.</span></div></li>
-      <li><div class="d">Jan – Jun 2025</div><div><b>CS 106 Section Leader, Stanford CS</b><span>Taught Python, C++, and data structures; led office hours.</span></div></li>
+      <li><div class="d">Fall 2026</div><div><b>AI Safety Research Intern, Redwood Research</b><span>Incoming, part-time. Berkeley, CA.</span></div></li>
+      <li><div class="d">Jun – Sep 2026</div><div><b>Software Engineer Intern, Databricks</b><span>Data Platform team, building in-region agents. San Francisco.</span></div></li>
+      <li><div class="d">Sep 2025 – now</div><div><b>Course Grader, Applied Matrix Theory, Stanford Mathematics</b><span>Evaluate proof-based linear algebra for 200+ students.</span></div></li>
+      <li><div class="d">Jun – Sep 2025</div><div><b>Undergraduate Researcher, Chiu Lab, Stanford</b><span>Bioengineering REU. Built CryoViT, CNN and vision transformer models that segment cell structures in noisy 3D cryo-EM data, applied to Alzheimer's research.</span></div></li>
+      <li><div class="d">Jan – Jun 2025</div><div><b>Teaching Assistant, Programming Abstractions, Stanford CS</b><span>Led weekly C++ sections on recursion, complexity, and data structures.</span></div></li>
     </ul>
   </section>
 
@@ -105,12 +121,12 @@
     <p class="eyebrow"><span class="em">📊</span>evals</p>
     <h2>Honors</h2>
     <ul class="evals">
-      <li><b>Rabi Scholarship</b><span>Columbia University · top 10 of about 60,000 applicants</span></li>
-      <li><b>King's Scholar and Valedictorian</b><span>Eton College · Gladstone Memorial Prize</span></li>
-      <li><b>UK Chemistry Olympiad</b><span>top 4 nationally</span></li>
-      <li><b>British Mathematical Olympiad</b><span>top 50 nationally, twice</span></li>
+      <li><b>YC Fellow</b><span>mentored by Harshita Arora</span></li>
+      <li><b>Rabi Scholar</b><span>Columbia University · top 10 scientific admits nationally</span></li>
+      <li><b>King's Scholar and Valedictorian</b><span>Eton College</span></li>
+      <li><b>British Mathematical Olympiad Round 2</b><span>top 50 nationally, twice</span></li>
+      <li><b>UK Chemistry Olympiad</b><span>gold medal three times · IChO team reserve</span></li>
       <li><b>World Science Scholars</b><span>1 of 48 selected globally</span></li>
-      <li><b>Youth Delegate, COP27</b><span>climate policy advocacy at the UN climate conference</span></li>
     </ul>
   </section>
 
@@ -138,16 +154,16 @@
 const CHAT_ENDPOINT = '';
 
 const QA = [
-  { keys:['work','research','interest','rl','reinforcement','safety','align','monitor','cot','post-training'],
-    a:`Abraham works on <b>reinforcement learning</b> and <b>post-training</b>, with a focus on AI safety: chain-of-thought monitorability, and how RL design decides whether internal signals stay trustworthy. Two 2026 preprints are in the research section.` },
-  { keys:['project','built','build','maestro','cryovit','agent','aqi','rollout'],
-    a:`Highlights: <b>Maestro</b> (AI music coach, TreeHacks), a <b>prediction market agent</b> (top 5 at SF Tech Week), <b>CryoViT</b> (vision transformers for cryo-EM), and <b>AQI forecasting</b> (CS229). See the rollouts section.` },
+  { keys:['work','research','interest','rl','reinforcement','safety','align','monitor','cot','post-training','redwood'],
+    a:`Abraham works on <b>reinforcement learning</b> and <b>post-training</b>, with a focus on AI safety: chain-of-thought monitorability, and how RL design decides whether internal signals stay trustworthy. He's joining Redwood Research part-time this fall. Papers are in the research section.` },
+  { keys:['project','built','build','maestro','agent','aqi','rollout','miner','polymarket'],
+    a:`Highlights: a <b>research frontier miner</b> agent (in progress), a <b>prediction markets agent</b> (top 5 of 100+ teams), a multi-agent causal modeling system at the Bridgewater AI hackathon, <b>Maestro</b> (TreeHacks runner-up), and AQI forecasting for CS 229.` },
   { keys:['background','eton','stanford','hong kong','school','study','about','who'],
-    a:`Abraham grew up in Hong Kong, was a King's Scholar and valedictorian at Eton College, and is now a Math and CS sophomore at Stanford.` },
-  { keys:['contact','reach','email','hire','connect','linkedin','github'],
-    a:`Email <b>ayeung16@stanford.edu</b>, or find him on GitHub (Abraham-y) and LinkedIn. Links are at the top of the page.` },
-  { keys:['paper','preprint','arxiv','probe','chain','distill','publication'],
-    a:`Two preprints from June 2026: <b>Math Distillation Decouples Chain-of-Thought from Behavior on a Reasoning Model</b>, and <b>Reading vs. Writing a Near-Oracle Internal Verifier</b> (with Anagha Ramaswamy). PDFs are in the research section.` },
+    a:`Abraham grew up in Hong Kong, was a King's Scholar and valedictorian at Eton College, and is now a Math and CS sophomore at Stanford. He's a YC Fellow and sings with the Mendicants.` },
+  { keys:['contact','reach','email','hire','connect','linkedin','github','cv','resume'],
+    a:`Email <b>ayeung16@stanford.edu</b>, or find him on GitHub (Abraham-y) and LinkedIn. His CV and links are at the top of the page.` },
+  { keys:['paper','preprint','probe','chain','distill','publication','alembic','autoencoder','sae','faithful'],
+    a:`Two preprints from June 2026: <b>Math Distillation Decouples Chain-of-Thought from Behavior on a Reasoning Model</b>, and <b>Reading vs. Writing a Near-Oracle Internal Verifier</b> (with Anagha Ramaswamy). Two more workshop papers are under review: one auditing cue-injection faithfulness metrics, one on compressing activation caches for sparse autoencoder training.` },
 ];
 const DEFAULT_A = `I'm a small static fallback for this site. Try asking about Abraham's <b>research</b>, <b>projects</b>, <b>background</b>, or <b>how to reach him</b>.`;
 const SUGGESTIONS = ['What does Abraham work on?', 'Summarize the papers', "What's his background?", 'How can I reach him?'];
