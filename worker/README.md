@@ -1,6 +1,6 @@
 # Chat Worker (Cloudflare Workers AI)
 
-Powers the **✦ Claude** panel on abrahamyeung.com with an open-source model
+Powers the **Ask my post-trained self** box on abrahamyeung.com with an open-source model
 (Llama on Cloudflare Workers AI). Your account/key never touches the website —
 the site only talks to this Worker.
 

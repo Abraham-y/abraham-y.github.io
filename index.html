@@ -3,837 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abraham Yeung — VS Code</title>
-<meta name="description" content="Abraham Yeung — reinforcement learning and AI safety researcher at Stanford.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --titlebar: #323233;
-    --activitybar: #333333;
-    --sidebar: #252526;
-    --sidebar-header: #383838;
-    --editor: #1e1e1e;
-    --tabbar: #252526;
-    --tab-active: #1e1e1e;
-    --tab-inactive: #2d2d2d;
-    --status: #007acc;
-    --panel: #1e1e1e;
-    --border: #1b1b1b;
-    --text: #cccccc;
-    --text-dim: #858585;
-    --text-bright: #ffffff;
-    --accent: #0e639c;
-    --hover: #2a2d2e;
-    --select: #094771;
-    /* syntax */
-    --c: #6a9955;   /* comment green */
-    --k: #569cd6;   /* keyword blue */
-    --s: #ce9178;   /* string orange */
-    --f: #dcdcaa;   /* function yellow */
-    --n: #b5cea8;   /* number */
-    --v: #9cdcfe;   /* variable light blue */
-    --t: #4ec9b0;   /* type teal */
-    --p: #d4d4d4;   /* punctuation */
-    --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    font-family: var(--mono);
-    background: var(--editor);
-    color: var(--text);
-    font-size: 13px;
-    overflow: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
-  ::selection { background: var(--select); }
-  a { color: inherit; text-decoration: none; }
-
-  .app { display: flex; flex-direction: column; height: 100vh; }
-
-  /* ===== TITLE BAR ===== */
-  .titlebar {
-    height: 35px; background: var(--titlebar); display: flex; align-items: center;
-    justify-content: space-between; padding: 0 10px; flex-shrink: 0;
-    border-bottom: 1px solid var(--border); user-select: none;
-  }
-  .tb-left { display: flex; align-items: center; gap: 8px; }
-  .dots { display: flex; gap: 8px; align-items: center; }
-  .dot { width: 12px; height: 12px; border-radius: 50%; }
-  .dot.r { background: #ff5f56; } .dot.y { background: #ffbd2e; } .dot.g { background: #27c93f; }
-  .menu-btn {
-    display: none; background: none; border: none; color: var(--text); cursor: pointer;
-    font-size: 16px; padding: 2px 6px; line-height: 1;
-  }
-  .tb-center { font-size: 12px; color: var(--text-dim); }
-  .tb-center b { color: var(--text); font-weight: 500; }
-  .tb-right { display: flex; align-items: center; gap: 6px; }
-  .claude-btn {
-    display: flex; align-items: center; gap: 6px; cursor: pointer;
-    background: linear-gradient(135deg, #d97757, #c15f3c);
-    color: #fff; border: none; border-radius: 5px; padding: 4px 10px;
-    font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.02em;
-    transition: filter 0.2s;
-  }
-  .claude-btn:hover { filter: brightness(1.1); }
-  .claude-btn .star { font-size: 12px; }
-
-  /* ===== BODY (activity | sidebar | main | claude) ===== */
-  .body { display: flex; flex: 1; min-height: 0; }
-
-  /* activity bar */
-  .activitybar {
-    width: 48px; background: var(--activitybar); flex-shrink: 0;
-    display: flex; flex-direction: column; align-items: center; padding-top: 6px;
-  }
-  .act-icon {
-    width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;
-    color: var(--text-dim); cursor: pointer; border-left: 2px solid transparent;
-    position: relative;
-  }
-  .act-icon svg { width: 24px; height: 24px; }
-  .act-icon:hover { color: var(--text); }
-  .act-icon.active { color: var(--text-bright); border-left-color: var(--text-bright); }
-  .act-spacer { flex: 1; }
-
-  /* sidebar / explorer */
-  .sidebar {
-    width: 240px; background: var(--sidebar); flex-shrink: 0; overflow-y: auto;
-    display: flex; flex-direction: column;
-  }
-  .sb-header {
-    font-size: 11px; letter-spacing: 0.08em; color: var(--text-dim); text-transform: uppercase;
-    padding: 10px 16px 6px; display: flex; justify-content: space-between;
-  }
-  .sb-title { padding: 4px 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
-    text-transform: uppercase; color: var(--text); display: flex; align-items: center; gap: 4px; cursor: pointer; }
-  .chev { transition: transform 0.15s; display: inline-block; }
-  .chev.collapsed { transform: rotate(-90deg); }
-  .tree { padding-bottom: 10px; }
-  .tree-item {
-    display: flex; align-items: center; gap: 6px; padding: 3px 12px 3px 0;
-    cursor: pointer; font-size: 13px; color: var(--text); white-space: nowrap;
-    border: 1px solid transparent;
-  }
-  .tree-item:hover { background: var(--hover); }
-  .tree-item.active { background: var(--select); }
-  .tree-item .twist { width: 14px; display: inline-flex; justify-content: center; color: var(--text-dim); }
-  .tree-file { padding-left: 0; }
-  .ficon { width: 16px; height: 16px; flex-shrink: 0; }
-  .tree-children { overflow: hidden; }
-  .tree-children.collapsed { display: none; }
-
-  /* main editor area */
-  .main { flex: 1; min-width: 0; display: flex; flex-direction: column; background: var(--editor); }
-  .tabstrip { height: 35px; background: var(--tabbar); display: flex; flex-shrink: 0; }
-  .tabbar { height: 35px; display: flex; flex: 1; min-width: 0; overflow-x: auto; }
-  .editor-actions { display: none; align-items: center; padding: 0 6px; border-left: 1px solid var(--border); flex-shrink: 0; }
-  .ea-btn { display: flex; align-items: center; gap: 5px; background: none; border: none; color: var(--text-dim);
-    cursor: pointer; font-family: var(--mono); font-size: 11px; padding: 4px 8px; border-radius: 4px; }
-  .ea-btn:hover { background: var(--hover); color: var(--text); }
-  .ea-btn.active { color: var(--text-bright); }
-
-  /* markdown preview */
-  .md-preview { max-width: 760px; padding: 16px 32px 60px; font-size: 14px; line-height: 1.75; color: var(--text); }
-  .md-preview h1 { font-size: 1.9em; margin: 0.1em 0 0.5em; color: #fff; border-bottom: 1px solid #333; padding-bottom: 0.25em; }
-  .md-preview h2 { font-size: 1.4em; margin: 1.3em 0 0.4em; color: #fff; border-bottom: 1px solid #2a2a2a; padding-bottom: 0.15em; }
-  .md-preview h3 { font-size: 1.15em; margin: 1.2em 0 0.3em; color: #fff; }
-  .md-preview p { margin: 0.7em 0; }
-  .md-preview ul { margin: 0.6em 0; padding-left: 1.4em; }
-  .md-preview li { margin: 0.28em 0; }
-  .md-preview a { color: #4ea1ff; }
-  .md-preview a:hover { text-decoration: underline; }
-  .md-preview strong { color: #fff; }
-  .md-preview code { background: #ffffff14; padding: 1px 6px; border-radius: 3px; color: var(--s); font-size: 0.92em; }
-  .md-preview blockquote { border-left: 3px solid #4a4a4a; margin: 0.9em 0; padding: 0.2em 0 0.2em 1em; color: var(--text-dim); font-style: italic; }
-  .md-preview figure { margin: 1.4em 0; text-align: center; }
-  .md-preview img { max-width: 100%; border: 1px solid #333; border-radius: 6px; background: #fff; }
-  .md-preview figcaption { font-size: 0.85em; color: var(--text-dim); margin-top: 0.6em; font-style: italic; }
-  .tab {
-    display: flex; align-items: center; gap: 7px; padding: 0 10px 0 12px; height: 35px;
-    background: var(--tab-inactive); color: var(--text-dim); cursor: pointer;
-    border-right: 1px solid var(--border); font-size: 12.5px; white-space: nowrap;
-    border-top: 1px solid transparent;
-  }
-  .tab.active { background: var(--tab-active); color: var(--text-bright); border-top-color: var(--status); }
-  .tab .tab-close { width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;
-    border-radius: 4px; color: var(--text-dim); font-size: 14px; }
-  .tab .tab-close:hover { background: #ffffff22; color: var(--text); }
-  .tab:not(.active) .tab-close { visibility: hidden; }
-  .tab:hover .tab-close { visibility: visible; }
-
-  .breadcrumb { height: 24px; display: flex; align-items: center; gap: 6px; padding: 0 18px;
-    font-size: 12px; color: var(--text-dim); flex-shrink: 0; }
-  .breadcrumb span.sep { opacity: 0.6; }
-
-  .editor-scroll { flex: 1; overflow: auto; padding: 8px 0 40px; }
-  .code { counter-reset: line; font-size: 13.5px; line-height: 1.55; min-width: max-content; }
-  .line { counter-increment: line; display: flex; padding: 0 24px 0 0; min-height: 1.55em; }
-  .line:hover { background: #ffffff08; }
-  .line::before {
-    content: counter(line); width: 52px; min-width: 52px; padding-right: 24px; text-align: right;
-    color: var(--text-dim); user-select: none; flex-shrink: 0;
-  }
-  .line .lc { white-space: pre-wrap; word-break: break-word; }
-  .code a { color: var(--s); text-decoration: underline; text-underline-offset: 2px; }
-  .code a:hover { color: #ffb08a; }
-
-  /* token colors */
-  .c { color: var(--c); } .k { color: var(--k); } .s { color: var(--s); }
-  .fn { color: var(--f); } .num { color: var(--n); } .v { color: var(--v); }
-  .ty { color: var(--t); } .pn { color: var(--p); }
-  .md-h { color: var(--k); font-weight: 600; } .md-h .hash { color: var(--text-dim); }
-  .md-b { color: var(--text-bright); font-weight: 600; }
-  .md-code { color: var(--s); background: #ffffff14; padding: 1px 5px; border-radius: 3px; }
-  .md-q { color: var(--c); font-style: italic; } .md-li { color: var(--s); }
-
-  /* ===== STATUS BAR ===== */
-  .statusbar {
-    height: 22px; background: var(--status); color: #fff; display: flex; align-items: center;
-    justify-content: space-between; padding: 0 8px; font-size: 11.5px; flex-shrink: 0;
-  }
-  .sb-group { display: flex; align-items: center; gap: 14px; }
-  .sb-item { display: flex; align-items: center; gap: 4px; cursor: default; }
-  .sb-item a { color: #fff; }
-  .sb-item.clickable { cursor: pointer; padding: 0 4px; border-radius: 3px; }
-  .sb-item.clickable:hover { background: #ffffff2e; }
-
-  /* ===== CLAUDE PANEL ===== */
-  .claude-panel {
-    width: 0; background: var(--sidebar); flex-shrink: 0; overflow: hidden;
-    display: flex; flex-direction: column; transition: width 0.22s ease; border-left: 1px solid var(--border);
-  }
-  body.claude-open .claude-panel { width: 360px; }
-  .cp-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px;
-    border-bottom: 1px solid var(--border); flex-shrink: 0; }
-  .cp-title { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--text-bright); }
-  .cp-title .star { color: #d97757; }
-  .cp-close { cursor: pointer; color: var(--text-dim); font-size: 16px; padding: 2px 6px; border-radius: 4px; }
-  .cp-close:hover { background: var(--hover); color: var(--text); }
-  .cp-messages { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 14px; }
-  .msg { font-size: 12.5px; line-height: 1.6; }
-  .msg .who { font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 4px; }
-  .msg.user .bubble { background: var(--select); color: #fff; padding: 8px 11px; border-radius: 8px; display: inline-block; }
-  .msg.bot .bubble { color: var(--text); }
-  .typing { display: inline-flex; gap: 4px; align-items: center; padding: 4px 0; }
-  .typing span { width: 6px; height: 6px; border-radius: 50%; background: var(--text-dim); animation: blink-dot 1.2s infinite both; }
-  .typing span:nth-child(2) { animation-delay: 0.2s; }
-  .typing span:nth-child(3) { animation-delay: 0.4s; }
-  @keyframes blink-dot { 0%, 80%, 100% { opacity: 0.25; } 40% { opacity: 1; } }
-  .cp-suggest { padding: 10px 14px; border-top: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 7px; flex-shrink: 0; }
-  .chip { font-size: 11.5px; color: var(--text); background: #ffffff10; border: 1px solid #ffffff1f; border-radius: 14px;
-    padding: 5px 11px; cursor: pointer; transition: background 0.15s; }
-  .chip:hover { background: #ffffff20; }
-  .cp-input { display: flex; gap: 6px; padding: 10px 14px 14px; border-top: 1px solid var(--border); flex-shrink: 0; }
-  .cp-input input {
-    flex: 1; background: var(--editor); border: 1px solid #ffffff24; border-radius: 6px; color: var(--text);
-    font-family: var(--mono); font-size: 12.5px; padding: 8px 10px; outline: none;
-  }
-  .cp-input input:focus { border-color: var(--accent); }
-  .cp-input button {
-    background: #d97757; border: none; border-radius: 6px; color: #fff; cursor: pointer;
-    padding: 0 12px; font-size: 13px;
-  }
-  .cp-input button:hover { filter: brightness(1.1); }
-
-  .sb-overlay { display: none; }
-
-  /* ===== RESPONSIVE / MINI VS CODE ===== */
-  @media (max-width: 760px) {
-    .menu-btn { display: block; }
-    .tb-center { display: none; }
-    .sidebar {
-      position: absolute; top: 35px; bottom: 22px; left: 48px; z-index: 50;
-      box-shadow: 6px 0 20px rgba(0,0,0,0.4); transform: translateX(-120%); transition: transform 0.2s;
-    }
-    body.sidebar-open .sidebar { transform: translateX(0); }
-    body.sidebar-open .sb-overlay { display: block; position: absolute; inset: 35px 0 22px 0; z-index: 40; background: rgba(0,0,0,0.35); }
-    body.claude-open .claude-panel { width: 100%; position: absolute; top: 35px; bottom: 22px; right: 0; z-index: 60; }
-    .claude-btn span.lbl { display: none; }
-    .line::before { width: 38px; min-width: 38px; padding-right: 12px; }
-    .sb-group.collapsible { display: none; }
-  }
-</style>
+<title>Abraham Yeung</title>
+<meta name="description" content="Abraham Yeung. Stanford student working on reinforcement learning, post-training, and AI safety.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 </head>
 <body>
-<div class="app">
+<main>
 
-  <!-- ===== TITLE BAR ===== -->
-  <div class="titlebar">
-    <div class="tb-left">
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle sidebar">☰</button>
-      <div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
-    </div>
-    <div class="tb-center"><b id="tbFile">README.md</b> — Abraham Yeung</div>
-    <div class="tb-right">
-      <button class="claude-btn" id="claudeBtn"><span class="star">✦</span><span class="lbl">Claude</span></button>
+  <div class="hdr">
+    <img class="photo" src="figures/me.jpg" alt="Abraham Yeung" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="photo-fallback" aria-hidden="true">🤖</div>
+    <div>
+      <h1>Abraham Yeung</h1>
+      <p class="tagline">Math &amp; CS at Stanford. Reinforcement learning, post-training, and AI safety.</p>
+      <div class="links">
+        <a href="mailto:ayeung16@stanford.edu">Email</a>
+        <a href="https://github.com/Abraham-y" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/abraham-yeung-11b2941b0/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://arxiv.org/a/yeung_a_1" target="_blank" rel="noopener">arXiv</a>
+      </div>
     </div>
   </div>
 
-  <!-- ===== BODY ===== -->
-  <div class="body">
+  <nav class="pipe" aria-label="Sections">
+    <a class="node" href="#policy"><span class="em">🤖</span><b>policy</b><span class="sub">about me</span></a>
+    <span class="arrow">→</span>
+    <a class="node" href="#reward"><span class="em">🧑‍⚖️</span><b>reward model</b><span class="sub">what I optimize for</span></a>
+    <span class="arrow">→</span>
+    <a class="node" href="#updates"><span class="em grad">∇</span><b>updates</b><span class="sub">research</span></a>
+    <span class="arrow">→</span>
+    <a class="node" href="#rollouts"><span class="em">📝</span><b>rollouts</b><span class="sub">projects</span></a>
+  </nav>
+  <p class="voice"><span class="k">status:</span> mid post-training &nbsp;·&nbsp; <span class="k">reward signal:</span> curiosity &nbsp;·&nbsp; <span class="k">KL penalty:</span> sleep</p>
 
-    <!-- activity bar -->
-    <div class="activitybar">
-      <div class="act-icon active" title="Explorer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4h7l2 2h9v14H3z"/></svg>
-      </div>
-      <div class="act-icon" title="Search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-      </div>
-      <div class="act-icon" title="Source Control">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7M18 11.5c0 3-4 3.5-6 3.5"/></svg>
-      </div>
-      <div class="act-icon" title="Run & Debug">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 5l11 7-11 7z"/></svg>
-      </div>
-      <div class="act-icon" title="Extensions">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><rect x="14" y="14" width="6" height="6"/></svg>
-      </div>
-      <div class="act-spacer"></div>
-      <div class="act-icon" title="Accounts">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
-      </div>
-      <div class="act-icon" title="Settings">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
-      </div>
+  <section id="policy">
+    <p class="eyebrow"><span class="em">🤖</span>policy</p>
+    <h2>About me</h2>
+    <p>I'm a sophomore at Stanford studying Mathematics and Computer Science. I work on reinforcement learning and post-training, with a focus on what those methods do to a model's safety properties: whether its chain of thought stays honest, whether internal signals stay trustworthy once you train on them, and which design choices quietly trade oversight for capability.</p>
+    <p>I grew up in Hong Kong and went to Eton College as a King's Scholar, graduating as valedictorian. Outside research I sing baritone with the Mendicants, Stanford's oldest a cappella group, direct Hackspace at BASES, and care about environmentalism and mentorship. I speak English, Cantonese, Mandarin, and German, and I'm learning Japanese.</p>
+  </section>
+
+  <section id="reward">
+    <p class="eyebrow"><span class="em">🧑‍⚖️</span>reward model</p>
+    <h2>What I optimize for</h2>
+    <ul>
+      <li><b>Models that stay overseeable as they get stronger.</b> Chain-of-thought monitoring only works if the reasoning we read is the reasoning that drove the answer. I want to know which training choices preserve that, and which erode it while the text still looks fine.</li>
+      <li><b>Post-training that doesn't trade safety for capability by accident.</b> Reward design, distillation, and RL loops each have side effects on honesty and controllability. Those effects should be measured, not assumed.</li>
+      <li><b>Interpretability artifacts wired into training carefully.</b> A probe that is safe to read can be dangerous to optimize against. The access a training loop gives an internal signal should be a deliberate decision.</li>
+      <li><b>Theory and systems together.</b> The interesting questions sit where the RL math meets the actual training run, so I try to work at both ends.</li>
+    </ul>
+  </section>
+
+  <section id="updates">
+    <p class="eyebrow"><span class="em grad">∇</span>gradient updates</p>
+    <h2>Research</h2>
+    <p class="lede">Two preprints from 2026, plus a research proposal I'm working towards.</p>
+
+    <div class="paper">
+      <h3>Math Distillation Decouples Chain-of-Thought from Behavior on a Reasoning Model</h3>
+      <div class="meta">Abraham Yeung · arXiv cs.LG, June 2026 · <a href="cot-monitorability.pdf" target="_blank">PDF</a></div>
+      <p>After math chain-of-thought fine-tuning, a planted cue moves the model's answers exactly as much as before, but the CoT stops mentioning it, with acknowledgment falling from 25% to 3% while accuracy improves. The behavior stays, the confession disappears, and a capability-only check would pass the model.</p>
     </div>
 
-    <!-- sidebar -->
-    <aside class="sidebar" id="sidebar">
-      <div class="sb-header"><span>Explorer</span><span>···</span></div>
-      <div class="sb-title" id="rootToggle"><span class="chev">⌄</span> PORTFOLIO</div>
-      <div class="tree" id="tree">
-        <!-- files injected here -->
-      </div>
-    </aside>
-    <div class="sb-overlay" id="sbOverlay"></div>
+    <div class="paper">
+      <h3>Reading vs. Writing a Near-Oracle Internal Verifier: How RL Design Determines Whether a Correctness Probe Is Safe</h3>
+      <div class="meta">Abraham Yeung, Anagha Ramaswamy · arXiv cs.LG, June 2026 · <a href="read-write-probe.pdf" target="_blank">PDF</a><a href="https://github.com/Abraham-y/reader-writer-probe-rl" target="_blank" rel="noopener">Code</a></div>
+      <p>Outcome RL grows a near-perfect linear correctness probe inside a small model. Used read-only, it gives large deployment gains. Used as the reward, it Goodharts badly. The less policy-gradient access the probe gets, the safer it is, which bounds how interpretability signals should be wired into RL.</p>
+    </div>
 
-    <!-- main editor -->
-    <main class="main">
-      <div class="tabstrip">
-        <div class="tabbar" id="tabbar"></div>
-        <div class="editor-actions" id="editorActions">
-          <button class="ea-btn" id="previewToggle" title="Toggle Markdown preview">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" width="16" height="16"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="12" y1="4" x2="12" y2="20"/><circle cx="17" cy="11" r="2.2"/><line x1="18.6" y1="12.6" x2="20" y2="14"/></svg>
-            <span class="ea-lbl">Preview</span>
-          </button>
-        </div>
-      </div>
-      <div class="breadcrumb" id="breadcrumb"></div>
-      <div class="editor-scroll" id="editor"></div>
-    </main>
+    <div class="note">
+      <div class="lbl">research note</div>
+      <p><a href="notes/confidence-rewards-and-monitorability.html">Do confidence rewards quietly hurt CoT monitorability?</a> Self-certainty and entropy-minimizing rewards pay a model for sounding sure. Oversight needs it to say its doubts out loud. A proposed experiment on OLMo-3 to measure whether these rewards reduce monitor recall at fixed CoT length.</p>
+    </div>
+  </section>
 
-    <!-- claude panel -->
-    <aside class="claude-panel" id="claudePanel">
-      <div class="cp-header">
-        <div class="cp-title"><span class="star">✦</span> Claude</div>
-        <span class="cp-close" id="cpClose">✕</span>
-      </div>
-      <div class="cp-messages" id="cpMessages"></div>
-      <div class="cp-suggest" id="cpSuggest"></div>
-      <form class="cp-input" id="cpForm">
-        <input id="cpInput" type="text" placeholder="Ask about Abraham…" autocomplete="off">
+  <section id="rollouts">
+    <p class="eyebrow"><span class="em">📝</span>rollouts</p>
+    <h2>Projects</h2>
+    <div class="roll">
+      <div><b>Maestro</b><span class="tag">ai / music · TreeHacks</span><p>Multimodal AI music coach: computer vision and audio analysis for real-time feedback. <a href="https://devpost.com/software/maestro-n0uqyz" target="_blank" rel="noopener">Devpost</a></p></div>
+      <div><b>Prediction Market Agent</b><span class="tag">agents · SF Tech Week</span><p>Autonomous agent for prediction markets. Top 5 at SF Tech Week (NVIDIA, Vercel, Brex).</p></div>
+      <div><b>CryoViT</b><span class="tag">structural biology · Chiu Lab</span><p>Vision transformer pipeline for cryo-EM protein segmentation.</p></div>
+      <div><b>AQI Forecasting</b><span class="tag">environmental ml · CS229</span><p>Air quality prediction with LSTM, GNN, and CNN models over spatiotemporal data.</p></div>
+    </div>
+  </section>
+
+  <section id="history">
+    <p class="eyebrow"><span class="em">📈</span>training history</p>
+    <h2>Experience</h2>
+    <ul class="tl">
+      <li><div class="d">Jun – Sep 2026</div><div><b>Software Engineering Intern, Databricks</b><span>San Francisco.</span></div></li>
+      <li><div class="d">Sep 2025 – now</div><div><b>Math 104 Grader, Stanford Mathematics</b><span>Linear algebra, about 100 students' homework each week.</span></div></li>
+      <li><div class="d">Sep 2025 – now</div><div><b>Director of Hackspace, BASES</b><span>Programming and outreach for hacker hours.</span></div></li>
+      <li><div class="d">Jun – Sep 2025</div><div><b>Software &amp; ML Intern, Chiu Lab, Stanford</b><span>Built CryoViT, a ViT pipeline for cryo-EM segmentation.</span></div></li>
+      <li><div class="d">Jan – Jun 2025</div><div><b>CS 106 Section Leader, Stanford CS</b><span>Taught Python, C++, and data structures; led office hours.</span></div></li>
+    </ul>
+  </section>
+
+  <section id="evals">
+    <p class="eyebrow"><span class="em">📊</span>evals</p>
+    <h2>Honors</h2>
+    <ul class="evals">
+      <li><b>Rabi Scholarship</b><span>Columbia University · top 10 of about 60,000 applicants</span></li>
+      <li><b>King's Scholar and Valedictorian</b><span>Eton College · Gladstone Memorial Prize</span></li>
+      <li><b>UK Chemistry Olympiad</b><span>top 4 nationally</span></li>
+      <li><b>British Mathematical Olympiad</b><span>top 50 nationally, twice</span></li>
+      <li><b>World Science Scholars</b><span>1 of 48 selected globally</span></li>
+      <li><b>Youth Delegate, COP27</b><span>climate policy advocacy at the UN climate conference</span></li>
+    </ul>
+  </section>
+
+  <section id="ask">
+    <p class="eyebrow"><span class="em">🤖</span>inference</p>
+    <h2>Ask my post-trained self</h2>
+    <p class="lede small">A small open-weights model with a short bio in its context. Ask it about my work. It can be wrong, so trust the sections above over it.</p>
+    <div class="chat">
+      <div class="chat-log" id="chatLog"></div>
+      <div class="chips" id="chips"></div>
+      <form id="chatForm" autocomplete="off">
+        <input id="chatInput" type="text" placeholder="What does Abraham work on?" aria-label="Ask a question">
         <button type="submit" aria-label="Send">➤</button>
       </form>
-    </aside>
-
-  </div>
-
-  <!-- ===== STATUS BAR ===== -->
-  <div class="statusbar">
-    <div class="sb-group">
-      <span class="sb-item clickable"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7M18 11.5c0 3-4 3.5-6 3.5"/></svg> main</span>
-      <span class="sb-item">✓ 0 ✕ 0</span>
     </div>
-    <div class="sb-group collapsible">
-      <a class="sb-item clickable" href="mailto:ayeung1616@gmail.com">✉ Email</a>
-      <a class="sb-item clickable" href="https://github.com/Abraham-y" target="_blank">GitHub</a>
-      <a class="sb-item clickable" href="https://www.linkedin.com/in/abraham-yeung-11b2941b0/" target="_blank">LinkedIn</a>
-      <span class="sb-item">Ln 1, Col 1</span>
-      <span class="sb-item">Spaces: 2</span>
-      <span class="sb-item">UTF-8</span>
-      <span class="sb-item" id="sbLang">Markdown</span>
-    </div>
-  </div>
+  </section>
 
-</div>
+  <footer>Abraham Yeung · <a href="https://github.com/Abraham-y/abraham-y.github.io" target="_blank" rel="noopener">source</a></footer>
+</main>
 
 <script>
-/* ============================================================
-   FILE CONTENT
-   Each line is pre-highlighted HTML. To edit your site, change
-   the strings below. Empty string = blank line.
-   ============================================================ */
-const FILES = {
-  'README.md': { lang: 'Markdown', icon: 'md', name: 'README.md', md:
-`# 👋 Hi, I'm Abraham Yeung
-
-Stanford sophomore studying **Mathematics** & **Computer Science**.
-I work on **reinforcement learning**, **post-training**, and **AI safety & alignment**.
-
-## Getting started
-- Open \`about.md\` to learn more about me
-- Browse \`research/publications.bib\` for preprints & papers
-- Peek at \`projects.py\` and \`experience.json\`
-
-> "Steer increasingly capable models toward reliable, human-aligned behavior."
-
-## Featured figure
-Hit the **Preview** button (top-right of the editor) to render this file with figures shown inline — toggle back for the Markdown source.
-
-![Figure: placeholder — replace with your own image in /figures](figures/placeholder.svg)
-
-Tip: click the **✦ Claude** button (top-right) to ask about my work.
-` },
-
-  'about.md': { lang: 'Markdown', icon: 'md', name: 'about.md', md:
-`# About
-
-Hi — I'm **Abraham Yeung**, a sophomore at Stanford pursuing a double major in **Mathematics** and **Computer Science**.
-
-## Research interests
-- Reinforcement learning
-- Post-training (RLHF / RLAIF)
-- AI safety & alignment
-
-I like working at the boundary of **theory** and **systems** — how we steer increasingly capable models toward reliable, human-aligned behavior.
-
-## Background
-I grew up in Hong Kong and attended Eton College as a **King's Scholar**, graduating as valedictorian.
-
-Outside research I sing baritone with the Mendicants (Stanford's oldest a cappella group), direct Hackspace at BASES, and care deeply about environmentalism and mentorship.
-
-## Languages
-English · Cantonese · Mandarin · German · Japanese (beginner)
-` },
-
-  'research/publications.bib': { lang: 'BibTeX', icon: 'bib', name: 'publications.bib', lines: [
-    `<span class="c">% Publications &amp; Preprints — Stanford University, 2026</span>`,
-    `<span class="c">% Tip: the pdf / code values below are clickable.</span>`,
-    ``,
-    `<span class="k">@article</span><span class="pn">{</span><span class="ty">yeung2026cotdistill</span><span class="pn">,</span>`,
-    `  <span class="v">title</span>   <span class="pn">=</span> <span class="s">{Math Distillation Decouples Chain-of-Thought</span>`,
-    `             <span class="s">from Behavior on a Reasoning Model}</span><span class="pn">,</span>`,
-    `  <span class="v">author</span>  <span class="pn">=</span> <span class="s">{Yeung, Abraham}</span><span class="pn">,</span>`,
-    `  <span class="v">year</span>    <span class="pn">=</span> <span class="num">2026</span><span class="pn">,</span>`,
-    `  <span class="v">venue</span>   <span class="pn">=</span> <span class="s">{Preprint · arXiv cs.LG}</span><span class="pn">,</span>`,
-    `  <span class="v">pdf</span>     <span class="pn">=</span> <span class="s">{</span><a href="cot-monitorability.pdf" target="_blank">cot-monitorability.pdf</a><span class="s">}</span>`,
-    `<span class="pn">}</span>`,
-    ``,
-    `<span class="k">@article</span><span class="pn">{</span><span class="ty">yeung2026readwrite</span><span class="pn">,</span>`,
-    `  <span class="v">title</span>   <span class="pn">=</span> <span class="s">{Reading vs. Writing a Near-Oracle Internal Verifier:</span>`,
-    `             <span class="s">How RL Design Determines Whether a Correctness</span>`,
-    `             <span class="s">Probe Is Safe}</span><span class="pn">,</span>`,
-    `  <span class="v">author</span>  <span class="pn">=</span> <span class="s">{Yeung, Abraham and Ramaswamy, Anagha}</span><span class="pn">,</span>`,
-    `  <span class="v">year</span>    <span class="pn">=</span> <span class="num">2026</span><span class="pn">,</span>`,
-    `  <span class="v">venue</span>   <span class="pn">=</span> <span class="s">{Preprint · arXiv cs.LG}</span><span class="pn">,</span>`,
-    `  <span class="v">pdf</span>     <span class="pn">=</span> <span class="s">{</span><a href="read-write-probe.pdf" target="_blank">read-write-probe.pdf</a><span class="s">}</span><span class="pn">,</span>`,
-    `  <span class="v">code</span>    <span class="pn">=</span> <span class="s">{</span><a href="https://github.com/Abraham-y/reader-writer-probe-rl" target="_blank">github.com/Abraham-y/reader-writer-probe-rl</a><span class="s">}</span>`,
-    `<span class="pn">}</span>`,
-  ]},
-
-  'projects.py': { lang: 'Python', icon: 'py', name: 'projects.py', lines: [
-    `<span class="c"># projects.py — selected work</span>`,
-    ``,
-    `projects <span class="pn">=</span> <span class="pn">[</span>`,
-    `    <span class="pn">{</span>`,
-    `        <span class="s">"name"</span><span class="pn">:</span> <span class="s">"Maestro"</span><span class="pn">,</span>`,
-    `        <span class="s">"tag"</span><span class="pn">:</span>  <span class="s">"ai / music"</span><span class="pn">,</span>`,
-    `        <span class="s">"desc"</span><span class="pn">:</span> <span class="s">"Multimodal AI music coach: computer vision +"</span>`,
-    `                <span class="s">"audio analysis for real-time feedback. (TreeHacks)"</span><span class="pn">,</span>`,
-    `        <span class="s">"tech"</span><span class="pn">:</span> <span class="pn">[</span><span class="s">"Computer Vision"</span><span class="pn">,</span> <span class="s">"Audio ML"</span><span class="pn">,</span> <span class="s">"Real-time"</span><span class="pn">]</span><span class="pn">,</span>`,
-    `        <span class="s">"url"</span><span class="pn">:</span>  <span class="s">"</span><a href="https://devpost.com/software/maestro-n0uqyz" target="_blank">https://devpost.com/software/maestro</a><span class="s">"</span><span class="pn">,</span>`,
-    `    <span class="pn">},</span>`,
-    `    <span class="pn">{</span>`,
-    `        <span class="s">"name"</span><span class="pn">:</span> <span class="s">"Prediction Market Agent"</span><span class="pn">,</span>`,
-    `        <span class="s">"tag"</span><span class="pn">:</span>  <span class="s">"markets / agents"</span><span class="pn">,</span>`,
-    `        <span class="s">"desc"</span><span class="pn">:</span> <span class="s">"Autonomous agent for prediction markets."</span>`,
-    `                <span class="s">"Top 5 at SF Tech Week (NVIDIA, Vercel, Brex)."</span><span class="pn">,</span>`,
-    `        <span class="s">"tech"</span><span class="pn">:</span> <span class="pn">[</span><span class="s">"LLM Agents"</span><span class="pn">,</span> <span class="s">"Probabilistic Modeling"</span><span class="pn">]</span><span class="pn">,</span>`,
-    `    <span class="pn">},</span>`,
-    `    <span class="pn">{</span>`,
-    `        <span class="s">"name"</span><span class="pn">:</span> <span class="s">"CryoViT"</span><span class="pn">,</span>`,
-    `        <span class="s">"tag"</span><span class="pn">:</span>  <span class="s">"structural biology"</span><span class="pn">,</span>`,
-    `        <span class="s">"desc"</span><span class="pn">:</span> <span class="s">"Vision transformer pipeline for cryo-EM protein"</span>`,
-    `                <span class="s">"segmentation in Stanford's Chiu Lab."</span><span class="pn">,</span>`,
-    `        <span class="s">"tech"</span><span class="pn">:</span> <span class="pn">[</span><span class="s">"Vision Transformers"</span><span class="pn">,</span> <span class="s">"Segmentation"</span><span class="pn">,</span> <span class="s">"PyTorch"</span><span class="pn">]</span><span class="pn">,</span>`,
-    `    <span class="pn">},</span>`,
-    `    <span class="pn">{</span>`,
-    `        <span class="s">"name"</span><span class="pn">:</span> <span class="s">"AQI Forecasting"</span><span class="pn">,</span>`,
-    `        <span class="s">"tag"</span><span class="pn">:</span>  <span class="s">"environmental ml"</span><span class="pn">,</span>`,
-    `        <span class="s">"desc"</span><span class="pn">:</span> <span class="s">"Air quality prediction with LSTM, GNN, and CNN."</span>`,
-    `                <span class="s">"CS229 spatiotemporal modeling project."</span><span class="pn">,</span>`,
-    `        <span class="s">"tech"</span><span class="pn">:</span> <span class="pn">[</span><span class="s">"LSTM"</span><span class="pn">,</span> <span class="s">"GNN"</span><span class="pn">,</span> <span class="s">"CNN"</span><span class="pn">,</span> <span class="s">"Time Series"</span><span class="pn">]</span><span class="pn">,</span>`,
-    `    <span class="pn">},</span>`,
-    `<span class="pn">]</span>`,
-    ``,
-    `<span class="k">for</span> p <span class="k">in</span> projects<span class="pn">:</span>`,
-    `    <span class="fn">print</span><span class="pn">(</span>p<span class="pn">[</span><span class="s">"name"</span><span class="pn">]</span><span class="pn">,</span> <span class="s">"→"</span><span class="pn">,</span> p<span class="pn">[</span><span class="s">"tag"</span><span class="pn">]</span><span class="pn">)</span>`,
-  ]},
-
-  'experience.json': { lang: 'JSON', icon: 'json', name: 'experience.json', lines: [
-    `<span class="pn">{</span>`,
-    `  <span class="v">"experience"</span><span class="pn">:</span> <span class="pn">[</span>`,
-    `    <span class="pn">{</span>`,
-    `      <span class="v">"role"</span><span class="pn">:</span> <span class="s">"Software Engineering Intern"</span><span class="pn">,</span>`,
-    `      <span class="v">"org"</span><span class="pn">:</span>  <span class="s">"Databricks"</span><span class="pn">,</span>`,
-    `      <span class="v">"date"</span><span class="pn">:</span> <span class="s">"Jun 2026 – Sep 2026"</span><span class="pn">,</span>`,
-    `      <span class="v">"note"</span><span class="pn">:</span> <span class="s">"Incoming intern in San Francisco."</span>`,
-    `    <span class="pn">},</span>`,
-    `    <span class="pn">{</span>`,
-    `      <span class="v">"role"</span><span class="pn">:</span> <span class="s">"Math 104 Linear Algebra Grader"</span><span class="pn">,</span>`,
-    `      <span class="v">"org"</span><span class="pn">:</span>  <span class="s">"Department of Mathematics, Stanford"</span><span class="pn">,</span>`,
-    `      <span class="v">"date"</span><span class="pn">:</span> <span class="s">"Sep 2025 – Present"</span><span class="pn">,</span>`,
-    `      <span class="v">"note"</span><span class="pn">:</span> <span class="s">"Grade ~100 students' homeworks weekly."</span>`,
-    `    <span class="pn">},</span>`,
-    `    <span class="pn">{</span>`,
-    `      <span class="v">"role"</span><span class="pn">:</span> <span class="s">"Director of Hackspace"</span><span class="pn">,</span>`,
-    `      <span class="v">"org"</span><span class="pn">:</span>  <span class="s">"BASES, Stanford"</span><span class="pn">,</span>`,
-    `      <span class="v">"date"</span><span class="pn">:</span> <span class="s">"Sep 2025 – Present"</span><span class="pn">,</span>`,
-    `      <span class="v">"note"</span><span class="pn">:</span> <span class="s">"Programming &amp; outreach for hacker hours."</span>`,
-    `    <span class="pn">},</span>`,
-    `    <span class="pn">{</span>`,
-    `      <span class="v">"role"</span><span class="pn">:</span> <span class="s">"Software &amp; ML Intern"</span><span class="pn">,</span>`,
-    `      <span class="v">"org"</span><span class="pn">:</span>  <span class="s">"Chiu Lab, Stanford"</span><span class="pn">,</span>`,
-    `      <span class="v">"date"</span><span class="pn">:</span> <span class="s">"Jun 2025 – Sep 2025"</span><span class="pn">,</span>`,
-    `      <span class="v">"note"</span><span class="pn">:</span> <span class="s">"Built CryoViT, a ViT pipeline for cryo-EM segmentation."</span>`,
-    `    <span class="pn">},</span>`,
-    `    <span class="pn">{</span>`,
-    `      <span class="v">"role"</span><span class="pn">:</span> <span class="s">"CS 106 Section Leader"</span><span class="pn">,</span>`,
-    `      <span class="v">"org"</span><span class="pn">:</span>  <span class="s">"Department of CS, Stanford"</span><span class="pn">,</span>`,
-    `      <span class="v">"date"</span><span class="pn">:</span> <span class="s">"Jan 2025 – Jun 2025"</span><span class="pn">,</span>`,
-    `      <span class="v">"note"</span><span class="pn">:</span> <span class="s">"Taught Python/C++ &amp; data structures; led office hours."</span>`,
-    `    <span class="pn">}</span>`,
-    `  <span class="pn">]</span>`,
-    `<span class="pn">}</span>`,
-  ]},
-
-  'honors.yaml': { lang: 'YAML', icon: 'yaml', name: 'honors.yaml', lines: [
-    `<span class="c"># honors.yaml — honors &amp; awards</span>`,
-    `<span class="v">honors</span><span class="pn">:</span>`,
-    `  <span class="pn">-</span> <span class="v">title</span><span class="pn">:</span> Rabi Scholarship`,
-    `    <span class="v">detail</span><span class="pn">:</span> <span class="s">Columbia University · Top 10 of ~60,000 applicants</span>`,
-    `  <span class="pn">-</span> <span class="v">title</span><span class="pn">:</span> King's Scholar &amp; Valedictorian`,
-    `    <span class="v">detail</span><span class="pn">:</span> <span class="s">Eton College · Gladstone Memorial Prize</span>`,
-    `  <span class="pn">-</span> <span class="v">title</span><span class="pn">:</span> UK Chemistry Olympiad`,
-    `    <span class="v">detail</span><span class="pn">:</span> <span class="s">Top 4 nationally</span>`,
-    `  <span class="pn">-</span> <span class="v">title</span><span class="pn">:</span> British Mathematical Olympiad`,
-    `    <span class="v">detail</span><span class="pn">:</span> <span class="s">Top 50 nationally, twice</span>`,
-    `  <span class="pn">-</span> <span class="v">title</span><span class="pn">:</span> World Science Scholars`,
-    `    <span class="v">detail</span><span class="pn">:</span> <span class="s">1 of 48 selected globally</span>`,
-    `  <span class="pn">-</span> <span class="v">title</span><span class="pn">:</span> Youth Delegate, COP27`,
-    `    <span class="v">detail</span><span class="pn">:</span> <span class="s">Climate policy advocacy at the UN Climate Conference</span>`,
-  ]},
-};
-
-/* File-type icons (small SVG documents tinted per type) */
-const ICON_COLORS = { md:'#519aba', py:'#ffd43b', json:'#cbcb41', bib:'#a074c4', yaml:'#cb4b16', def:'#c5c5c5' };
-function fileIcon(type) {
-  const col = ICON_COLORS[type] || ICON_COLORS.def;
-  return `<svg class="ficon" viewBox="0 0 24 24" fill="none" stroke="${col}" stroke-width="1.6"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>`;
-}
-
-/* ===== Explorer tree ===== */
-const TREE = [
-  { type:'file', key:'README.md' },
-  { type:'file', key:'about.md' },
-  { type:'folder', name:'research', open:true, children:[ { type:'file', key:'research/publications.bib' } ] },
-  { type:'file', key:'projects.py' },
-  { type:'file', key:'experience.json' },
-  { type:'file', key:'honors.yaml' },
-];
-
-const treeEl = document.getElementById('tree');
-function buildTree() {
-  let html = '';
-  TREE.forEach(node => {
-    if (node.type === 'file') {
-      const f = FILES[node.key];
-      html += `<div class="tree-item tree-file" data-file="${node.key}" style="padding-left:24px">
-        <span class="twist"></span>${fileIcon(f.icon)}<span>${f.name}</span></div>`;
-    } else {
-      html += `<div class="tree-item folder-row" data-folder="${node.name}" style="padding-left:8px">
-        <span class="twist">${node.open ? '⌄' : '›'}</span>
-        <svg class="ficon" viewBox="0 0 24 24" fill="#c09553" stroke="none"><path d="M3 6h6l2 2h10v11H3z"/></svg>
-        <span>${node.name}</span></div>`;
-      html += `<div class="tree-children ${node.open ? '' : 'collapsed'}" data-children="${node.name}">`;
-      node.children.forEach(c => {
-        const f = FILES[c.key];
-        html += `<div class="tree-item tree-file" data-file="${c.key}" style="padding-left:42px">
-          <span class="twist"></span>${fileIcon(f.icon)}<span>${f.name}</span></div>`;
-      });
-      html += `</div>`;
-    }
-  });
-  treeEl.innerHTML = html;
-}
-buildTree();
-
-/* ===== Tabs + editor ===== */
-let openTabs = ['README.md', 'about.md'];
-let active = 'README.md';
-
-const tabbar = document.getElementById('tabbar');
-const editor = document.getElementById('editor');
-const breadcrumb = document.getElementById('breadcrumb');
-const sbLang = document.getElementById('sbLang');
-const tbFile = document.getElementById('tbFile');
-const editorActions = document.getElementById('editorActions');
-const previewToggle = document.getElementById('previewToggle');
-
-let mdPreview = true; // default to rendered preview; toggle shows source
-
-function renderTabs() {
-  tabbar.innerHTML = openTabs.map(key => {
-    const f = FILES[key];
-    return `<div class="tab ${key === active ? 'active' : ''}" data-tab="${key}">
-      ${fileIcon(f.icon)}<span>${f.name}</span>
-      <span class="tab-close" data-close="${key}">✕</span></div>`;
-  }).join('');
-}
-
-/* ---- tiny Markdown renderer (source highlight + inline-figure preview) ---- */
-function escapeHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
-
-// matches: ![alt](src) | [text](url) | **bold** | `code`
-const INLINE_RE = /!\[([^\]]*)\]\(([^)]+)\)|\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*|`([^`]+)`/g;
-
-function inlineSource(s) {
-  return s.replace(INLINE_RE, (m, ia, isrc, lt, lurl, b, code) => {
-    if (ia !== undefined) return '<span class="pn">![</span><span class="s">' + ia + '</span><span class="pn">](</span><span class="v">' + isrc + '</span><span class="pn">)</span>';
-    if (lt !== undefined) return '<span class="pn">[</span><span class="fn">' + lt + '</span><span class="pn">](</span><span class="v">' + lurl + '</span><span class="pn">)</span>';
-    if (b !== undefined) return '<span class="pn">**</span><span class="md-b">' + b + '</span><span class="pn">**</span>';
-    return '<span class="pn">\`</span><span class="md-code">' + code + '</span><span class="pn">\`</span>';
-  });
-}
-function inlineHtml(s) {
-  return s.replace(INLINE_RE, (m, ia, isrc, lt, lurl, b, code) => {
-    if (ia !== undefined) return '<img src="' + isrc + '" alt="' + ia + '">';
-    if (lt !== undefined) return '<a href="' + lurl + '" target="_blank">' + lt + '</a>';
-    if (b !== undefined) return '<strong>' + b + '</strong>';
-    return '<code>' + code + '</code>';
-  });
-}
-function highlightMarkdown(md) {
-  return md.split('\n').map(raw => {
-    let inner, m;
-    if (raw === '') inner = '&nbsp;';
-    else if (m = raw.match(/^(#{1,6})\s+(.*)$/)) inner = '<span class="hash">' + m[1] + ' </span><span class="md-h">' + inlineSource(escapeHtml(m[2])) + '</span>';
-    else if (m = raw.match(/^(\s*)([-*])\s+(.*)$/)) inner = m[1] + '<span class="md-li">' + m[2] + '</span> ' + inlineSource(escapeHtml(m[3]));
-    else if (m = raw.match(/^>\s?(.*)$/)) inner = '<span class="md-q">&gt; ' + inlineSource(escapeHtml(m[1])) + '</span>';
-    else inner = inlineSource(escapeHtml(raw));
-    return '<div class="line"><span class="lc">' + inner + '</span></div>';
-  }).join('');
-}
-function renderMarkdownPreview(md) {
-  let html = '', para = [], list = [], quote = [];
-  const flushP = () => { if (para.length) { html += '<p>' + inlineHtml(escapeHtml(para.join(' '))) + '</p>'; para = []; } };
-  const flushL = () => { if (list.length) { html += '<ul>' + list.map(li => '<li>' + inlineHtml(escapeHtml(li)) + '</li>').join('') + '</ul>'; list = []; } };
-  const flushQ = () => { if (quote.length) { html += '<blockquote>' + inlineHtml(escapeHtml(quote.join(' '))) + '</blockquote>'; quote = []; } };
-  const flushAll = () => { flushP(); flushL(); flushQ(); };
-  md.split('\n').forEach(raw => {
-    let m;
-    if (raw.trim() === '') { flushAll(); return; }
-    if (m = raw.match(/^\s*!\[([^\]]*)\]\(([^)]+)\)\s*$/)) {
-      flushAll();
-      const alt = escapeHtml(m[1]), src = escapeHtml(m[2]);
-      html += '<figure><img src="' + src + '" alt="' + alt + '">' + (alt ? '<figcaption>' + alt + '</figcaption>' : '') + '</figure>';
-    } else if (m = raw.match(/^(#{1,6})\s+(.*)$/)) {
-      flushAll(); const lvl = m[1].length;
-      html += '<h' + lvl + '>' + inlineHtml(escapeHtml(m[2])) + '</h' + lvl + '>';
-    } else if (m = raw.match(/^\s*[-*]\s+(.*)$/)) { flushP(); flushQ(); list.push(m[1]); }
-    else if (m = raw.match(/^>\s?(.*)$/)) { flushP(); flushL(); quote.push(m[1]); }
-    else { flushL(); flushQ(); para.push(raw); }
-  });
-  flushAll();
-  return html;
-}
-
-function updatePreviewBtn() {
-  const f = FILES[active];
-  if (f && f.md) {
-    editorActions.style.display = 'flex';
-    previewToggle.classList.toggle('active', mdPreview);
-    previewToggle.querySelector('.ea-lbl').textContent = mdPreview ? 'Source' : 'Preview';
-  } else {
-    editorActions.style.display = 'none';
-  }
-}
-
-function renderEditor() {
-  const f = FILES[active];
-  updatePreviewBtn();
-  if (!f) { editor.innerHTML = ''; breadcrumb.innerHTML = ''; tbFile.textContent = ''; return; }
-  if (f.md && mdPreview) editor.innerHTML = '<div class="md-preview">' + renderMarkdownPreview(f.md) + '</div>';
-  else if (f.md) editor.innerHTML = '<div class="code">' + highlightMarkdown(f.md) + '</div>';
-  else editor.innerHTML = '<div class="code">' + f.lines.map(l => '<div class="line"><span class="lc">' + (l || '&nbsp;') + '</span></div>').join('') + '</div>';
-  editor.scrollTop = 0;
-  const parts = active.split('/');
-  breadcrumb.innerHTML = '<span>portfolio</span>' + parts.map(p => '<span class="sep">›</span> <span>' + p + '</span>').join(' ');
-  sbLang.textContent = f.lang;
-  tbFile.textContent = f.name + (f.md && mdPreview ? ' — Preview' : '');
-  document.querySelectorAll('.tree-file').forEach(t => t.classList.toggle('active', t.dataset.file === active));
-}
-
-previewToggle.addEventListener('click', () => { mdPreview = !mdPreview; renderEditor(); });
-
-function openFile(key) {
-  if (!FILES[key]) return;
-  if (!openTabs.includes(key)) openTabs.push(key);
-  active = key;
-  renderTabs(); renderEditor();
-  document.body.classList.remove('sidebar-open'); // close drawer on mobile
-}
-
-function closeTab(key) {
-  const i = openTabs.indexOf(key);
-  if (i === -1) return;
-  openTabs.splice(i, 1);
-  if (active === key) active = openTabs[Math.max(0, i - 1)] || null;
-  renderTabs(); renderEditor();
-}
-
-/* ===== Events ===== */
-treeEl.addEventListener('click', e => {
-  const file = e.target.closest('[data-file]');
-  if (file) { openFile(file.dataset.file); return; }
-  const folder = e.target.closest('[data-folder]');
-  if (folder) {
-    const name = folder.dataset.folder;
-    const kids = treeEl.querySelector(`[data-children="${name}"]`);
-    const tw = folder.querySelector('.twist');
-    const collapsed = kids.classList.toggle('collapsed');
-    tw.textContent = collapsed ? '›' : '⌄';
-  }
-});
-
-tabbar.addEventListener('click', e => {
-  const close = e.target.closest('[data-close]');
-  if (close) { e.stopPropagation(); closeTab(close.dataset.close); return; }
-  const tab = e.target.closest('[data-tab]');
-  if (tab) openFile(tab.dataset.tab);
-});
-
-document.getElementById('rootToggle').addEventListener('click', function() {
-  const chev = this.querySelector('.chev');
-  const collapsed = chev.classList.toggle('collapsed');
-  treeEl.style.display = collapsed ? 'none' : 'block';
-});
-
-/* mobile sidebar */
-document.getElementById('menuBtn').addEventListener('click', () => document.body.classList.toggle('sidebar-open'));
-document.getElementById('sbOverlay').addEventListener('click', () => document.body.classList.remove('sidebar-open'));
-
-/* ===== Claude panel ===== */
-const CLAUDE_QA = [
-  { keys:['work','research','interest','rl','reinforcement','safety','align','do'],
-    a:`Abraham focuses on <b>reinforcement learning</b>, <b>post-training</b> (RLHF / RLAIF), and <b>AI safety &amp; alignment</b> — steering increasingly capable models toward reliable, human-aligned behavior. He's a Math &amp; CS sophomore at Stanford.` },
-  { keys:['project','built','build','maestro','cryovit','agent','aqi'],
-    a:`A few highlights: <b>Maestro</b> (multimodal AI music coach, TreeHacks), a <b>Prediction Market Agent</b> (top-5 at SF Tech Week), <b>CryoViT</b> (vision transformers for cryo-EM in the Chiu Lab), and <b>AQI Forecasting</b> (LSTM/GNN/CNN, CS229). Open <i>projects.py</i> to see them all.` },
-  { keys:['background','eton','stanford','hong kong','school','study','about'],
-    a:`Abraham grew up in Hong Kong and attended Eton College as a King's Scholar, graduating as valedictorian. He's now at Stanford studying Mathematics &amp; Computer Science.` },
-  { keys:['contact','reach','email','hire','connect','linkedin','github'],
-    a:`You can email <b>ayeung1616@gmail.com</b>, or find him on GitHub (Abraham-y) and LinkedIn — the links are in the blue status bar at the bottom.` },
-  { keys:['publication','paper','preprint','arxiv','cot','probe','chain'],
-    a:`Two recent preprints (Stanford, 2026): <b>"Math Distillation Decouples Chain-of-Thought from Behavior on a Reasoning Model"</b> and <b>"Reading vs. Writing a Near-Oracle Internal Verifier"</b> (on RL design and safe correctness probes). Open <i>research/publications.bib</i> for the PDFs and code.` },
-];
-const DEFAULT_A = `I'm a little static assistant for Abraham's site. Try asking about his <b>research</b>, <b>projects</b>, <b>background</b>, or <b>how to reach him</b> — or tap a suggestion below.`;
-const SUGGESTIONS = ['What does Abraham work on?', 'Notable projects?', "What's his background?", 'How can I reach him?'];
-
-/* Set this to your deployed Cloudflare Worker URL to enable the live open-source
-   model. Leave it as '' and the panel falls back to the canned answers below.
-   The same fallback also kicks in automatically if the Worker errors or is down. */
+/* Set this to your deployed Cloudflare Worker URL (see worker/README.md) to enable
+   the live model. With '' the box falls back to canned answers, and it also
+   falls back automatically if the Worker errors. */
 const CHAT_ENDPOINT = '';
 
-const cpMessages = document.getElementById('cpMessages');
-const cpSuggest = document.getElementById('cpSuggest');
-let claudeInit = false;
-let chatHistory = []; // {role:'user'|'assistant', content} sent to the Worker for context
+const QA = [
+  { keys:['work','research','interest','rl','reinforcement','safety','align','monitor','cot','post-training'],
+    a:`Abraham works on <b>reinforcement learning</b> and <b>post-training</b>, with a focus on AI safety: chain-of-thought monitorability, and how RL design decides whether internal signals stay trustworthy. Two 2026 preprints are in the research section.` },
+  { keys:['project','built','build','maestro','cryovit','agent','aqi','rollout'],
+    a:`Highlights: <b>Maestro</b> (AI music coach, TreeHacks), a <b>prediction market agent</b> (top 5 at SF Tech Week), <b>CryoViT</b> (vision transformers for cryo-EM), and <b>AQI forecasting</b> (CS229). See the rollouts section.` },
+  { keys:['background','eton','stanford','hong kong','school','study','about','who'],
+    a:`Abraham grew up in Hong Kong, was a King's Scholar and valedictorian at Eton College, and is now a Math and CS sophomore at Stanford.` },
+  { keys:['contact','reach','email','hire','connect','linkedin','github'],
+    a:`Email <b>ayeung16@stanford.edu</b>, or find him on GitHub (Abraham-y) and LinkedIn. Links are at the top of the page.` },
+  { keys:['paper','preprint','arxiv','probe','chain','distill','publication'],
+    a:`Two preprints from June 2026: <b>Math Distillation Decouples Chain-of-Thought from Behavior on a Reasoning Model</b>, and <b>Reading vs. Writing a Near-Oracle Internal Verifier</b> (with Anagha Ramaswamy). PDFs are in the research section.` },
+];
+const DEFAULT_A = `I'm a small static fallback for this site. Try asking about Abraham's <b>research</b>, <b>projects</b>, <b>background</b>, or <b>how to reach him</b>.`;
+const SUGGESTIONS = ['What does Abraham work on?', 'Summarize the papers', "What's his background?", 'How can I reach him?'];
 
-function addMsg(who, html) {
+const log = document.getElementById('chatLog');
+const chips = document.getElementById('chips');
+let history = [];
+
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function fmt(t) { return esc(t).replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\n{2,}/g,'<br><br>').replace(/\n/g,'<br>'); }
+function strip(h) { const d = document.createElement('div'); d.innerHTML = h; return d.textContent || ''; }
+function add(who, html) {
   const d = document.createElement('div');
-  d.className = 'msg ' + who;
-  d.innerHTML = `<div class="who">${who === 'user' ? 'You' : '✦ Claude'}</div><div class="bubble">${html}</div>`;
-  cpMessages.appendChild(d);
-  cpMessages.scrollTop = cpMessages.scrollHeight;
-  return d;
+  d.className = 'msg ' + who; d.innerHTML = html;
+  log.appendChild(d); log.scrollTop = log.scrollHeight; return d;
 }
-function addTyping() {
-  const d = addMsg('bot', `<span class="typing"><span></span><span></span><span></span></span>`);
-  d.dataset.typing = '1';
-  return d;
-}
-function stripHtml(html) { const t = document.createElement('div'); t.innerHTML = html; return t.textContent || ''; }
-function fmtReply(text) { return inlineHtml(escapeHtml(text)).replace(/\n{2,}/g, '<br><br>').replace(/\n/g, '<br>'); }
-
-function answerFor(text) {
-  const t = text.toLowerCase();
-  for (const qa of CLAUDE_QA) if (qa.keys.some(k => t.includes(k))) return qa.a;
+function canned(t) {
+  t = t.toLowerCase();
+  for (const q of QA) if (q.keys.some(k => t.includes(k))) return q.a;
   return DEFAULT_A;
 }
-
 async function ask(text) {
-  addMsg('user', text);
-  chatHistory.push({ role: 'user', content: text });
-
-  // No endpoint configured → use canned answers (keyword match).
+  add('user', esc(text));
+  history.push({ role:'user', content:text });
+  chips.innerHTML = '';
   if (!CHAT_ENDPOINT) {
-    setTimeout(() => {
-      const a = answerFor(text);
-      addMsg('bot', a);
-      chatHistory.push({ role: 'assistant', content: stripHtml(a) });
-    }, 300);
+    setTimeout(() => { const a = canned(text); add('bot', a); history.push({ role:'assistant', content:strip(a) }); }, 300);
     return;
   }
-
-  const typing = addTyping();
+  const typing = add('bot', '<span class="typing"><span></span><span></span><span></span></span>');
   try {
-    const r = await fetch(CHAT_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: chatHistory.slice(-6) }),
-    });
+    const r = await fetch(CHAT_ENDPOINT, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ messages: history.slice(-6) }) });
     const data = await r.json();
     typing.remove();
-    if (r.ok && data.reply) {
-      addMsg('bot', fmtReply(data.reply));
-      chatHistory.push({ role: 'assistant', content: data.reply });
-    } else { throw new Error(data.error || 'no reply'); }
+    if (r.ok && data.reply) { add('bot', fmt(data.reply)); history.push({ role:'assistant', content:data.reply }); }
+    else throw new Error(data.error || 'no reply');
   } catch (e) {
     typing.remove();
-    const a = answerFor(text); // graceful fallback to canned answer
-    addMsg('bot', a);
-    chatHistory.push({ role: 'assistant', content: stripHtml(a) });
+    const a = canned(text); add('bot', a); history.push({ role:'assistant', content:strip(a) });
   }
 }
-function initClaude() {
-  if (claudeInit) return; claudeInit = true;
-  addMsg('bot', `Hi! 👋 I'm a quick assistant for <b>Abraham's</b> site. Ask me anything, or pick a question below.`);
-  cpSuggest.innerHTML = SUGGESTIONS.map(s => `<span class="chip">${s}</span>`).join('');
-  cpSuggest.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => ask(c.textContent)));
-}
-function toggleClaude(open) {
-  const isOpen = open !== undefined ? open : !document.body.classList.contains('claude-open');
-  document.body.classList.toggle('claude-open', isOpen);
-  if (isOpen) { initClaude(); document.getElementById('cpInput').focus(); }
-}
-document.getElementById('claudeBtn').addEventListener('click', () => toggleClaude());
-document.getElementById('cpClose').addEventListener('click', () => toggleClaude(false));
-document.getElementById('cpForm').addEventListener('submit', e => {
+add('bot', `Hi. I'm a small model that has read Abraham's bio. Ask me something, or pick a question.`);
+chips.innerHTML = SUGGESTIONS.map(s => `<button type="button" class="chip">${s}</button>`).join('');
+chips.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => ask(c.textContent)));
+document.getElementById('chatForm').addEventListener('submit', e => {
   e.preventDefault();
-  const inp = document.getElementById('cpInput');
-  const v = inp.value.trim();
-  if (!v) return;
+  const inp = document.getElementById('chatInput');
+  const v = inp.value.trim(); if (!v) return;
   ask(v); inp.value = '';
 });
-
-/* ===== init ===== */
-renderTabs();
-renderEditor();
 </script>
 </body>
 </html>
