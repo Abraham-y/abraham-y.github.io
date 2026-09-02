@@ -43,8 +43,8 @@
   <section id="policy">
     <p class="eyebrow"><span class="em">🤖</span>policy</p>
     <h2>About me</h2>
-    <p>I'm a sophomore at Stanford studying Mathematics and Computer Science. I work on reinforcement learning and post-training, with a focus on what those methods do to a model's safety properties: whether its chain of thought stays honest, whether internal signals stay trustworthy once you train on them, and which design choices quietly trade oversight for capability. This fall I'm joining <a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a> part-time as an AI safety research intern, after a summer on the Data Platform team at Databricks.</p>
-    <p>I grew up in Hong Kong and went to Eton College as a King's Scholar, graduating as valedictorian. Outside research I'm a YC Fellow, a TreeHacks Summer Fellow and organizer, and Director of Hackspace at BASES. I sing tenor with the Mendicants, Stanford's oldest a cappella group. I speak English, Cantonese, and Mandarin natively, plus some German and beginner Japanese.</p>
+    <p>I'm a junior at Stanford studying Mathematics and Computer Science. I work on reinforcement learning and post-training, with a focus on what those methods do to a model's safety properties: whether its chain of thought stays honest, whether internal signals stay trustworthy once you train on them, and which design choices quietly trade oversight for capability. This fall I'm joining <a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a> part-time as an AI safety research intern, after a summer on the Data Platform team at Databricks.</p>
+    <p>I grew up in Hong Kong and went to Eton College as a King's Scholar, graduating as valedictorian. Outside research I'm a YC Fellow, a TreeHacks Summer Fellow and organizer, and ex-Director of Hackspace at BASES. I sing baritone with the Mendicants, Stanford's oldest a cappella group. I speak English, Cantonese, and Mandarin natively, plus some German and beginner Japanese.</p>
   </section>
 
   <section id="reward">
@@ -133,7 +133,7 @@
   <section id="ask">
     <p class="eyebrow"><span class="em">🤖</span>inference</p>
     <h2>Ask my post-trained self</h2>
-    <p class="lede small">A small open-weights model with a short bio in its context. Ask it about my work. It can be wrong, so trust the sections above over it.</p>
+    <p class="lede small" id="askLede">A small open-weights model with a short bio in its context. Ask it about my work. It can be wrong, so trust the sections above over it.</p>
     <div class="chat">
       <div class="chat-log" id="chatLog"></div>
       <div class="chips" id="chips"></div>
@@ -159,7 +159,7 @@ const QA = [
   { keys:['project','built','build','maestro','agent','aqi','rollout','miner','polymarket'],
     a:`Highlights: a <b>research frontier miner</b> agent (in progress), a <b>prediction markets agent</b> (top 5 of 100+ teams), a multi-agent causal modeling system at the Bridgewater AI hackathon, <b>Maestro</b> (TreeHacks runner-up), and AQI forecasting for CS 229.` },
   { keys:['background','eton','stanford','hong kong','school','study','about','who'],
-    a:`Abraham grew up in Hong Kong, was a King's Scholar and valedictorian at Eton College, and is now a Math and CS sophomore at Stanford. He's a YC Fellow and sings with the Mendicants.` },
+    a:`Abraham grew up in Hong Kong, was a King's Scholar and valedictorian at Eton College, and is now a Math and CS junior at Stanford. He's a YC Fellow and sings baritone with the Mendicants.` },
   { keys:['contact','reach','email','hire','connect','linkedin','github','cv','resume'],
     a:`Email <b>ayeung16@stanford.edu</b>, or find him on GitHub (Abraham-y) and LinkedIn. His CV and links are at the top of the page.` },
   { keys:['paper','preprint','probe','chain','distill','publication','alembic','autoencoder','sae','faithful'],
@@ -168,6 +168,7 @@ const QA = [
 const DEFAULT_A = `I'm a small static fallback for this site. Try asking about Abraham's <b>research</b>, <b>projects</b>, <b>background</b>, or <b>how to reach him</b>.`;
 const SUGGESTIONS = ['What does Abraham work on?', 'Summarize the papers', "What's his background?", 'How can I reach him?'];
 
+if (!CHAT_ENDPOINT) document.getElementById('askLede').textContent = 'Placeholder for now: a keyword matcher with a few canned answers, until the open-weights model behind it is deployed. Trust the sections above.';
 const log = document.getElementById('chatLog');
 const chips = document.getElementById('chips');
 let history = [];
