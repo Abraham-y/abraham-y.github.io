@@ -13,9 +13,9 @@
  * personal site. The history cap + max_tokens below also bound usage.
  */
 
-// Open instruct model. Upgrade to '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
+// Open instruct model. Cheaper fallback: '@cf/meta/llama-3.1-8b-instruct-fp8'
 // for stronger answers (uses more of the free allowance per call).
-const MODEL = '@cf/meta/llama-3.1-8b-instruct';
+const MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 
 const SYSTEM_PROMPT = `You are a friendly, concise assistant embedded on the personal website of Abraham Yeung. Answer visitors' questions about Abraham only, in a warm and professional tone. If asked something unrelated to Abraham, gently redirect to his work. Keep replies under ~120 words and never invent facts.
 
@@ -82,6 +82,7 @@ export default {
       if (!reply) return json({ error: 'empty reply' }, 502, cors);
       return json({ reply }, 200, cors);
     } catch (e) {
+      console.error('ai_error', e && e.message);
       return json({ error: 'ai_error' }, 500, cors);
     }
   },

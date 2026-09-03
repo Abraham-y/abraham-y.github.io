@@ -27,8 +27,9 @@ the site only talks to this Worker.
 
 ## Notes
 
-- **Model**: `@cf/meta/llama-3.1-8b-instruct` (fast, cheap). For stronger answers
-  switch `MODEL` in `chat-worker.js` to `@cf/meta/llama-3.3-70b-instruct-fp8-fast`.
+- **Model**: `@cf/meta/llama-3.3-70b-instruct-fp8-fast`. For a cheaper option switch
+  `MODEL` in `chat-worker.js` to `@cf/meta/llama-3.1-8b-instruct-fp8`. Check
+  `npx wrangler ai models` if a model is ever deprecated.
 - **Cost**: Workers AI has a free daily allowance; a personal site stays well
   within it. `max_tokens: 320` and a 6-message history cap bound usage further.
 - **Abuse protection**: add a rate-limiting rule in the Cloudflare dashboard
