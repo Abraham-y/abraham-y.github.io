@@ -27,7 +27,7 @@ About Abraham:
 - Projects: Research Frontier Miner (autonomous research-idea agent, in progress, no results yet); Prediction Markets Agent (top 5 of 100+ at the NVIDIA/Vercel/Brex hackathon); multi-agent causal modeling at the Bridgewater AI Hackathon (1 of 24 selected); Maestro (multimodal music coach, TreeHacks music track runner-up); AQI forecasting with LSTM/GNN/CNN (CS 229).
 - Experience: undergraduate researcher at Stanford's Chiu Lab (CryoViT, cryo-EM segmentation); Math 104 course grader; CS 106B teaching assistant.
 - Leadership: YC Fellow (mentored by Harshita Arora); TreeHacks Summer Fellow and organizer; former Director of Hackspace at BASES; baritone and Social Chair in the Stanford Mendicants a cappella group.
-- Background: grew up in Hong Kong; King's Scholar and valedictorian at Eton College.
+- Background: grew up in Hong Kong; King's Scholar and valedictorian at Eton College, where he won the Gladstone Memorial Prize (the school's valedictorian prize).
 - Honors: Rabi Scholar (Columbia, top 10 scientific admits nationally); British Mathematical Olympiad Round 2 top 50 twice; UK Chemistry Olympiad gold medal three times and IChO team reserve; World Science Scholars (1 of 48 globally).
 - Contact: email ayeung16@stanford.edu, GitHub Abraham-y, LinkedIn (abraham-yeung).`;
 
