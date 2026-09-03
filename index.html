@@ -61,31 +61,7 @@
   <section id="updates">
     <p class="eyebrow"><span class="em grad">∇</span>gradient updates</p>
     <h2>Research</h2>
-    <p class="lede">Two preprints, two workshop papers under review, and a proposal I'm working towards.</p>
-
-    <div class="paper">
-      <h3>Math Distillation Decouples Chain-of-Thought from Behavior on a Reasoning Model</h3>
-      <div class="meta">Abraham Yeung · preprint, June 2026 · <a href="cot-monitorability.pdf" target="_blank">PDF</a></div>
-      <p>After math chain-of-thought fine-tuning, a planted cue moves the model's answers exactly as much as before, but the CoT stops mentioning it, with acknowledgment falling from 25% to 3% while accuracy improves. The behavior stays, the confession disappears, and a capability-only check would pass the model. Pre-registered, with bootstrap confidence intervals.</p>
-    </div>
-
-    <div class="paper">
-      <h3>Reading vs. Writing a Near-Oracle Internal Verifier: How RL Design Determines Whether a Correctness Probe Is Safe</h3>
-      <div class="meta">Abraham Yeung, Anagha Ramaswamy · preprint, June 2026 · <a href="read-write-probe.pdf" target="_blank">PDF</a><a href="https://github.com/Abraham-y/reader-writer-probe-rl" target="_blank" rel="noopener">Code</a></div>
-      <p>Outcome RL grows a near-perfect linear correctness probe inside a small model. Used read-only, as a best-of-n selector, it gives large gains. Used as the reward, it Goodharts badly. The less policy-gradient access the probe gets, the safer it is, which bounds how interpretability signals should be wired into RL.</p>
-    </div>
-
-    <div class="paper">
-      <h3>Alembic: Auditing Cue-Injection Faithfulness Metrics</h3>
-      <div class="meta">2026 · workshop paper under review</div>
-      <p>The most-cited chain-of-thought faithfulness measurement inherits its headline conclusion, that smaller models are less faithful, from size-dependent error terms. A content-free placebo insertion reproduces up to 85% of the measured cue influence at the smallest scale. Replicated in an independent run, with up to half the effect traced to an unset serving default and to task-family sampling.</p>
-    </div>
-
-    <div class="paper">
-      <h3>Activation Cache Compression for Sparse Autoencoder Training</h3>
-      <div class="meta">2026 · workshop paper under review</div>
-      <p>How aggressively can cached LLM activations be compressed before sparse autoencoders retrained on them diverge, and how do you measure that validly? About 170 GPU-hours of pre-registered experiments on a 97-test library of codecs, SAE trainers, and streaming fidelity metrics. Every published number regenerates from committed artifacts.</p>
-    </div>
+    <p class="lede">Papers are under review and will appear here once they are public. For now, a proposal I'm working towards.</p>
 
     <div class="note">
       <div class="lbl">research note</div>
@@ -163,10 +139,10 @@ const QA = [
   { keys:['contact','reach','email','hire','connect','linkedin','github','cv','resume'],
     a:`Email <b>ayeung16@stanford.edu</b>, or find him on GitHub (Abraham-y) and LinkedIn. His CV and links are at the top of the page.` },
   { keys:['paper','preprint','probe','chain','distill','publication','alembic','autoencoder','sae','faithful'],
-    a:`Two preprints from June 2026: <b>Math Distillation Decouples Chain-of-Thought from Behavior on a Reasoning Model</b>, and <b>Reading vs. Writing a Near-Oracle Internal Verifier</b> (with Anagha Ramaswamy). Two more workshop papers are under review: one auditing cue-injection faithfulness metrics, one on compressing activation caches for sparse autoencoder training.` },
+    a:`Abraham's papers are under review and not public yet. His research is on chain-of-thought monitorability, probing, and how RL design affects whether internal signals stay trustworthy. There's a research note on the page about confidence rewards and monitorability.` },
 ];
 const DEFAULT_A = `I'm a small static fallback for this site. Try asking about Abraham's <b>research</b>, <b>projects</b>, <b>background</b>, or <b>how to reach him</b>.`;
-const SUGGESTIONS = ['What does Abraham work on?', 'Summarize the papers', "What's his background?", 'How can I reach him?'];
+const SUGGESTIONS = ['What does Abraham work on?', 'What are the projects?', "What's his background?", 'How can I reach him?'];
 
 if (!CHAT_ENDPOINT) document.getElementById('askLede').textContent = 'Placeholder for now: a keyword matcher with a few canned answers, until the open-weights model behind it is deployed. Trust the sections above.';
 const log = document.getElementById('chatLog');
