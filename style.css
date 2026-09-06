@@ -88,6 +88,9 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
 .arrow { align-self: center; color: var(--fg-3); flex: 0 0 auto; }
 .voice { font-family: var(--mono); font-size: 13px; color: var(--fg-2); margin: 0; text-align: center; }
 .voice .k { color: var(--fg-3); }
+.more { font-family: var(--mono); font-size: 12px; text-align: center; margin: 10px 0 0; display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; }
+.more a { color: var(--fg-3); }
+.more a:hover { color: var(--accent); text-decoration: none; }
 
 .logo { width: 16px; height: 16px; vertical-align: -3px; margin-right: 7px; border-radius: 3px; object-fit: contain; }
 section p .logo { width: 15px; height: 15px; vertical-align: -2px; margin-right: 4px; }
