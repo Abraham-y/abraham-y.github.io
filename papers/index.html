@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papers · Abraham Yeung</title>
+<meta name="description" content="Papers under review by Abraham Yeung on chain-of-thought faithfulness metrics, monitors under RL optimization, and activation-cache compression for SAE training.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥕</text></svg>">
+</head>
+<body>
+<main>
+  <p class="back"><a href="../">← abrahamyeung.com</a></p>
+  <p class="eyebrow" style="margin-top:28px"><span class="em grad">∇</span>gradient updates</p>
+  <h1>Papers</h1>
+  <p class="lede">Three papers under review, all from 2026. Venues are not listed while reviews are pending. Each links to the de-anonymized PDF.</p>
+
+  <div class="paper">
+    <h3><a href="cot-faithfulness-judges.pdf" target="_blank">How Valid are Metrics of Chain of Thought Faithfulness with LLM Judges?</a></h3>
+    <div class="meta">Abraham Yeung · workshop paper under review · <a href="cot-faithfulness-judges.pdf" target="_blank">PDF</a></div>
+    <p>Cue injection is the standard way to measure whether a model's chain of thought reflects what drove its answer: plant a false hint, then check whether the answer moves and whether the CoT mentions the hint. Across four Qwen 2.5 sizes, a placebo with no false answer changes the smallest model's answer on 21 to 27 percent of questions, which is 85 to 94 percent of the effect of a real cue. Two things that should not matter, decoding parameters and the family of questions asked, move the result substantially, and an LLM judge re-scoring identical outputs disagrees with itself. The metric's headline conclusion, that smaller models are less faithful, inherits size-dependent error terms.</p>
+  </div>
+
+  <div class="paper">
+    <h3><a href="monitor-accuracy-train-against-it.pdf" target="_blank">What Happens to a Monitor's Accuracy When You Train Against It</a></h3>
+    <div class="meta">Abraham Yeung, Anagha Ramaswamy · under review · <a href="monitor-accuracy-train-against-it.pdf" target="_blank">PDF</a></div>
+    <p>A linear probe on a model's hidden states predicts whether its next answer will be correct, and does so well on held-out data. Used as the reward for reinforcement learning, it drives true accuracy down by 31 percentage points, and the probe's own accuracy, scored at every checkpoint on fresh answers, does not register the change for about 40 training steps. An LLM judge scoring the same run shows the same lag. Accuracy is a property of a classifier and a population together, and deploying the monitor as a reward is what moves the population. A monitor built only from text features of the answer scores higher than the probe as a monitor and, as a reward, drives accuracy to zero while the answers stay well-formed. One statistic, the share of answers above a threshold fixed at the start, registers the change early and without ground truth.</p>
+  </div>
+
+  <div class="paper">
+    <h3><a href="activation-cache-compression.pdf" target="_blank">How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training</a></h3>
+    <div class="meta">Abraham Yeung · workshop paper under review · <a href="activation-cache-compression.pdf" target="_blank">PDF</a></div>
+    <p>Training a sparse autoencoder needs a large cache of model activations, and compressing that cache changes which features the SAE learns. The paper shows that the obvious measurement is not meaningful on its own: retraining on a cache with one value in a million perturbed by the smallest fp32 step keeps only 70 percent of features, while changing the random seed keeps 23 percent. So it calibrates each site instead, with retraining on identical bytes as the ceiling and a reseed as the floor, and measures every codec against that. On GPT-2 small and Pythia-1.4B, naive per-token int4 loses more features than a reseed, standardizing channels before quantizing brings int4 back above the floor at the same file size, and a bf16 forward pass loses slightly more than rotated 8-bit storage. About 170 GPU-hours of pre-registered experiments, with every number regenerating from committed artifacts.</p>
+  </div>
+
+  <footer>Abraham Yeung · <a href="mailto:ayeung16@stanford.edu">ayeung16@stanford.edu</a></footer>
+</main>
+</body>
+</html>
