@@ -62,7 +62,7 @@
   <section id="updates">
     <p class="eyebrow"><span class="em grad">∇</span>gradient updates</p>
     <h2>Research</h2>
-    <p class="lede">Three papers are under review. Titles, summaries, and PDFs are on the <a href="papers/">papers page</a>. Venues will be added once decisions are out.</p>
+    <p class="lede">Four papers are under review. Titles, summaries, and PDFs are on the <a href="papers/">papers page</a>. Venues will be added once decisions are out.</p>
 
   </section>
 
@@ -74,6 +74,8 @@
       <div><b>Prediction Markets Agent</b><span class="tag">markets · top 5 of 100+</span><p>Agent that evaluates live Polymarket prices and flags mispriced contracts from incoming information and microstructure signals. Finalist at the NVIDIA, Vercel, and Brex hackathon.</p></div>
       <div><b>Multi-Agent Causal Modeling</b><span class="tag"><img class="logo" src="figures/logos/bridgewater.png" alt="">agents · <a href="https://www.bridgewater.com/" target="_blank" rel="noopener">Bridgewater</a> AI Hackathon</span><p>Selected as 1 of 24. A multi-agent system that maps causal graphs for policy-impact scenarios by decomposing macro questions into testable sub-claims.</p></div>
       <div><b>Maestro</b><span class="tag"><img class="logo" src="figures/logos/treehacks.png" alt="">ai / music · TreeHacks runner-up</span><p>Multimodal music coach that analyzes instrument audio and video with NVIDIA vision and audio models. <a href="https://devpost.com/software/maestro-n0uqyz" target="_blank" rel="noopener">Devpost</a></p></div>
+      <div><b>gigabpe</b><span class="tag">systems · Rust · PyPI</span><p>BPE tokenizer trainer in Rust with Python bindings. A 32k vocabulary on 12.9 GB of FineWeb in 38 s against 257 s for HuggingFace tokenizers, with every merge byte-identical and a fraction of the memory. <a href="https://github.com/Abraham-y/gigabpe" target="_blank" rel="noopener">GitHub</a></p></div>
+      <div><b>Transformer from scratch</b><span class="tag">systems · CS 336</span><p>A language model built end to end in PyTorch: tokenizer, training loop, FlashAttention as Triton kernels, distributed data parallel with optimizer sharding, profiling, scaling laws, and SFT plus GRPO post-training.</p></div>
       <div><b>AQI Forecasting</b><span class="tag">time series · CS 229</span><p>LSTM, GNN, and CNN models over 545k+ observations for spatiotemporal air quality forecasting, with robustness testing under distribution shift.</p></div>
     </div>
   </section>
@@ -95,7 +97,7 @@
     <p class="eyebrow"><span class="em">📊</span>evals</p>
     <h2>Honors</h2>
     <ul class="evals">
-      <li><b><img class="logo" src="figures/logos/yc.png" alt=""><a href="https://events.ycombinator.com/fellows2026" target="_blank" rel="noopener">YC Fellow</a></b><span>mentored by Harshita Arora</span></li>
+      <li><b><img class="logo" src="figures/logos/yc.png" alt=""><a href="https://events.ycombinator.com/fellows2026" target="_blank" rel="noopener">YC Fellow</a></b><span>Summer 2026 · mentored by Harshita Arora</span></li>
       <li><b><img class="logo" src="figures/logos/treehacks.png" alt=""><a href="https://www.treehacks.com/" target="_blank" rel="noopener">TreeHacks</a> Summer Fellow</b><span>2026</span></li>
       <li><b><img class="logo" src="figures/logos/mats.png" alt=""><a href="https://www.matsprogram.org/" target="_blank" rel="noopener">MATS 11.0</a></b><span>accepted</span></li>
       <li><b><img class="logo" src="figures/logos/columbia.png" alt=""><a href="https://urf.columbia.edu/urf/research/rabi" target="_blank" rel="noopener">Rabi Scholar</a></b><span>Columbia University · top 10 scientific admits nationally</span></li>
@@ -134,13 +136,13 @@ const QA = [
   { keys:['work','research','interest','rl','reinforcement','safety','align','monitor','cot','post-training','redwood'],
     a:`Abraham works on <b>reinforcement learning</b> and <b>post-training</b>, with a focus on AI safety: chain-of-thought monitorability, and how RL design decides whether internal signals stay trustworthy. He's joining Redwood Research part-time this fall. Papers are in the research section.` },
   { keys:['project','built','build','maestro','agent','aqi','rollout','miner','polymarket'],
-    a:`Highlights: a <b>research frontier miner</b> agent (in progress), a <b>prediction markets agent</b> (top 5 of 100+ teams), a multi-agent causal modeling system at the Bridgewater AI hackathon, <b>Maestro</b> (TreeHacks runner-up), and AQI forecasting for CS 229.` },
+    a:`Highlights: <b>gigabpe</b>, a Rust BPE tokenizer trainer on PyPI that is several times faster than HuggingFace's, a <b>research frontier miner</b> agent (in progress), a <b>prediction markets agent</b> (top 5 of 100+ teams), a multi-agent causal modeling system at the Bridgewater AI hackathon, <b>Maestro</b> (TreeHacks runner-up), and AQI forecasting for CS 229.` },
   { keys:['background','eton','stanford','hong kong','school','study','about','who'],
     a:`Abraham grew up in Hong Kong, was a King's Scholar and valedictorian at Eton College, and is now a Math and CS junior at Stanford. He's a YC Fellow and sings baritone with the Mendicants.` },
   { keys:['contact','reach','email','hire','connect','linkedin','github','cv','resume'],
     a:`Email <b>ayeung16@stanford.edu</b>, or find him on GitHub (Abraham-y) and LinkedIn. His CV and links are at the top of the page.` },
   { keys:['paper','preprint','probe','chain','distill','publication','alembic','autoencoder','sae','faithful'],
-    a:`Three papers are under review: one auditing chain-of-thought faithfulness metrics, one on what happens to a monitor's accuracy when you train against it, and one on compressing activation caches for SAE training. Summaries and PDFs are at abrahamyeung.com/papers.` },
+    a:`Four papers are under review: one auditing chain-of-thought faithfulness metrics, one on what happens to a monitor's accuracy when you train against it, one on compressing activation caches for SAE training, and one on using a coding agent to improve lower bounds in coding theory. Summaries and PDFs are at abrahamyeung.com/papers.` },
 ];
 const DEFAULT_A = `I'm a small static fallback for this site. Try asking about Abraham's <b>research</b>, <b>projects</b>, <b>background</b>, or <b>how to reach him</b>.`;
 const SUGGESTIONS = ['What does Abraham work on?', 'What are the projects?', "What's his background?", 'How can I reach him?'];

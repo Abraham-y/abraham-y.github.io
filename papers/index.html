@@ -16,7 +16,7 @@
   <p class="back"><a href="../">← abrahamyeung.com</a></p>
   <p class="eyebrow" style="margin-top:28px"><span class="em grad">∇</span>gradient updates</p>
   <h1>Papers</h1>
-  <p class="lede">Three papers under review, all from 2026. Venues are not listed while reviews are pending. Each links to the de-anonymized PDF.</p>
+  <p class="lede">Four papers under review, all from 2026. Venues are not listed while reviews are pending. Each links to the de-anonymized PDF.</p>
 
   <div class="paper">
     <h3><a href="cot-faithfulness-judges.pdf" target="_blank">How Valid are Metrics of Chain of Thought Faithfulness with LLM Judges?</a></h3>
@@ -34,6 +34,13 @@
     <h3><a href="activation-cache-compression.pdf" target="_blank">How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training</a></h3>
     <div class="meta">Abraham Yeung · workshop paper under review · <a href="activation-cache-compression.pdf" target="_blank">PDF</a></div>
     <p>Training a sparse autoencoder needs a large cache of model activations, and compressing that cache changes which features the SAE learns. The paper shows that the obvious measurement is not meaningful on its own: retraining on a cache with one value in a million perturbed by the smallest fp32 step keeps only 70 percent of features, while changing the random seed keeps 23 percent. So it calibrates each site instead, with retraining on identical bytes as the ceiling and a reseed as the floor, and measures every codec against that. On GPT-2 small and Pythia-1.4B, naive per-token int4 loses more features than a reseed, standardizing channels before quantizing brings int4 back above the floor at the same file size, and a bf16 forward pass loses slightly more than rotated 8-bit storage. About 170 GPU-hours of pre-registered experiments, with every number regenerating from committed artifacts.</p>
+  </div>
+
+
+  <div class="paper">
+    <h3><a href="coding-agents-for-coding-theory.pdf" target="_blank">Coding Agents for Coding Theory</a></h3>
+    <div class="meta">Abraham Yeung · workshop paper under review · <a href="coding-agents-for-coding-theory.pdf" target="_blank">PDF</a></div>
+    <p>Five weeks of an LLM coding agent, run under a protocol that required verifiers to be written and tested before any search, on open cells of the quaternary edit-metric code table. Searching over codes invariant under a prescribed symmetry group improved four published lower bounds, including E4(6,3) from 114, a bound standing since 2012, to 120. The paper gives equal space to how the work went wrong: an intermediate result was written down, never rechecked, and then treated as a fact that ruled out further search, twice. SAT and ILP produced every certificate and no constructions, and the calibration check the paper proposes turns out to be necessary but not sufficient. The bound count has grown since this version was submitted.</p>
   </div>
 
   <footer>Abraham Yeung · <a href="mailto:ayeung16@stanford.edu">ayeung16@stanford.edu</a></footer>
