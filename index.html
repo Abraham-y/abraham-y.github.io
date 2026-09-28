@@ -62,8 +62,12 @@
   <section id="updates">
     <p class="eyebrow"><span class="em grad">∇</span>gradient updates</p>
     <h2>Research</h2>
-    <p class="lede">Four papers are under review. Titles, summaries, and PDFs are on the <a href="papers/">papers page</a>. Venues will be added once decisions are out.</p>
-
+    <p class="lede">One paper is accepted at the <a href="https://mathai-2026.github.io/" target="_blank" rel="noopener">MATH-AI workshop</a> at NeurIPS 2026 and three more are under review. Titles, summaries, and PDFs are on the <a href="papers/">papers page</a>.</p>
+    <div class="paper">
+      <h3><a href="papers/coding-agents-for-coding-theory.pdf" target="_blank">Coding Agents for Coding Theory</a></h3>
+      <div class="meta">Abraham Yeung · <a href="https://mathai-2026.github.io/" target="_blank" rel="noopener">MATH-AI workshop, NeurIPS 2026</a> · <a href="papers/coding-agents-for-coding-theory.pdf" target="_blank">PDF</a></div>
+      <p>Five weeks of an LLM coding agent on open cells of the quaternary edit-metric code table, under a protocol that required verifiers to be written and tested before any search. Searching over codes invariant under a prescribed symmetry group improved four published lower bounds, including E4(6,3) from 114, a bound standing since 2012, to 120. The paper gives equal space to how the work went wrong.</p>
+    </div>
   </section>
 
   <section id="rollouts">
@@ -142,7 +146,7 @@ const QA = [
   { keys:['contact','reach','email','hire','connect','linkedin','github','cv','resume'],
     a:`Email <b>ayeung16@stanford.edu</b>, or find him on GitHub (Abraham-y) and LinkedIn. His CV and links are at the top of the page.` },
   { keys:['paper','preprint','probe','chain','distill','publication','alembic','autoencoder','sae','faithful'],
-    a:`Four papers are under review: one auditing chain-of-thought faithfulness metrics, one on what happens to a monitor's accuracy when you train against it, one on compressing activation caches for SAE training, and one on using a coding agent to improve lower bounds in coding theory. Summaries and PDFs are at abrahamyeung.com/papers.` },
+    a:`One paper, on using a coding agent to improve lower bounds in coding theory, is accepted at the MATH-AI workshop at NeurIPS 2026. Three more are under review: one auditing chain-of-thought faithfulness metrics, one on what happens to a monitor's accuracy when you train against it, and one on compressing activation caches for SAE training. Summaries and PDFs are at abrahamyeung.com/papers.` },
 ];
 const DEFAULT_A = `I'm a small static fallback for this site. Try asking about Abraham's <b>research</b>, <b>projects</b>, <b>background</b>, or <b>how to reach him</b>.`;
 const SUGGESTIONS = ['What does Abraham work on?', 'What are the projects?', "What's his background?", 'How can I reach him?'];
