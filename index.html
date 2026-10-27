@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥕</text></svg>">
 </head>
 <body>
@@ -39,7 +39,7 @@
         <h3><a href="papers/monitor-accuracy-train-against-it.pdf" target="_blank">What Happens to a Monitor's Accuracy When You Train Against It</a></h3>
         <div class="authors"><b>Abraham Yeung</b>, Anagha Ramaswamy</div>
         <div class="meta"><a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026, InterpScience Workshop</a> · <a href="papers/monitor-accuracy-train-against-it.pdf" target="_blank">PDF</a></div>
-        <p>Used as an RL reward, a probe that predicts whether a model's answer is correct (held-out AUROC 0.982) drives true accuracy down 31 points, and the probe's own accuracy takes about 40 steps to register it. The share of answers above a threshold fixed at the start catches the drop early, without ground truth.</p>
+        <p>Using a correctness probe as an RL reward cuts true accuracy by 31 points, and the probe takes about 40 steps to notice.</p>
       </div>
     </div>
     <div class="paper">
@@ -48,7 +48,7 @@
         <h3><a href="papers/activation-cache-compression.pdf" target="_blank">How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training</a></h3>
         <div class="authors"><b>Abraham Yeung</b></div>
         <div class="meta"><a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026, InterpScience Workshop</a> · <a href="papers/activation-cache-compression.pdf" target="_blank">PDF</a></div>
-        <p>Nudging one cached activation in a million by a single fp32 step leaves only 70% of an SAE's features intact on retraining, so compression has to be judged against a calibrated floor. Measured that way, naive int4 does worse than reseeding, and standardizing channels first brings it back above the floor at the same size.</p>
+        <p>Naive int4 activation caches lose more SAE features than reseeding does; standardizing channels first fixes it at the same size.</p>
       </div>
     </div>
     <div class="paper">
@@ -57,7 +57,7 @@
         <h3><a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">Coding Agents for Coding Theory</a></h3>
         <div class="authors"><b>Abraham Yeung</b></div>
         <div class="meta"><a class="venue" href="https://mathai-2026.github.io/" target="_blank" rel="noopener">NeurIPS 2026, MATH-AI Workshop</a> · <a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">arXiv</a></div>
-        <p>An LLM coding agent, run for five weeks under a verifier-first protocol, improved thirteen published lower bounds for quaternary edit-metric codes, including E<sub>4</sub>(6,3) from 114, standing since 2012, to 120. The paper gives equal space to the three recorded conclusions that turned out to be wrong.</p>
+        <p>An LLM coding agent improved 13 published lower bounds for quaternary edit-metric codes, one of which had stood since 2012.</p>
       </div>
     </div>
   </section>
