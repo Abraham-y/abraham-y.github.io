@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=2">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥕</text></svg>">
 </head>
 <body>
@@ -29,59 +29,37 @@
     </div>
   </div>
 
-  <nav class="pipe" aria-label="Sections">
-    <a class="node" href="#policy"><span class="em"><img src="figures/me.jpg" alt="" onerror="this.replaceWith('🤖')"></span><b>policy</b><span class="sub">about me</span></a>
-    <span class="arrow">→</span>
-    <a class="node" href="#reward"><span class="em">🥕</span><b>reward model</b><span class="sub">what I optimize for</span></a>
-    <span class="arrow">→</span>
-    <a class="node" href="#updates"><span class="em grad">∇</span><b>updates</b><span class="sub">research</span></a>
-    <span class="arrow">→</span>
-    <a class="node" href="#rollouts"><span class="em">📝</span><b>rollouts</b><span class="sub">projects</span></a>
-  </nav>
-  <p class="voice"><span class="k">status:</span> mid post-training &nbsp;·&nbsp; <span class="k">reward signal:</span> curiosity &nbsp;·&nbsp; <span class="k">KL penalty:</span> sleep</p>
-  <p class="more"><a href="#history">📈 training history</a><a href="#evals">📊 evals</a><a href="#ask">🤖 ask</a></p>
+  <nav class="nav" aria-label="Sections"><a href="#research">Research</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#honors">Honors</a><a href="#ask">Ask</a></nav>
 
-  <section id="policy">
-    <p class="eyebrow"><span class="em">🤖</span>policy</p>
+  <section id="about">
     <h2>About me</h2>
-    <p>I'm a junior at <img class="logo" src="figures/logos/stanford.png" alt=""><a href="https://www.stanford.edu/" target="_blank" rel="noopener">Stanford</a> studying Mathematics and Computer Science. I work on reinforcement learning and post-training, and on what those methods do to a model's safety: whether its reasoning stays honest, and which training choices quietly trade oversight for capability. This fall I'm joining <img class="logo" src="figures/logos/redwood.png" alt=""><a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a> part-time as an AI safety research intern, after a summer on the Data Platform team at <img class="logo" src="figures/logos/databricks.png" alt=""><a href="https://www.databricks.com/" target="_blank" rel="noopener">Databricks</a>.</p>
+    <p>I'm a junior at <img class="logo" src="figures/logos/stanford.png" alt=""><a href="https://www.stanford.edu/" target="_blank" rel="noopener">Stanford</a> studying Mathematics and Computer Science. I'm most excited about mid-training and post-training and the impact they have on safety: does the chain of thought stay honest and how do we balance capability and oversight? Next year, I'm joining <img class="logo" src="figures/logos/redwood.png" alt=""><a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a> part-time as an ML research intern, after a summer on the Data Platform team at <img class="logo" src="figures/logos/databricks.png" alt=""><a href="https://www.databricks.com/" target="_blank" rel="noopener">Databricks</a>.</p>
     <p>I grew up in Hong Kong and went to <img class="logo" src="figures/logos/eton.png" alt=""><a href="https://www.etoncollege.com/" target="_blank" rel="noopener">Eton College</a>. I sing baritone with the <img class="logo" src="figures/logos/mendicants.png" alt=""><a href="https://www.stanfordmendicants.com/" target="_blank" rel="noopener">Mendicants</a>, Stanford's oldest a cappella group. I speak English, Cantonese, and Mandarin natively, plus some German and beginner Japanese.</p>
   </section>
 
-  <section id="reward">
-    <p class="eyebrow"><span class="em">🥕</span>reward model</p>
-    <h2>What I optimize for</h2>
-    <ul>
-      <li><b>Models that stay overseeable as they get stronger.</b> Chain-of-thought monitoring only works if the reasoning we read is the reasoning that drove the answer. I want to know which training choices preserve that, and which erode it while the text still looks fine.</li>
-      <li><b>Post-training that doesn't trade safety for capability by accident.</b> Reward design, distillation, and RL loops each have side effects on honesty and controllability. Those effects should be measured, not assumed.</li>
-      <li><b>Interpretability artifacts wired into training carefully.</b> A probe that is safe to read can be dangerous to optimize against. The access a training loop gives an internal signal should be a deliberate decision.</li>
-      <li><b>Measurements that survive scrutiny.</b> Pre-registered designs, placebo controls, bootstrap intervals, and numbers that regenerate from committed artifacts. A safety metric with a hidden confound is worse than no metric.</li>
-    </ul>
-  </section>
-
-  <section id="updates">
-    <p class="eyebrow"><span class="em grad">∇</span>gradient updates</p>
+  <section id="research">
     <h2>Research</h2>
-    <p class="lede">Three papers are accepted at NeurIPS 2026 workshops: two at <a href="https://interpscience.github.io/" target="_blank" rel="noopener">InterpScience</a> and one at <a href="https://mathai-2026.github.io/" target="_blank" rel="noopener">MATH-AI</a>. Titles, summaries, and PDFs are on the <a href="papers/">papers page</a>.</p>
     <div class="paper">
+      <a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026 · InterpScience</a>
       <h3><a href="papers/monitor-accuracy-train-against-it.pdf" target="_blank">What Happens to a Monitor's Accuracy When You Train Against It</a></h3>
-      <div class="meta">Abraham Yeung, Anagha Ramaswamy · <a href="https://interpscience.github.io/" target="_blank" rel="noopener">InterpScience workshop, NeurIPS 2026</a> · <a href="papers/monitor-accuracy-train-against-it.pdf" target="_blank">PDF</a></div>
+      <div class="meta">Abraham Yeung, Anagha Ramaswamy · <a href="papers/monitor-accuracy-train-against-it.pdf" target="_blank">PDF</a></div>
       <p>A linear probe on a model's hidden states predicts whether its next answer will be correct, with held-out AUROC 0.982. Used as the reward for reinforcement learning, a probe of the same representation drives true accuracy down by 31 percentage points, and the probe's own accuracy does not register the change for about 40 training steps. One statistic, the share of answers above a threshold fixed at the start, registers it early and without ground truth.</p>
     </div>
     <div class="paper">
+      <a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026 · InterpScience</a>
       <h3><a href="papers/activation-cache-compression.pdf" target="_blank">How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training</a></h3>
-      <div class="meta">Abraham Yeung · <a href="https://interpscience.github.io/" target="_blank" rel="noopener">InterpScience workshop, NeurIPS 2026</a> · <a href="papers/activation-cache-compression.pdf" target="_blank">PDF</a></div>
+      <div class="meta">Abraham Yeung · <a href="papers/activation-cache-compression.pdf" target="_blank">PDF</a></div>
       <p>Compressing the activation cache used to train a sparse autoencoder changes which features it learns, but so does perturbing one value in a million by the smallest fp32 step. The paper calibrates each site between retraining on identical bytes and a reseed, then measures codecs against that: naive int4 loses more features than a reseed, and standardizing channels first brings int4 back above the floor at the same file size.</p>
     </div>
     <div class="paper">
+      <a class="venue" href="https://mathai-2026.github.io/" target="_blank" rel="noopener">NeurIPS 2026 · MATH-AI</a>
       <h3><a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">Coding Agents for Coding Theory</a></h3>
-      <div class="meta">Abraham Yeung · <a href="https://mathai-2026.github.io/" target="_blank" rel="noopener">MATH-AI workshop, NeurIPS 2026</a> · <a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">arXiv</a></div>
+      <div class="meta">Abraham Yeung · <a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">arXiv</a></div>
       <p>Five weeks of an LLM coding agent on open cells of the quaternary edit-metric code table, under a protocol that required verifiers to be written and tested before any search. Searching over codes invariant under a prescribed symmetry group improved thirteen published lower bounds, including E4(6,3) from 114, a bound standing since 2012, to 120. The paper gives equal space to how the work went wrong.</p>
     </div>
   </section>
 
-  <section id="rollouts">
-    <p class="eyebrow"><span class="em">📝</span>rollouts</p>
+  <section id="projects">
     <h2>Projects</h2>
     <div class="roll">
       <div><b>Research Frontier Miner</b><span class="tag">agents · in progress</span><p>A resumable agent that mines recent ML papers, walks the citation graph to find proposed extensions nobody has attempted, and ranks the open problems. SQLite plus vector search, content-addressed caching, best-first frontier.</p></div>
@@ -94,11 +72,10 @@
     </div>
   </section>
 
-  <section id="history">
-    <p class="eyebrow"><span class="em">📈</span>training history</p>
+  <section id="experience">
     <h2>Experience</h2>
     <ul class="tl">
-      <li><div class="d">Sep 2026 – Jan 2027</div><div><b><img class="logo" src="figures/logos/redwood.png" alt="">AI Safety Research Intern, <a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a></b><span>Part-time. Berkeley, CA.</span></div></li>
+      <li><div class="d">Jan 2027 – May 2027</div><div><b><img class="logo" src="figures/logos/redwood.png" alt="">Incoming ML Research Intern, <a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a></b><span>Part-time. Berkeley, CA.</span></div></li>
       <li><div class="d">Jun – Sep 2026</div><div><b><img class="logo" src="figures/logos/databricks.png" alt="">Software Engineer Intern, <a href="https://www.databricks.com/" target="_blank" rel="noopener">Databricks</a></b><span>Data Platform team, building in-region agents. San Francisco.</span></div></li>
       <li><div class="d">Apr 2026 – now</div><div><b><img class="logo" src="figures/logos/stanford.png" alt="">Tutor, <a href="https://ctl.stanford.edu/students/tutoring" target="_blank" rel="noopener">Center for Teaching and Learning</a>, Stanford</b><span>One-on-one appointment tutoring for CS 106A, CS 106B, CS 107, and CS 109.</span></div></li>
       <li><div class="d">Sep 2024 – Jun 2026</div><div><b><img class="logo" src="figures/logos/bases.png" alt="">Director of Hackspace, <a href="https://bases.stanford.edu/" target="_blank" rel="noopener">BASES</a></b><span>Stanford's largest student-run entrepreneurship programs. Sponsor relations and coordination for hackathons serving 200+ participants.</span></div></li>
@@ -108,8 +85,7 @@
     </ul>
   </section>
 
-  <section id="evals">
-    <p class="eyebrow"><span class="em">📊</span>evals</p>
+  <section id="honors">
     <h2>Honors</h2>
     <ul class="evals">
       <li><b><img class="logo" src="figures/logos/yc.png" alt=""><a href="https://events.ycombinator.com/fellows2026" target="_blank" rel="noopener">YC Fellow</a></b><span>Summer 2026 · mentored by Harshita Arora</span></li>
@@ -125,8 +101,7 @@
   </section>
 
   <section id="ask">
-    <p class="eyebrow"><span class="em">🤖</span>inference</p>
-    <h2>Ask my post-trained self</h2>
+    <h2>Ask a model about my work</h2>
     <p class="lede small" id="askLede">A small open-weights model with a short bio in its context. Ask it about my work. It can be wrong, so trust the sections above over it.</p>
     <div class="chat">
       <div class="chat-log" id="chatLog"></div>
@@ -149,7 +124,7 @@ const CHAT_ENDPOINT = 'https://abraham-chat.abrahamyeung.workers.dev';
 
 const QA = [
   { keys:['work','research','interest','rl','reinforcement','safety','align','monitor','cot','post-training','redwood'],
-    a:`Abraham works on <b>reinforcement learning</b> and <b>post-training</b>, with a focus on AI safety: chain-of-thought monitorability, and how RL design decides whether internal signals stay trustworthy. He's joining Redwood Research part-time this fall. Papers are in the research section.` },
+    a:`Abraham works on <b>reinforcement learning</b> and <b>post-training</b>, with a focus on AI safety: chain-of-thought monitorability, and how RL design decides whether internal signals stay trustworthy. He's joining Redwood Research part-time as an ML research intern from January to May 2027. Papers are in the research section.` },
   { keys:['project','built','build','maestro','agent','aqi','rollout','miner','polymarket'],
     a:`Highlights: <b>gigabpe</b>, a Rust BPE tokenizer trainer on PyPI that is several times faster than HuggingFace's, a <b>research frontier miner</b> agent (in progress), a <b>prediction markets agent</b> (top 5 of 100+ teams), a multi-agent causal modeling system at the Bridgewater AI hackathon, <b>Maestro</b> (TreeHacks runner-up), and AQI forecasting for CS 229.` },
   { keys:['background','eton','stanford','hong kong','school','study','about','who'],

@@ -8,32 +8,34 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../style.css?v=2">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥕</text></svg>">
 </head>
 <body>
 <main>
   <p class="back"><a href="../">← abrahamyeung.com</a></p>
-  <p class="eyebrow" style="margin-top:28px"><span class="em grad">∇</span>gradient updates</p>
-  <h1>Papers</h1>
+  <h1 style="margin-top:28px">Papers</h1>
   <p class="lede">Three papers from 2026, all accepted at NeurIPS 2026 workshops. Each links to its arXiv page or PDF.</p>
 
   <div class="paper">
+    <a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026 · InterpScience</a>
     <h3><a href="monitor-accuracy-train-against-it.pdf" target="_blank">What Happens to a Monitor's Accuracy When You Train Against It</a></h3>
-    <div class="meta">Abraham Yeung, Anagha Ramaswamy · <a href="https://interpscience.github.io/" target="_blank" rel="noopener">InterpScience workshop, NeurIPS 2026</a> · <a href="monitor-accuracy-train-against-it.pdf" target="_blank">PDF</a></div>
+    <div class="meta">Abraham Yeung, Anagha Ramaswamy · <a href="monitor-accuracy-train-against-it.pdf" target="_blank">PDF</a></div>
     <p>A linear probe on a model's hidden states predicts whether its next answer will be correct: held-out AUROC 0.982, still 0.939 with trace length stratified out, and as a best-of-16 selector it captures 89 percent of the available headroom. Used as the reward for reinforcement learning, a probe of the same representation drives true accuracy down by 31 percentage points, and the probe's own accuracy, scored at every checkpoint on fresh answers, does not register the change for about 40 training steps. An LLM judge scoring the same run shows the same lag. Accuracy is a property of a classifier and a population together, and deploying the monitor as a reward is what moves the population. A monitor built only from text features of the answer scores higher than the probe as a monitor and, as a reward, drives accuracy to zero while the answers stay well-formed. One statistic, the share of answers above a threshold fixed at the start, registers the change early and without ground truth.</p>
   </div>
 
   <div class="paper">
+    <a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026 · InterpScience</a>
     <h3><a href="activation-cache-compression.pdf" target="_blank">How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training</a></h3>
-    <div class="meta">Abraham Yeung · <a href="https://interpscience.github.io/" target="_blank" rel="noopener">InterpScience workshop, NeurIPS 2026</a> · <a href="activation-cache-compression.pdf" target="_blank">PDF</a></div>
+    <div class="meta">Abraham Yeung · <a href="activation-cache-compression.pdf" target="_blank">PDF</a></div>
     <p>Training a sparse autoencoder needs a large cache of model activations, and compressing that cache changes which features the SAE learns. The paper shows that the obvious measurement is not meaningful on its own: retraining on a cache with one value in a million perturbed by the smallest fp32 step keeps only 70 percent of features, while changing the random seed keeps 23 percent. So it calibrates each site instead, with retraining on identical bytes as the ceiling and a reseed as the floor, and measures every codec against that. On GPT-2 small and Pythia-1.4B, naive per-token int4 loses more features than a reseed, standardizing channels before quantizing brings int4 back above the floor at the same file size, and a bf16 forward pass loses slightly more than rotated 8-bit storage. About 170 GPU-hours of pre-registered experiments, with every number regenerating from committed artifacts.</p>
   </div>
 
 
   <div class="paper">
+    <a class="venue" href="https://mathai-2026.github.io/" target="_blank" rel="noopener">NeurIPS 2026 · MATH-AI</a>
     <h3><a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">Coding Agents for Coding Theory</a></h3>
-    <div class="meta">Abraham Yeung · <a href="https://mathai-2026.github.io/" target="_blank" rel="noopener">MATH-AI workshop, NeurIPS 2026</a> · <a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">arXiv</a></div>
+    <div class="meta">Abraham Yeung · <a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">arXiv</a></div>
     <p>Five weeks of an LLM coding agent, run under a protocol that required verifiers to be written and tested before any search, on open cells of the quaternary edit-metric code table. Searching over codes invariant under a prescribed symmetry group improved thirteen published lower bounds, including E4(6,3) from 114, a bound standing since 2012, to 120. The paper gives equal space to how the work went wrong: an intermediate result was written down, never rechecked, and then treated as a fact that ruled out further search, three times. SAT and ILP produced every certificate and no constructions, and the calibration check the paper proposes turns out to be necessary but not sufficient.</p>
   </div>
 
