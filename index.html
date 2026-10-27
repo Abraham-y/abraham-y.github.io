@@ -8,18 +8,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=2">
+<link rel="stylesheet" href="style.css?v=4">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥕</text></svg>">
 </head>
 <body>
 <main>
 
-  <div class="hdr">
-    <img class="photo" src="figures/me.jpg" alt="Abraham Yeung" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="photo-fallback" aria-hidden="true">🤖</div>
-    <div>
+  <header class="hdr">
+    <div class="intro">
       <h1>Abraham Yeung</h1>
-      <p class="tagline">Math &amp; CS at Stanford. Reinforcement learning, post-training, and AI safety.</p>
+    <p>I'm a junior at <img class="logo" src="figures/logos/stanford.png" alt=""><a href="https://www.stanford.edu/" target="_blank" rel="noopener">Stanford</a> studying Mathematics and Computer Science. I'm most excited about mid-training and post-training and the impact they have on safety: does the chain of thought stay honest and how do we balance capability and oversight? Next year, I'm joining <img class="logo" src="figures/logos/redwood.png" alt=""><a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a> part-time as an ML research intern, after a summer on the Data Platform team at <img class="logo" src="figures/logos/databricks.png" alt=""><a href="https://www.databricks.com/" target="_blank" rel="noopener">Databricks</a>.</p>
+    <p>I grew up in Hong Kong and went to <img class="logo" src="figures/logos/eton.png" alt=""><a href="https://www.etoncollege.com/" target="_blank" rel="noopener">Eton College</a>. I sing baritone with the <img class="logo" src="figures/logos/mendicants.png" alt=""><a href="https://www.stanfordmendicants.com/" target="_blank" rel="noopener">Mendicants</a>, Stanford's oldest a cappella group. I speak English, Cantonese, and Mandarin natively, plus some German and beginner Japanese.</p>
       <div class="links">
         <a href="mailto:ayeung16@stanford.edu">Email</a>
         <a href="https://github.com/Abraham-y" target="_blank" rel="noopener">GitHub</a>
@@ -27,35 +26,39 @@
         <a href="cv.pdf" target="_blank">CV</a>
       </div>
     </div>
-  </div>
+    <img class="photo" src="figures/me.jpg" alt="Abraham Yeung" onerror="this.style.display='none'">
+  </header>
 
   <nav class="nav" aria-label="Sections"><a href="#research">Research</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#honors">Honors</a><a href="#ask">Ask</a></nav>
-
-  <section id="about">
-    <h2>About me</h2>
-    <p>I'm a junior at <img class="logo" src="figures/logos/stanford.png" alt=""><a href="https://www.stanford.edu/" target="_blank" rel="noopener">Stanford</a> studying Mathematics and Computer Science. I'm most excited about mid-training and post-training and the impact they have on safety: does the chain of thought stay honest and how do we balance capability and oversight? Next year, I'm joining <img class="logo" src="figures/logos/redwood.png" alt=""><a href="https://www.redwoodresearch.org/" target="_blank" rel="noopener">Redwood Research</a> part-time as an ML research intern, after a summer on the Data Platform team at <img class="logo" src="figures/logos/databricks.png" alt=""><a href="https://www.databricks.com/" target="_blank" rel="noopener">Databricks</a>.</p>
-    <p>I grew up in Hong Kong and went to <img class="logo" src="figures/logos/eton.png" alt=""><a href="https://www.etoncollege.com/" target="_blank" rel="noopener">Eton College</a>. I sing baritone with the <img class="logo" src="figures/logos/mendicants.png" alt=""><a href="https://www.stanfordmendicants.com/" target="_blank" rel="noopener">Mendicants</a>, Stanford's oldest a cappella group. I speak English, Cantonese, and Mandarin natively, plus some German and beginner Japanese.</p>
-  </section>
 
   <section id="research">
     <h2>Research</h2>
     <div class="paper">
-      <a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026 · InterpScience</a>
-      <h3><a href="papers/monitor-accuracy-train-against-it.pdf" target="_blank">What Happens to a Monitor's Accuracy When You Train Against It</a></h3>
-      <div class="meta">Abraham Yeung, Anagha Ramaswamy · <a href="papers/monitor-accuracy-train-against-it.pdf" target="_blank">PDF</a></div>
-      <p>A linear probe on a model's hidden states predicts whether its next answer will be correct, with held-out AUROC 0.982. Used as the reward for reinforcement learning, a probe of the same representation drives true accuracy down by 31 percentage points, and the probe's own accuracy does not register the change for about 40 training steps. One statistic, the share of answers above a threshold fixed at the start, registers it early and without ground truth.</p>
+      <a class="thumb" href="papers/monitor-accuracy-train-against-it.pdf" target="_blank"><img src="figures/papers/monitor.png" alt="" loading="lazy"></a>
+      <div>
+        <h3><a href="papers/monitor-accuracy-train-against-it.pdf" target="_blank">What Happens to a Monitor's Accuracy When You Train Against It</a></h3>
+        <div class="authors"><b>Abraham Yeung</b>, Anagha Ramaswamy</div>
+        <div class="meta"><a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026, InterpScience Workshop</a> · <a href="papers/monitor-accuracy-train-against-it.pdf" target="_blank">PDF</a></div>
+        <p>Used as an RL reward, a probe that predicts whether a model's answer is correct (held-out AUROC 0.982) drives true accuracy down 31 points, and the probe's own accuracy takes about 40 steps to register it. The share of answers above a threshold fixed at the start catches the drop early, without ground truth.</p>
+      </div>
     </div>
     <div class="paper">
-      <a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026 · InterpScience</a>
-      <h3><a href="papers/activation-cache-compression.pdf" target="_blank">How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training</a></h3>
-      <div class="meta">Abraham Yeung · <a href="papers/activation-cache-compression.pdf" target="_blank">PDF</a></div>
-      <p>Compressing the activation cache used to train a sparse autoencoder changes which features it learns, but so does perturbing one value in a million by the smallest fp32 step. The paper calibrates each site between retraining on identical bytes and a reseed, then measures codecs against that: naive int4 loses more features than a reseed, and standardizing channels first brings int4 back above the floor at the same file size.</p>
+      <a class="thumb" href="papers/activation-cache-compression.pdf" target="_blank"><img src="figures/papers/sae.png" alt="" loading="lazy"></a>
+      <div>
+        <h3><a href="papers/activation-cache-compression.pdf" target="_blank">How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training</a></h3>
+        <div class="authors"><b>Abraham Yeung</b></div>
+        <div class="meta"><a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026, InterpScience Workshop</a> · <a href="papers/activation-cache-compression.pdf" target="_blank">PDF</a></div>
+        <p>Nudging one cached activation in a million by a single fp32 step leaves only 70% of an SAE's features intact on retraining, so compression has to be judged against a calibrated floor. Measured that way, naive int4 does worse than reseeding, and standardizing channels first brings it back above the floor at the same size.</p>
+      </div>
     </div>
     <div class="paper">
-      <a class="venue" href="https://mathai-2026.github.io/" target="_blank" rel="noopener">NeurIPS 2026 · MATH-AI</a>
-      <h3><a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">Coding Agents for Coding Theory</a></h3>
-      <div class="meta">Abraham Yeung · <a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">arXiv</a></div>
-      <p>Five weeks of an LLM coding agent on open cells of the quaternary edit-metric code table, under a protocol that required verifiers to be written and tested before any search. Searching over codes invariant under a prescribed symmetry group improved thirteen published lower bounds, including E4(6,3) from 114, a bound standing since 2012, to 120. The paper gives equal space to how the work went wrong.</p>
+      <a class="thumb" href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener"><img src="figures/papers/coding.png" alt="" loading="lazy"></a>
+      <div>
+        <h3><a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">Coding Agents for Coding Theory</a></h3>
+        <div class="authors"><b>Abraham Yeung</b></div>
+        <div class="meta"><a class="venue" href="https://mathai-2026.github.io/" target="_blank" rel="noopener">NeurIPS 2026, MATH-AI Workshop</a> · <a href="https://arxiv.org/abs/2609.39081" target="_blank" rel="noopener">arXiv</a></div>
+        <p>An LLM coding agent, run for five weeks under a verifier-first protocol, improved thirteen published lower bounds for quaternary edit-metric codes, including E<sub>4</sub>(6,3) from 114, standing since 2012, to 120. The paper gives equal space to the three recorded conclusions that turned out to be wrong.</p>
+      </div>
     </div>
   </section>
 
