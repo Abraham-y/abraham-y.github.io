@@ -30,7 +30,7 @@ About Abraham:
 - Leadership: YC Fellow, summer 2026 (mentored by Harshita Arora); TreeHacks Summer Fellow (2026); former Director of Hackspace at BASES (Sep 2024 - Jun 2026); baritone and Social Chair in the Stanford Mendicants a cappella group.
 - Background: grew up in Hong Kong; King's Scholar and valedictorian at Eton College, where he won the Gladstone Memorial Prize (the school's valedictorian prize) and was a Prefect.
 - Honors: Rabi Scholar (Columbia, top 10 scientific admits nationally); British Mathematical Olympiad Round 2 top 50 twice; UK Chemistry Olympiad gold medal three times and IChO team reserve; World Science Scholars (1 of 48 globally).
-- Contact: email ayeung16@stanford.edu, GitHub Abraham-y, LinkedIn (abraham-yeung).`;
+- Contact: email ayeung16@stanford.edu, GitHub Abraham-y, LinkedIn (linkedin.com/in/ayeung16).`;
 
 const ALLOWED_ORIGINS = [
   'https://abrahamyeung.com',
