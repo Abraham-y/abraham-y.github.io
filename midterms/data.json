@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T11:04:29-08:00",
+ "updated": "2026-11-03T11:09:53-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.363,
-   "edge": -0.18,
+   "p_market": 0.365,
+   "edge": -0.182,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.697,
-   "edge": -0.1265,
+   "p_market": 0.699,
+   "edge": -0.1285,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -86,8 +86,8 @@
    "poll_avg": -0.4,
    "n_polls": 8,
    "p_final": 0.4527,
-   "p_market": 0.364,
-   "edge": 0.0887,
+   "p_market": 0.363,
+   "edge": 0.0897,
    "edge_lo": 0.0566,
    "edge_hi": 0.16,
    "robust": true
@@ -108,21 +108,6 @@
    "robust": true
   },
   {
-   "race_id": "ME-SEN",
-   "office": "Senate",
-   "challenger": "Troy Jackson",
-   "rep": "Susan Collins",
-   "ind_race": false,
-   "poll_avg": 4.5,
-   "n_polls": 14,
-   "p_final": 0.7685,
-   "p_market": 0.695,
-   "edge": 0.0735,
-   "edge_lo": 0.0225,
-   "edge_hi": 0.0752,
-   "robust": false
-  },
-  {
    "race_id": "MI-SEN",
    "office": "Senate",
    "challenger": "Abdul El-Sayed",
@@ -131,8 +116,8 @@
    "poll_avg": 5.3,
    "n_polls": 17,
    "p_final": 0.845,
-   "p_market": 0.772,
-   "edge": 0.073,
+   "p_market": 0.77,
+   "edge": 0.075,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
@@ -151,6 +136,21 @@
    "edge_lo": -0.0857,
    "edge_hi": -0.0449,
    "robust": true
+  },
+  {
+   "race_id": "ME-SEN",
+   "office": "Senate",
+   "challenger": "Troy Jackson",
+   "rep": "Susan Collins",
+   "ind_race": false,
+   "poll_avg": 4.5,
+   "n_polls": 14,
+   "p_final": 0.7685,
+   "p_market": 0.7,
+   "edge": 0.0685,
+   "edge_lo": 0.0225,
+   "edge_hi": 0.0752,
+   "robust": false
   },
   {
    "race_id": "KS-SEN",
@@ -191,8 +191,8 @@
    "poll_avg": -1.3,
    "n_polls": 9,
    "p_final": 0.3639,
-   "p_market": 0.308,
-   "edge": 0.0559,
+   "p_market": 0.305,
+   "edge": 0.0589,
    "edge_lo": 0.0409,
    "edge_hi": 0.0559,
    "robust": true
@@ -228,19 +228,19 @@
    "robust": false
   },
   {
-   "race_id": "NH-GOV",
+   "race_id": "TX-GOV",
    "office": "Governor",
-   "challenger": "Cinde Warmington",
-   "rep": "Kelly Ayotte",
+   "challenger": "Gina Hinojosa",
+   "rep": "Greg Abbott",
    "ind_race": false,
-   "poll_avg": -6.9,
-   "n_polls": 6,
-   "p_final": 0.108,
-   "p_market": 0.148,
-   "edge": -0.04,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
+   "poll_avg": -1.8,
+   "n_polls": 20,
+   "p_final": 0.3177,
+   "p_market": 0.356,
+   "edge": -0.0383,
+   "edge_lo": -0.0748,
+   "edge_hi": -0.0322,
+   "robust": true
   },
   {
    "race_id": "AZ-GOV",
@@ -253,6 +253,21 @@
    "p_final": 0.8939,
    "p_market": 0.932,
    "edge": -0.0381,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "NH-GOV",
+   "office": "Governor",
+   "challenger": "Cinde Warmington",
+   "rep": "Kelly Ayotte",
+   "ind_race": false,
+   "poll_avg": -6.9,
+   "n_polls": 6,
+   "p_final": 0.108,
+   "p_market": 0.146,
+   "edge": -0.038,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -271,21 +286,6 @@
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
-  },
-  {
-   "race_id": "TX-GOV",
-   "office": "Governor",
-   "challenger": "Gina Hinojosa",
-   "rep": "Greg Abbott",
-   "ind_race": false,
-   "poll_avg": -1.8,
-   "n_polls": 20,
-   "p_final": 0.3177,
-   "p_market": 0.355,
-   "edge": -0.0373,
-   "edge_lo": -0.0748,
-   "edge_hi": -0.0322,
-   "robust": true
   },
   {
    "race_id": "TN-GOV",
@@ -386,8 +386,8 @@
    "poll_avg": 4.4,
    "n_polls": 16,
    "p_final": 0.8016,
-   "p_market": 0.82,
-   "edge": -0.0184,
+   "p_market": 0.821,
+   "edge": -0.0194,
    "edge_lo": -0.0352,
    "edge_hi": -0.0065,
    "robust": false
@@ -551,8 +551,8 @@
    "poll_avg": 8.8,
    "n_polls": 14,
    "p_final": 0.9472,
-   "p_market": 0.942,
-   "edge": 0.0052,
+   "p_market": 0.941,
+   "edge": 0.0062,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.363,
-   "edge": -0.197
+   "p_market": 0.365,
+   "edge": -0.199
   },
   {
    "race_id": "FL-SEN",
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.697,
-   "edge": -0.129
+   "p_market": 0.699,
+   "edge": -0.13
   },
   {
    "race_id": "GA-SEN",
@@ -661,7 +661,7 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.364,
+   "p_market": 0.363,
    "edge": 0.088
   },
   {
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.355,
-   "edge": -0.041
+   "p_market": 0.356,
+   "edge": -0.042
   },
   {
    "race_id": "TX-SEN",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.772,
-   "edge": 0.069
+   "p_market": 0.77,
+   "edge": 0.071
   },
   {
    "race_id": "MI-GOV",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.942,
-   "edge": 0.016
+   "p_market": 0.941,
+   "edge": 0.017
   },
   {
    "race_id": "SC-SEN",
@@ -796,8 +796,8 @@
    "hi80": 4.5,
    "p_live": 0.365,
    "p_pre": 0.364,
-   "p_market": 0.308,
-   "edge": 0.056
+   "p_market": 0.305,
+   "edge": 0.06
   },
   {
    "race_id": "ME-SEN",
@@ -811,8 +811,8 @@
    "hi80": 9.6,
    "p_live": 0.767,
    "p_pre": 0.768,
-   "p_market": 0.695,
-   "edge": 0.072
+   "p_market": 0.7,
+   "edge": 0.067
   },
   {
    "race_id": "IA-SEN",
@@ -856,8 +856,8 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.976,
-   "edge": 0.007
+   "p_market": 0.975,
+   "edge": 0.008
   },
   {
    "race_id": "NE-SEN",
@@ -901,8 +901,8 @@
    "hi80": 9.7,
    "p_live": 0.809,
    "p_pre": 0.802,
-   "p_market": 0.82,
-   "edge": -0.011
+   "p_market": 0.821,
+   "edge": -0.012
   },
   {
    "race_id": "AZ-GOV",
@@ -931,8 +931,8 @@
    "hi80": -0.2,
    "p_live": 0.093,
    "p_pre": 0.108,
-   "p_market": 0.148,
-   "edge": -0.055
+   "p_market": 0.146,
+   "edge": -0.054
   },
   {
    "race_id": "VT-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.086
   }
  ],
- "live_updated": "11:04:10"
+ "live_updated": "11:09:31"
 }
