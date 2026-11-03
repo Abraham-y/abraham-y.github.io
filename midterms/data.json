@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T05:17:08-08:00",
+ "updated": "2026-11-03T05:22:29-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.695,
-   "edge": -0.1245,
+   "p_market": 0.693,
+   "edge": -0.1225,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -146,25 +146,10 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.633,
-   "edge": 0.0633,
+   "p_market": 0.631,
+   "edge": 0.0653,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
-   "robust": true
-  },
-  {
-   "race_id": "TX-GOV",
-   "office": "Governor",
-   "challenger": "Gina Hinojosa",
-   "rep": "Greg Abbott",
-   "ind_race": false,
-   "poll_avg": -1.8,
-   "n_polls": 20,
-   "p_final": 0.3177,
-   "p_market": 0.374,
-   "edge": -0.0563,
-   "edge_lo": -0.0748,
-   "edge_hi": -0.0322,
    "robust": true
   },
   {
@@ -183,33 +168,18 @@
    "robust": false
   },
   {
-   "race_id": "FL-SEN",
-   "office": "Senate",
-   "challenger": "Angie Nixon",
-   "rep": "Ashley Moody",
+   "race_id": "TX-GOV",
+   "office": "Governor",
+   "challenger": "Gina Hinojosa",
+   "rep": "Greg Abbott",
    "ind_race": false,
-   "poll_avg": -5.9,
-   "n_polls": 14,
-   "p_final": 0.1006,
-   "p_market": 0.15,
-   "edge": -0.0494,
-   "edge_lo": -0.0552,
-   "edge_hi": -0.0427,
-   "robust": true
-  },
-  {
-   "race_id": "MI-SEN",
-   "office": "Senate",
-   "challenger": "Abdul El-Sayed",
-   "rep": "Mike Rogers",
-   "ind_race": false,
-   "poll_avg": 5.3,
-   "n_polls": 17,
-   "p_final": 0.845,
-   "p_market": 0.796,
-   "edge": 0.049,
-   "edge_lo": 0.0317,
-   "edge_hi": 0.0745,
+   "poll_avg": -1.8,
+   "n_polls": 20,
+   "p_final": 0.3177,
+   "p_market": 0.369,
+   "edge": -0.0513,
+   "edge_lo": -0.0748,
+   "edge_hi": -0.0322,
    "robust": true
   },
   {
@@ -225,6 +195,36 @@
    "edge": 0.0489,
    "edge_lo": 0.0409,
    "edge_hi": 0.0559,
+   "robust": true
+  },
+  {
+   "race_id": "FL-SEN",
+   "office": "Senate",
+   "challenger": "Angie Nixon",
+   "rep": "Ashley Moody",
+   "ind_race": false,
+   "poll_avg": -5.9,
+   "n_polls": 14,
+   "p_final": 0.1006,
+   "p_market": 0.149,
+   "edge": -0.0484,
+   "edge_lo": -0.0552,
+   "edge_hi": -0.0427,
+   "robust": true
+  },
+  {
+   "race_id": "MI-SEN",
+   "office": "Senate",
+   "challenger": "Abdul El-Sayed",
+   "rep": "Mike Rogers",
+   "ind_race": false,
+   "poll_avg": 5.3,
+   "n_polls": 17,
+   "p_final": 0.845,
+   "p_market": 0.799,
+   "edge": 0.046,
+   "edge_lo": 0.0317,
+   "edge_hi": 0.0745,
    "robust": true
   },
   {
@@ -266,8 +266,8 @@
    "poll_avg": -6.9,
    "n_polls": 6,
    "p_final": 0.108,
-   "p_market": 0.146,
-   "edge": -0.038,
+   "p_market": 0.147,
+   "edge": -0.039,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -311,8 +311,8 @@
    "poll_avg": 8.3,
    "n_polls": 4,
    "p_final": 0.8939,
-   "p_market": 0.929,
-   "edge": -0.0351,
+   "p_market": 0.928,
+   "edge": -0.0341,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -326,8 +326,8 @@
    "poll_avg": 0.7,
    "n_polls": 10,
    "p_final": 0.4935,
-   "p_market": 0.527,
-   "edge": -0.0335,
+   "p_market": 0.525,
+   "edge": -0.0315,
    "edge_lo": -0.0556,
    "edge_hi": -0.0076,
    "robust": false
@@ -498,6 +498,21 @@
    "robust": false
   },
   {
+   "race_id": "OH-SEN",
+   "office": "Senate",
+   "challenger": "Sherrod Brown",
+   "rep": "Jon Husted",
+   "ind_race": false,
+   "poll_avg": 3.1,
+   "n_polls": 18,
+   "p_final": 0.727,
+   "p_market": 0.717,
+   "edge": 0.01,
+   "edge_lo": 0.0071,
+   "edge_hi": 0.0329,
+   "robust": false
+  },
+  {
    "race_id": "NE-GOV",
    "office": "Governor",
    "challenger": "Lynne Walz",
@@ -510,21 +525,6 @@
    "edge": 0.0085,
    "edge_lo": null,
    "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "OH-SEN",
-   "office": "Senate",
-   "challenger": "Sherrod Brown",
-   "rep": "Jon Husted",
-   "ind_race": false,
-   "poll_avg": 3.1,
-   "n_polls": 18,
-   "p_final": 0.727,
-   "p_market": 0.719,
-   "edge": 0.008,
-   "edge_lo": 0.0071,
-   "edge_hi": 0.0329,
    "robust": false
   },
   {
@@ -601,7 +601,7 @@
    "hi80": -0.3,
    "p_live": 0.089,
    "p_pre": 0.101,
-   "p_market": 0.15,
+   "p_market": 0.149,
    "edge": -0.06
   },
   {
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.695,
-   "edge": -0.127
+   "p_market": 0.693,
+   "edge": -0.125
   },
   {
    "race_id": "GA-SEN",
@@ -631,8 +631,8 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.966,
-   "edge": 0.018
+   "p_market": 0.969,
+   "edge": 0.015
   },
   {
    "race_id": "NV-GOV",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.633,
-   "edge": 0.052
+   "p_market": 0.631,
+   "edge": 0.054
   },
   {
    "race_id": "AK-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.374,
-   "edge": -0.06
+   "p_market": 0.369,
+   "edge": -0.055
   },
   {
    "race_id": "TX-SEN",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.796,
-   "edge": 0.045
+   "p_market": 0.799,
+   "edge": 0.042
   },
   {
    "race_id": "MI-GOV",
@@ -826,8 +826,8 @@
    "hi80": 6.6,
    "p_live": 0.488,
    "p_pre": 0.493,
-   "p_market": 0.527,
-   "edge": -0.04
+   "p_market": 0.525,
+   "edge": -0.037
   },
   {
    "race_id": "IA-GOV",
@@ -886,8 +886,8 @@
    "hi80": 8.7,
    "p_live": 0.728,
    "p_pre": 0.727,
-   "p_market": 0.719,
-   "edge": 0.009
+   "p_market": 0.717,
+   "edge": 0.011
   },
   {
    "race_id": "OH-GOV",
@@ -916,8 +916,8 @@
    "hi80": 15.0,
    "p_live": 0.905,
    "p_pre": 0.894,
-   "p_market": 0.929,
-   "edge": -0.024
+   "p_market": 0.928,
+   "edge": -0.023
   },
   {
    "race_id": "NH-GOV",
@@ -931,8 +931,8 @@
    "hi80": -0.2,
    "p_live": 0.093,
    "p_pre": 0.108,
-   "p_market": 0.146,
-   "edge": -0.053
+   "p_market": 0.147,
+   "edge": -0.054
   },
   {
    "race_id": "VT-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "05:16:50"
+ "live_updated": "05:22:10"
 }
