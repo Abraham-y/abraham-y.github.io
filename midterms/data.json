@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T03:56:58-08:00",
+ "updated": "2026-11-03T04:02:18-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -146,8 +146,8 @@
    "poll_avg": 6.6,
    "n_polls": 2,
    "p_final": 0.8295,
-   "p_market": 0.896,
-   "edge": -0.0665,
+   "p_market": 0.895,
+   "edge": -0.0655,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
    "robust": true
@@ -348,21 +348,6 @@
    "robust": false
   },
   {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.329,
-   "edge": -0.0288,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
-   "robust": false
-  },
-  {
    "race_id": "OH-GOV",
    "office": "Governor",
    "challenger": "Amy Acton",
@@ -375,6 +360,21 @@
    "edge": -0.0284,
    "edge_lo": -0.0352,
    "edge_hi": -0.0065,
+   "robust": false
+  },
+  {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.327,
+   "edge": -0.0268,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -706,8 +706,8 @@
    "hi80": 16.2,
    "p_live": 0.831,
    "p_pre": 0.83,
-   "p_market": 0.896,
-   "edge": -0.065
+   "p_market": 0.895,
+   "edge": -0.064
   },
   {
    "race_id": "TX-GOV",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.329,
-   "edge": -0.032
+   "p_market": 0.327,
+   "edge": -0.03
   },
   {
    "race_id": "OH-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "03:56:40"
+ "live_updated": "04:02:00"
 }
