@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T04:07:38-08:00",
+ "updated": "2026-11-03T04:12:58-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.716,
-   "edge": -0.1455,
+   "p_market": 0.715,
+   "edge": -0.1445,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -146,8 +146,8 @@
    "poll_avg": 6.6,
    "n_polls": 2,
    "p_final": 0.8295,
-   "p_market": 0.896,
-   "edge": -0.0665,
+   "p_market": 0.895,
+   "edge": -0.0655,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
    "robust": true
@@ -311,8 +311,8 @@
    "poll_avg": 0.7,
    "n_polls": 10,
    "p_final": 0.4935,
-   "p_market": 0.53,
-   "edge": -0.0365,
+   "p_market": 0.529,
+   "edge": -0.0355,
    "edge_lo": -0.0556,
    "edge_hi": -0.0076,
    "robust": false
@@ -371,8 +371,8 @@
    "poll_avg": -1.5,
    "n_polls": 8,
    "p_final": 0.3002,
-   "p_market": 0.327,
-   "edge": -0.0268,
+   "p_market": 0.328,
+   "edge": -0.0278,
    "edge_lo": -0.0281,
    "edge_hi": 0.0467,
    "robust": false
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.716,
-   "edge": -0.148
+   "p_market": 0.715,
+   "edge": -0.147
   },
   {
    "race_id": "GA-SEN",
@@ -706,8 +706,8 @@
    "hi80": 16.2,
    "p_live": 0.831,
    "p_pre": 0.83,
-   "p_market": 0.896,
-   "edge": -0.065
+   "p_market": 0.895,
+   "edge": -0.064
   },
   {
    "race_id": "TX-GOV",
@@ -812,7 +812,7 @@
    "p_live": 0.767,
    "p_pre": 0.768,
    "p_market": 0.729,
-   "edge": 0.038
+   "edge": 0.037
   },
   {
    "race_id": "IA-SEN",
@@ -826,8 +826,8 @@
    "hi80": 6.6,
    "p_live": 0.488,
    "p_pre": 0.493,
-   "p_market": 0.53,
-   "edge": -0.042
+   "p_market": 0.529,
+   "edge": -0.041
   },
   {
    "race_id": "IA-GOV",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.327,
-   "edge": -0.03
+   "p_market": 0.328,
+   "edge": -0.031
   },
   {
    "race_id": "OH-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "04:07:21"
+ "live_updated": "04:12:40"
 }
