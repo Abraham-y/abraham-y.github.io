@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:42:21-08:00",
+ "updated": "2026-11-03T02:47:42-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -161,8 +161,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.382,
-   "edge": -0.0643,
+   "p_market": 0.376,
+   "edge": -0.0583,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -363,6 +363,21 @@
    "robust": false
   },
   {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.327,
+   "edge": -0.0268,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
+   "robust": false
+  },
+  {
    "race_id": "LA-SEN",
    "office": "Senate",
    "challenger": "Jamie Davis",
@@ -390,21 +405,6 @@
    "edge": -0.0252,
    "edge_lo": null,
    "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.325,
-   "edge": -0.0248,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.382,
-   "edge": -0.068
+   "p_market": 0.376,
+   "edge": -0.062
   },
   {
    "race_id": "TX-SEN",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.325,
-   "edge": -0.028
+   "p_market": 0.327,
+   "edge": -0.029
   },
   {
    "race_id": "OH-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "02:42:03"
+ "live_updated": "02:47:23"
 }
