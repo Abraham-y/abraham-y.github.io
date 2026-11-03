@@ -37,3 +37,5 @@ fixed,3,11,3,3205,,2026-10-30,here,prescribed symmetry (symbol swap and reversal
 fixed,3,11,4,525,,2026-11-03,here,prescribed symmetry (all symbol permutations and reversal) + local search,codes/edit3_n11_d4_size525.txt,188b37b46232302bcae04fa73644b223ad8e397ce024e45d629c3f8a4dde4313
 fixed,3,11,5,108,,2026-11-03,here,prescribed symmetry (cyclic symbol shift and reversal) + local search,codes/edit3_n11_d5_size108.txt,b643535c5dc00adecc03c9b8d80a7d4b437d9654163b8c201e34161cffac8a0d
 fixed,3,11,6,36,,2026-11-03,here,prescribed symmetry (cyclic symbol shift and reversal) + local search,codes/edit3_n11_d6_size36.txt,dc17504563bfd7ec8d481ed4c535a608beb297fd352df98e840f3aed4e3ee4d3
+fixed,3,10,5,54,,2026-11-03,here,prescribed symmetry (cyclic symbol shift and reversal) + local search,codes/edit3_n10_d5_size54.txt,af66b7099e3be1a6bec14c1652a0f50b75122e423cef782a3bd7e4b97fe7e2d1
+fixed,3,10,6,19,,2026-11-03,here,prescribed symmetry (symbol swap and reversal) + local search,codes/edit3_n10_d6_size19.txt,277ae6ea1ee3f514221cb44589fbb1cb0455f37a797160d30a752c6bbef95e06
