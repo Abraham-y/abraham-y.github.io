@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T11:32:18-08:00",
+ "updated": "2026-11-03T11:37:45-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.363,
-   "edge": -0.18,
+   "p_market": 0.372,
+   "edge": -0.189,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.703,
-   "edge": -0.1325,
+   "p_market": 0.705,
+   "edge": -0.1345,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -86,8 +86,8 @@
    "poll_avg": -0.4,
    "n_polls": 8,
    "p_final": 0.4527,
-   "p_market": 0.364,
-   "edge": 0.0887,
+   "p_market": 0.363,
+   "edge": 0.0897,
    "edge_lo": 0.0566,
    "edge_hi": 0.16,
    "robust": true
@@ -116,8 +116,8 @@
    "poll_avg": 5.3,
    "n_polls": 17,
    "p_final": 0.845,
-   "p_market": 0.766,
-   "edge": 0.079,
+   "p_market": 0.761,
+   "edge": 0.084,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.363,
-   "edge": -0.197
+   "p_market": 0.372,
+   "edge": -0.206
   },
   {
    "race_id": "FL-SEN",
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.703,
-   "edge": -0.135
+   "p_market": 0.705,
+   "edge": -0.137
   },
   {
    "race_id": "GA-SEN",
@@ -661,7 +661,7 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.364,
+   "p_market": 0.363,
    "edge": 0.088
   },
   {
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.766,
-   "edge": 0.075
+   "p_market": 0.761,
+   "edge": 0.08
   },
   {
    "race_id": "MI-GOV",
@@ -857,7 +857,7 @@
    "p_live": 0.983,
    "p_pre": 0.972,
    "p_market": 0.975,
-   "edge": 0.008
+   "edge": 0.009
   },
   {
    "race_id": "NE-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.086
   }
  ],
- "live_updated": "11:31:08"
+ "live_updated": "11:37:21"
 }
