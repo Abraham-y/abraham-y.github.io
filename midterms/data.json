@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T04:23:37-08:00",
+ "updated": "2026-11-03T04:28:57-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.714,
-   "edge": -0.1435,
+   "p_market": 0.71,
+   "edge": -0.1395,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -131,8 +131,8 @@
    "poll_avg": 6.6,
    "n_polls": 2,
    "p_final": 0.8295,
-   "p_market": 0.895,
-   "edge": -0.0655,
+   "p_market": 0.896,
+   "edge": -0.0665,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
    "robust": true
@@ -146,8 +146,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.633,
-   "edge": 0.0633,
+   "p_market": 0.632,
+   "edge": 0.0643,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -303,21 +303,6 @@
    "robust": false
   },
   {
-   "race_id": "IA-SEN",
-   "office": "Senate",
-   "challenger": "Josh Turek",
-   "rep": "Ashley Hinson",
-   "ind_race": false,
-   "poll_avg": 0.7,
-   "n_polls": 10,
-   "p_final": 0.4935,
-   "p_market": 0.529,
-   "edge": -0.0355,
-   "edge_lo": -0.0556,
-   "edge_hi": -0.0076,
-   "robust": false
-  },
-  {
    "race_id": "AZ-GOV",
    "office": "Governor",
    "challenger": "Katie Hobbs",
@@ -330,6 +315,21 @@
    "edge": -0.0341,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "IA-SEN",
+   "office": "Senate",
+   "challenger": "Josh Turek",
+   "rep": "Ashley Hinson",
+   "ind_race": false,
+   "poll_avg": 0.7,
+   "n_polls": 10,
+   "p_final": 0.4935,
+   "p_market": 0.527,
+   "edge": -0.0335,
+   "edge_lo": -0.0556,
+   "edge_hi": -0.0076,
    "robust": false
   },
   {
@@ -498,21 +498,6 @@
    "robust": false
   },
   {
-   "race_id": "OH-SEN",
-   "office": "Senate",
-   "challenger": "Sherrod Brown",
-   "rep": "Jon Husted",
-   "ind_race": false,
-   "poll_avg": 3.1,
-   "n_polls": 18,
-   "p_final": 0.727,
-   "p_market": 0.715,
-   "edge": 0.012,
-   "edge_lo": 0.0071,
-   "edge_hi": 0.0329,
-   "robust": false
-  },
-  {
    "race_id": "NE-GOV",
    "office": "Governor",
    "challenger": "Lynne Walz",
@@ -525,6 +510,21 @@
    "edge": 0.0085,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "OH-SEN",
+   "office": "Senate",
+   "challenger": "Sherrod Brown",
+   "rep": "Jon Husted",
+   "ind_race": false,
+   "poll_avg": 3.1,
+   "n_polls": 18,
+   "p_final": 0.727,
+   "p_market": 0.719,
+   "edge": 0.008,
+   "edge_lo": 0.0071,
+   "edge_hi": 0.0329,
    "robust": false
   },
   {
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.714,
-   "edge": -0.145
+   "p_market": 0.71,
+   "edge": -0.142
   },
   {
    "race_id": "GA-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.633,
-   "edge": 0.052
+   "p_market": 0.632,
+   "edge": 0.053
   },
   {
    "race_id": "AK-SEN",
@@ -706,8 +706,8 @@
    "hi80": 16.2,
    "p_live": 0.831,
    "p_pre": 0.83,
-   "p_market": 0.895,
-   "edge": -0.064
+   "p_market": 0.896,
+   "edge": -0.065
   },
   {
    "race_id": "TX-GOV",
@@ -826,8 +826,8 @@
    "hi80": 6.6,
    "p_live": 0.488,
    "p_pre": 0.493,
-   "p_market": 0.529,
-   "edge": -0.041
+   "p_market": 0.527,
+   "edge": -0.04
   },
   {
    "race_id": "IA-GOV",
@@ -886,8 +886,8 @@
    "hi80": 8.7,
    "p_live": 0.728,
    "p_pre": 0.727,
-   "p_market": 0.715,
-   "edge": 0.013
+   "p_market": 0.719,
+   "edge": 0.009
   },
   {
    "race_id": "OH-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "04:23:20"
+ "live_updated": "04:28:39"
 }
