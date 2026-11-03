@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:05:30-08:00",
+ "updated": "2026-11-03T02:10:42-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -131,25 +131,10 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.389,
-   "edge": -0.0713,
+   "p_market": 0.388,
+   "edge": -0.0703,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
-   "robust": true
-  },
-  {
-   "race_id": "KS-SEN",
-   "office": "Senate",
-   "challenger": "Adam Hamilton",
-   "rep": "Roger Marshall",
-   "ind_race": false,
-   "poll_avg": 3.9,
-   "n_polls": 9,
-   "p_final": 0.6963,
-   "p_market": 0.628,
-   "edge": 0.0683,
-   "edge_lo": 0.038,
-   "edge_hi": 0.1678,
    "robust": true
   },
   {
@@ -165,6 +150,21 @@
    "edge": -0.0655,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
+   "robust": true
+  },
+  {
+   "race_id": "KS-SEN",
+   "office": "Senate",
+   "challenger": "Adam Hamilton",
+   "rep": "Roger Marshall",
+   "ind_race": false,
+   "poll_avg": 3.9,
+   "n_polls": 9,
+   "p_final": 0.6963,
+   "p_market": 0.632,
+   "edge": 0.0643,
+   "edge_lo": 0.038,
+   "edge_hi": 0.1678,
    "robust": true
   },
   {
@@ -326,8 +326,8 @@
    "poll_avg": 0.7,
    "n_polls": 10,
    "p_final": 0.4935,
-   "p_market": 0.525,
-   "edge": -0.0315,
+   "p_market": 0.526,
+   "edge": -0.0325,
    "edge_lo": -0.0556,
    "edge_hi": -0.0076,
    "robust": false
@@ -632,7 +632,7 @@
    "p_live": 0.984,
    "p_pre": 0.971,
    "p_market": 0.971,
-   "edge": 0.013
+   "edge": 0.014
   },
   {
    "race_id": "NV-GOV",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.628,
-   "edge": 0.057
+   "p_market": 0.632,
+   "edge": 0.053
   },
   {
    "race_id": "AK-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.389,
-   "edge": -0.075
+   "p_market": 0.388,
+   "edge": -0.074
   },
   {
    "race_id": "TX-SEN",
@@ -826,8 +826,8 @@
    "hi80": 6.6,
    "p_live": 0.488,
    "p_pre": 0.493,
-   "p_market": 0.525,
-   "edge": -0.037
+   "p_market": 0.526,
+   "edge": -0.039
   },
   {
    "race_id": "IA-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "02:04:59"
+ "live_updated": "02:10:32"
 }
