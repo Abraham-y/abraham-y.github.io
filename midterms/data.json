@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T04:39:38-08:00",
+ "updated": "2026-11-03T04:44:58-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.37,
-   "edge": -0.187,
+   "p_market": 0.367,
+   "edge": -0.184,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -131,8 +131,8 @@
    "poll_avg": 6.6,
    "n_polls": 2,
    "p_final": 0.8295,
-   "p_market": 0.896,
-   "edge": -0.0665,
+   "p_market": 0.895,
+   "edge": -0.0655,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
    "robust": true
@@ -146,8 +146,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.634,
-   "edge": 0.0623,
+   "p_market": 0.632,
+   "edge": 0.0643,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -161,8 +161,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.371,
-   "edge": -0.0533,
+   "p_market": 0.379,
+   "edge": -0.0613,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -363,21 +363,6 @@
    "robust": false
   },
   {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.327,
-   "edge": -0.0268,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
-   "robust": false
-  },
-  {
    "race_id": "LA-SEN",
    "office": "Senate",
    "challenger": "Jamie Davis",
@@ -420,6 +405,21 @@
    "edge": -0.0235,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.323,
+   "edge": -0.0228,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -468,6 +468,21 @@
    "robust": false
   },
   {
+   "race_id": "MI-GOV",
+   "office": "Governor",
+   "challenger": "Jocelyn Benson",
+   "rep": "John James",
+   "ind_race": false,
+   "poll_avg": 8.8,
+   "n_polls": 14,
+   "p_final": 0.9472,
+   "p_market": 0.931,
+   "edge": 0.0162,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
    "race_id": "OK-GOV",
    "office": "Governor",
    "challenger": "Cyndi Munson",
@@ -478,21 +493,6 @@
    "p_final": 0.1153,
    "p_market": 0.1007,
    "edge": 0.0146,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "MI-GOV",
-   "office": "Governor",
-   "challenger": "Jocelyn Benson",
-   "rep": "John James",
-   "ind_race": false,
-   "poll_avg": 8.8,
-   "n_polls": 14,
-   "p_final": 0.9472,
-   "p_market": 0.934,
-   "edge": 0.0132,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.37,
-   "edge": -0.204
+   "p_market": 0.367,
+   "edge": -0.201
   },
   {
    "race_id": "FL-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.634,
-   "edge": 0.051
+   "p_market": 0.632,
+   "edge": 0.053
   },
   {
    "race_id": "AK-SEN",
@@ -706,8 +706,8 @@
    "hi80": 16.2,
    "p_live": 0.831,
    "p_pre": 0.83,
-   "p_market": 0.896,
-   "edge": -0.065
+   "p_market": 0.895,
+   "edge": -0.064
   },
   {
    "race_id": "TX-GOV",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.371,
-   "edge": -0.057
+   "p_market": 0.379,
+   "edge": -0.065
   },
   {
    "race_id": "TX-SEN",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.934,
-   "edge": 0.024
+   "p_market": 0.931,
+   "edge": 0.027
   },
   {
    "race_id": "SC-SEN",
@@ -856,7 +856,7 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.975,
+   "p_market": 0.974,
    "edge": 0.009
   },
   {
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.327,
-   "edge": -0.029
+   "p_market": 0.323,
+   "edge": -0.026
   },
   {
    "race_id": "OH-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "04:39:20"
+ "live_updated": "04:44:40"
 }
