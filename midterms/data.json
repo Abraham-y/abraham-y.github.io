@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T09:34:40-08:00",
+ "updated": "2026-11-03T09:40:01-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -71,8 +71,8 @@
    "poll_avg": -0.4,
    "n_polls": 8,
    "p_final": 0.4527,
-   "p_market": 0.35,
-   "edge": 0.1027,
+   "p_market": 0.349,
+   "edge": 0.1037,
    "edge_lo": 0.0566,
    "edge_hi": 0.16,
    "robust": true
@@ -131,8 +131,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.615,
-   "edge": 0.0813,
+   "p_market": 0.619,
+   "edge": 0.0773,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -146,8 +146,8 @@
    "poll_avg": 5.3,
    "n_polls": 17,
    "p_final": 0.845,
-   "p_market": 0.776,
-   "edge": 0.069,
+   "p_market": 0.774,
+   "edge": 0.071,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
@@ -191,8 +191,8 @@
    "poll_avg": 6.6,
    "n_polls": 2,
    "p_final": 0.8295,
-   "p_market": 0.894,
-   "edge": -0.0645,
+   "p_market": 0.893,
+   "edge": -0.0635,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
    "robust": true
@@ -378,21 +378,6 @@
    "robust": false
   },
   {
-   "race_id": "TX-SEN",
-   "office": "Senate",
-   "challenger": "James Talarico",
-   "rep": "Ken Paxton",
-   "ind_race": false,
-   "poll_avg": 3.3,
-   "n_polls": 25,
-   "p_final": 0.7415,
-   "p_market": 0.719,
-   "edge": 0.0225,
-   "edge_lo": -0.0055,
-   "edge_hi": 0.0242,
-   "robust": false
-  },
-  {
    "race_id": "NY-GOV",
    "office": "Governor",
    "challenger": "Kathy Hochul",
@@ -405,6 +390,21 @@
    "edge": 0.0208,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "TX-SEN",
+   "office": "Senate",
+   "challenger": "James Talarico",
+   "rep": "Ken Paxton",
+   "ind_race": false,
+   "poll_avg": 3.3,
+   "n_polls": 25,
+   "p_final": 0.7415,
+   "p_market": 0.722,
+   "edge": 0.0195,
+   "edge_lo": -0.0055,
+   "edge_hi": 0.0242,
    "robust": false
   },
   {
@@ -631,7 +631,7 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.966,
+   "p_market": 0.967,
    "edge": 0.018
   },
   {
@@ -661,8 +661,8 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.35,
-   "edge": 0.102
+   "p_market": 0.349,
+   "edge": 0.103
   },
   {
    "race_id": "KS-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.615,
-   "edge": 0.07
+   "p_market": 0.619,
+   "edge": 0.066
   },
   {
    "race_id": "AK-SEN",
@@ -706,8 +706,8 @@
    "hi80": 16.2,
    "p_live": 0.831,
    "p_pre": 0.83,
-   "p_market": 0.894,
-   "edge": -0.063
+   "p_market": 0.893,
+   "edge": -0.062
   },
   {
    "race_id": "TX-GOV",
@@ -736,8 +736,8 @@
    "hi80": 8.9,
    "p_live": 0.754,
    "p_pre": 0.742,
-   "p_market": 0.719,
-   "edge": 0.036
+   "p_market": 0.722,
+   "edge": 0.032
   },
   {
    "race_id": "WI-GOV",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.776,
-   "edge": 0.065
+   "p_market": 0.774,
+   "edge": 0.067
   },
   {
    "race_id": "MI-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.087
   }
  ],
- "live_updated": "09:34:23"
+ "live_updated": "09:39:43"
 }
