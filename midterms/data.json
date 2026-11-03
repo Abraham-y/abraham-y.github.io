@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T03:09:02-08:00",
+ "updated": "2026-11-03T03:14:23-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -18,6 +18,21 @@
  ],
  "races": [
   {
+   "race_id": "FL-GOV",
+   "office": "Governor",
+   "challenger": "David Jolly",
+   "rep": "Byron Donalds",
+   "ind_race": false,
+   "poll_avg": -4.0,
+   "n_polls": 14,
+   "p_final": 0.183,
+   "p_market": 0.373,
+   "edge": -0.19,
+   "edge_lo": -0.198,
+   "edge_hi": -0.1799,
+   "robust": true
+  },
+  {
    "race_id": "NV-GOV",
    "office": "Governor",
    "challenger": "Aaron Ford",
@@ -30,21 +45,6 @@
    "edge": -0.1873,
    "edge_lo": -0.1933,
    "edge_hi": -0.1722,
-   "robust": true
-  },
-  {
-   "race_id": "FL-GOV",
-   "office": "Governor",
-   "challenger": "David Jolly",
-   "rep": "Byron Donalds",
-   "ind_race": false,
-   "poll_avg": -4.0,
-   "n_polls": 14,
-   "p_final": 0.183,
-   "p_market": 0.37,
-   "edge": -0.187,
-   "edge_lo": -0.198,
-   "edge_hi": -0.1799,
    "robust": true
   },
   {
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.37,
-   "edge": -0.204
+   "p_market": 0.373,
+   "edge": -0.207
   },
   {
    "race_id": "FL-SEN",
@@ -631,8 +631,8 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.97,
-   "edge": 0.015
+   "p_market": 0.968,
+   "edge": 0.016
   },
   {
    "race_id": "NV-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "03:08:45"
+ "live_updated": "03:14:04"
 }
