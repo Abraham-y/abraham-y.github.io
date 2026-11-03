@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:15:54-08:00",
+ "updated": "2026-11-03T02:21:06-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -101,8 +101,8 @@
    "poll_avg": 0.8,
    "n_polls": 7,
    "p_final": 0.6175,
-   "p_market": 0.707,
-   "edge": -0.0895,
+   "p_market": 0.71,
+   "edge": -0.0925,
    "edge_lo": -0.1506,
    "edge_hi": -0.083,
    "robust": true
@@ -123,6 +123,21 @@
    "robust": true
   },
   {
+   "race_id": "AK-GOV",
+   "office": "Governor",
+   "challenger": "Jonathan Kreiss-Tomkins",
+   "rep": "Bernadette Wilson",
+   "ind_race": false,
+   "poll_avg": 6.6,
+   "n_polls": 2,
+   "p_final": 0.8295,
+   "p_market": 0.895,
+   "edge": -0.0655,
+   "edge_lo": -0.1368,
+   "edge_hi": -0.0586,
+   "robust": true
+  },
+  {
    "race_id": "TX-GOV",
    "office": "Governor",
    "challenger": "Gina Hinojosa",
@@ -131,8 +146,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.388,
-   "edge": -0.0703,
+   "p_market": 0.383,
+   "edge": -0.0653,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -146,25 +161,10 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.629,
-   "edge": 0.0673,
+   "p_market": 0.632,
+   "edge": 0.0643,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
-   "robust": true
-  },
-  {
-   "race_id": "AK-GOV",
-   "office": "Governor",
-   "challenger": "Jonathan Kreiss-Tomkins",
-   "rep": "Bernadette Wilson",
-   "ind_race": false,
-   "poll_avg": 6.6,
-   "n_polls": 2,
-   "p_final": 0.8295,
-   "p_market": 0.895,
-   "edge": -0.0655,
-   "edge_lo": -0.1368,
-   "edge_hi": -0.0586,
    "robust": true
   },
   {
@@ -213,6 +213,21 @@
    "robust": true
   },
   {
+   "race_id": "MI-SEN",
+   "office": "Senate",
+   "challenger": "Abdul El-Sayed",
+   "rep": "Mike Rogers",
+   "ind_race": false,
+   "poll_avg": 5.3,
+   "n_polls": 17,
+   "p_final": 0.845,
+   "p_market": 0.801,
+   "edge": 0.044,
+   "edge_lo": 0.0317,
+   "edge_hi": 0.0745,
+   "robust": true
+  },
+  {
    "race_id": "MS-SEN",
    "office": "Senate",
    "challenger": "Scott Colom",
@@ -226,21 +241,6 @@
    "edge_lo": -0.0489,
    "edge_hi": 0.0562,
    "robust": false
-  },
-  {
-   "race_id": "MI-SEN",
-   "office": "Senate",
-   "challenger": "Abdul El-Sayed",
-   "rep": "Mike Rogers",
-   "ind_race": false,
-   "poll_avg": 5.3,
-   "n_polls": 17,
-   "p_final": 0.845,
-   "p_market": 0.803,
-   "edge": 0.042,
-   "edge_lo": 0.0317,
-   "edge_hi": 0.0745,
-   "robust": true
   },
   {
    "race_id": "ME-SEN",
@@ -617,7 +617,7 @@
    "p_live": 0.568,
    "p_pre": 0.57,
    "p_market": 0.722,
-   "edge": -0.154
+   "edge": -0.153
   },
   {
    "race_id": "GA-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.629,
-   "edge": 0.056
+   "p_market": 0.632,
+   "edge": 0.053
   },
   {
    "race_id": "AK-SEN",
@@ -691,8 +691,8 @@
    "hi80": 8.0,
    "p_live": 0.62,
    "p_pre": 0.617,
-   "p_market": 0.707,
-   "edge": -0.087
+   "p_market": 0.71,
+   "edge": -0.09
   },
   {
    "race_id": "AK-GOV",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.388,
-   "edge": -0.074
+   "p_market": 0.383,
+   "edge": -0.069
   },
   {
    "race_id": "TX-SEN",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.803,
-   "edge": 0.038
+   "p_market": 0.801,
+   "edge": 0.04
   },
   {
    "race_id": "MI-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "02:15:44"
+ "live_updated": "02:20:57"
 }
