@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T03:51:38-08:00",
+ "updated": "2026-11-03T03:56:58-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -131,8 +131,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.627,
-   "edge": 0.0693,
+   "p_market": 0.629,
+   "edge": 0.0673,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -146,8 +146,8 @@
    "poll_avg": 6.6,
    "n_polls": 2,
    "p_final": 0.8295,
-   "p_market": 0.895,
-   "edge": -0.0655,
+   "p_market": 0.896,
+   "edge": -0.0665,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
    "robust": true
@@ -251,10 +251,25 @@
    "poll_avg": 4.5,
    "n_polls": 14,
    "p_final": 0.7685,
-   "p_market": 0.73,
-   "edge": 0.0385,
+   "p_market": 0.729,
+   "edge": 0.0395,
    "edge_lo": 0.0225,
    "edge_hi": 0.0752,
+   "robust": false
+  },
+  {
+   "race_id": "NH-GOV",
+   "office": "Governor",
+   "challenger": "Cinde Warmington",
+   "rep": "Kelly Ayotte",
+   "ind_race": false,
+   "poll_avg": -6.9,
+   "n_polls": 6,
+   "p_final": 0.108,
+   "p_market": 0.146,
+   "edge": -0.038,
+   "edge_lo": null,
+   "edge_hi": null,
    "robust": false
   },
   {
@@ -318,21 +333,6 @@
    "robust": false
   },
   {
-   "race_id": "NH-GOV",
-   "office": "Governor",
-   "challenger": "Cinde Warmington",
-   "rep": "Kelly Ayotte",
-   "ind_race": false,
-   "poll_avg": -6.9,
-   "n_polls": 6,
-   "p_final": 0.108,
-   "p_market": 0.14,
-   "edge": -0.032,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "MT-SEN",
    "office": "Senate",
    "challenger": "Seth Bodnar",
@@ -356,8 +356,8 @@
    "poll_avg": -1.5,
    "n_polls": 8,
    "p_final": 0.3002,
-   "p_market": 0.33,
-   "edge": -0.0298,
+   "p_market": 0.329,
+   "edge": -0.0288,
    "edge_lo": -0.0281,
    "edge_hi": 0.0467,
    "robust": false
@@ -631,7 +631,7 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.965,
+   "p_market": 0.964,
    "edge": 0.02
   },
   {
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.627,
-   "edge": 0.058
+   "p_market": 0.629,
+   "edge": 0.056
   },
   {
    "race_id": "AK-SEN",
@@ -706,8 +706,8 @@
    "hi80": 16.2,
    "p_live": 0.831,
    "p_pre": 0.83,
-   "p_market": 0.895,
-   "edge": -0.064
+   "p_market": 0.896,
+   "edge": -0.065
   },
   {
    "race_id": "TX-GOV",
@@ -811,8 +811,8 @@
    "hi80": 9.6,
    "p_live": 0.767,
    "p_pre": 0.768,
-   "p_market": 0.73,
-   "edge": 0.037
+   "p_market": 0.729,
+   "edge": 0.038
   },
   {
    "race_id": "IA-SEN",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.33,
-   "edge": -0.033
+   "p_market": 0.329,
+   "edge": -0.032
   },
   {
    "race_id": "OH-SEN",
@@ -931,8 +931,8 @@
    "hi80": -0.2,
    "p_live": 0.093,
    "p_pre": 0.108,
-   "p_market": 0.14,
-   "edge": -0.048
+   "p_market": 0.146,
+   "edge": -0.053
   },
   {
    "race_id": "VT-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "03:51:21"
+ "live_updated": "03:56:40"
 }
