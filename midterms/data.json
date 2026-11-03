@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:58:24-08:00",
+ "updated": "2026-11-03T03:09:02-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.367,
-   "edge": -0.184,
+   "p_market": 0.37,
+   "edge": -0.187,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -101,8 +101,8 @@
    "poll_avg": 0.8,
    "n_polls": 7,
    "p_final": 0.6175,
-   "p_market": 0.707,
-   "edge": -0.0895,
+   "p_market": 0.705,
+   "edge": -0.0875,
    "edge_lo": -0.1506,
    "edge_hi": -0.083,
    "robust": true
@@ -131,8 +131,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.625,
-   "edge": 0.0713,
+   "p_market": 0.627,
+   "edge": 0.0693,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.367,
-   "edge": -0.2
+   "p_market": 0.37,
+   "edge": -0.204
   },
   {
    "race_id": "FL-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.625,
-   "edge": 0.06
+   "p_market": 0.627,
+   "edge": 0.058
   },
   {
    "race_id": "AK-SEN",
@@ -691,8 +691,8 @@
    "hi80": 8.0,
    "p_live": 0.62,
    "p_pre": 0.617,
-   "p_market": 0.707,
-   "edge": -0.087
+   "p_market": 0.705,
+   "edge": -0.085
   },
   {
    "race_id": "AK-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "02:58:04"
+ "live_updated": "03:08:45"
 }
