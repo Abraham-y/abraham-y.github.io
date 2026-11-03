@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T08:51:47-08:00",
+ "updated": "2026-11-03T08:57:08-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -26,8 +26,8 @@
    "poll_avg": 0.2,
    "n_polls": 4,
    "p_final": 0.5677,
-   "p_market": 0.758,
-   "edge": -0.1903,
+   "p_market": 0.76,
+   "edge": -0.1923,
    "edge_lo": -0.1933,
    "edge_hi": -0.1722,
    "robust": true
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.337,
-   "edge": -0.154,
+   "p_market": 0.333,
+   "edge": -0.15,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -71,8 +71,8 @@
    "poll_avg": -0.4,
    "n_polls": 8,
    "p_final": 0.4527,
-   "p_market": 0.351,
-   "edge": 0.1017,
+   "p_market": 0.35,
+   "edge": 0.1027,
    "edge_lo": 0.0566,
    "edge_hi": 0.16,
    "robust": true
@@ -101,8 +101,8 @@
    "poll_avg": 0.8,
    "n_polls": 7,
    "p_final": 0.6175,
-   "p_market": 0.705,
-   "edge": -0.0875,
+   "p_market": 0.704,
+   "edge": -0.0865,
    "edge_lo": -0.1506,
    "edge_hi": -0.083,
    "robust": true
@@ -116,8 +116,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.622,
-   "edge": 0.0743,
+   "p_market": 0.621,
+   "edge": 0.0753,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -461,8 +461,8 @@
    "poll_avg": 7.5,
    "n_polls": 7,
    "p_final": 0.8715,
-   "p_market": 0.883,
-   "edge": -0.0115,
+   "p_market": 0.885,
+   "edge": -0.0135,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -543,21 +543,6 @@
    "robust": false
   },
   {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.304,
-   "edge": -0.0038,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
-   "robust": false
-  },
-  {
    "race_id": "IA-SEN",
    "office": "Senate",
    "challenger": "Josh Turek",
@@ -570,6 +555,21 @@
    "edge": -0.0035,
    "edge_lo": -0.0556,
    "edge_hi": -0.0076,
+   "robust": false
+  },
+  {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.303,
+   "edge": -0.0028,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
    "robust": false
   }
  ],
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.337,
-   "edge": -0.17
+   "p_market": 0.333,
+   "edge": -0.167
   },
   {
    "race_id": "FL-SEN",
@@ -646,8 +646,8 @@
    "hi80": 8.2,
    "p_live": 0.55,
    "p_pre": 0.568,
-   "p_market": 0.758,
-   "edge": -0.208
+   "p_market": 0.76,
+   "edge": -0.21
   },
   {
    "race_id": "KS-GOV",
@@ -661,8 +661,8 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.351,
-   "edge": 0.101
+   "p_market": 0.35,
+   "edge": 0.102
   },
   {
    "race_id": "KS-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.622,
-   "edge": 0.063
+   "p_market": 0.621,
+   "edge": 0.064
   },
   {
    "race_id": "AK-SEN",
@@ -691,8 +691,8 @@
    "hi80": 8.0,
    "p_live": 0.62,
    "p_pre": 0.617,
-   "p_market": 0.705,
-   "edge": -0.085
+   "p_market": 0.704,
+   "edge": -0.084
   },
   {
    "race_id": "AK-GOV",
@@ -841,8 +841,8 @@
    "hi80": 12.5,
    "p_live": 0.885,
    "p_pre": 0.872,
-   "p_market": 0.883,
-   "edge": 0.002
+   "p_market": 0.885,
+   "edge": 0.0
   },
   {
    "race_id": "NC-SEN",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.304,
-   "edge": -0.007
+   "p_market": 0.303,
+   "edge": -0.005
   },
   {
    "race_id": "OH-SEN",
@@ -932,7 +932,7 @@
    "p_live": 0.093,
    "p_pre": 0.108,
    "p_market": 0.156,
-   "edge": -0.064
+   "edge": -0.063
   },
   {
    "race_id": "VT-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "08:51:29"
+ "live_updated": "08:56:49"
 }
