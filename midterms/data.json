@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T10:32:25-08:00",
+ "updated": "2026-11-03T10:37:49-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.342,
-   "edge": -0.159,
+   "p_market": 0.343,
+   "edge": -0.16,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.688,
-   "edge": -0.1175,
+   "p_market": 0.693,
+   "edge": -0.1225,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -101,8 +101,8 @@
    "poll_avg": 0.8,
    "n_polls": 7,
    "p_final": 0.6175,
-   "p_market": 0.7,
-   "edge": -0.0825,
+   "p_market": 0.702,
+   "edge": -0.0845,
    "edge_lo": -0.1506,
    "edge_hi": -0.083,
    "robust": true
@@ -168,21 +168,6 @@
    "robust": true
   },
   {
-   "race_id": "SC-SEN",
-   "office": "Senate",
-   "challenger": "Annie Andrews",
-   "rep": "Darline Graham",
-   "ind_race": false,
-   "poll_avg": -1.3,
-   "n_polls": 9,
-   "p_final": 0.3639,
-   "p_market": 0.3,
-   "edge": 0.0639,
-   "edge_lo": 0.0409,
-   "edge_hi": 0.0559,
-   "robust": true
-  },
-  {
    "race_id": "AK-GOV",
    "office": "Governor",
    "challenger": "Jonathan Kreiss-Tomkins",
@@ -195,6 +180,21 @@
    "edge": -0.0635,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
+   "robust": true
+  },
+  {
+   "race_id": "SC-SEN",
+   "office": "Senate",
+   "challenger": "Annie Andrews",
+   "rep": "Darline Graham",
+   "ind_race": false,
+   "poll_avg": -1.3,
+   "n_polls": 9,
+   "p_final": 0.3639,
+   "p_market": 0.301,
+   "edge": 0.0629,
+   "edge_lo": 0.0409,
+   "edge_hi": 0.0559,
    "robust": true
   },
   {
@@ -243,6 +243,21 @@
    "robust": false
   },
   {
+   "race_id": "AZ-GOV",
+   "office": "Governor",
+   "challenger": "Katie Hobbs",
+   "rep": "Andy Biggs",
+   "ind_race": false,
+   "poll_avg": 8.3,
+   "n_polls": 4,
+   "p_final": 0.8939,
+   "p_market": 0.932,
+   "edge": -0.0381,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
    "race_id": "AL-GOV",
    "office": "Governor",
    "challenger": "Doug Jones",
@@ -271,21 +286,6 @@
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
-  },
-  {
-   "race_id": "AZ-GOV",
-   "office": "Governor",
-   "challenger": "Katie Hobbs",
-   "rep": "Andy Biggs",
-   "ind_race": false,
-   "poll_avg": 8.3,
-   "n_polls": 4,
-   "p_final": 0.8939,
-   "p_market": 0.931,
-   "edge": -0.0371,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
   },
   {
    "race_id": "TN-GOV",
@@ -483,21 +483,6 @@
    "robust": false
   },
   {
-   "race_id": "MI-GOV",
-   "office": "Governor",
-   "challenger": "Jocelyn Benson",
-   "rep": "John James",
-   "ind_race": false,
-   "poll_avg": 8.8,
-   "n_polls": 14,
-   "p_final": 0.9472,
-   "p_market": 0.936,
-   "edge": 0.0112,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "OH-SEN",
    "office": "Senate",
    "challenger": "Sherrod Brown",
@@ -510,6 +495,36 @@
    "edge": 0.011,
    "edge_lo": 0.0071,
    "edge_hi": 0.0329,
+   "robust": false
+  },
+  {
+   "race_id": "MI-GOV",
+   "office": "Governor",
+   "challenger": "Jocelyn Benson",
+   "rep": "John James",
+   "ind_race": false,
+   "poll_avg": 8.8,
+   "n_polls": 14,
+   "p_final": 0.9472,
+   "p_market": 0.938,
+   "edge": 0.0092,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "IA-GOV",
+   "office": "Governor",
+   "challenger": "Rob Sand",
+   "rep": "Zach Lahn",
+   "ind_race": false,
+   "poll_avg": 7.5,
+   "n_polls": 7,
+   "p_final": 0.8715,
+   "p_market": 0.88,
+   "edge": -0.0085,
+   "edge_lo": null,
+   "edge_hi": null,
    "robust": false
   },
   {
@@ -543,21 +558,6 @@
    "robust": false
   },
   {
-   "race_id": "IA-GOV",
-   "office": "Governor",
-   "challenger": "Rob Sand",
-   "rep": "Zach Lahn",
-   "ind_race": false,
-   "poll_avg": 7.5,
-   "n_polls": 7,
-   "p_final": 0.8715,
-   "p_market": 0.877,
-   "edge": -0.0055,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "NE-SEN",
    "office": "Senate",
    "challenger": "Dan Osborn",
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.342,
-   "edge": -0.175
+   "p_market": 0.343,
+   "edge": -0.177
   },
   {
    "race_id": "FL-SEN",
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.688,
-   "edge": -0.12
+   "p_market": 0.693,
+   "edge": -0.125
   },
   {
    "race_id": "GA-SEN",
@@ -631,7 +631,7 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.967,
+   "p_market": 0.968,
    "edge": 0.017
   },
   {
@@ -691,8 +691,8 @@
    "hi80": 8.0,
    "p_live": 0.62,
    "p_pre": 0.617,
-   "p_market": 0.7,
-   "edge": -0.08
+   "p_market": 0.702,
+   "edge": -0.082
   },
   {
    "race_id": "AK-GOV",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.936,
-   "edge": 0.022
+   "p_market": 0.938,
+   "edge": 0.02
   },
   {
    "race_id": "SC-SEN",
@@ -796,8 +796,8 @@
    "hi80": 4.5,
    "p_live": 0.365,
    "p_pre": 0.364,
-   "p_market": 0.3,
-   "edge": 0.065
+   "p_market": 0.301,
+   "edge": 0.063
   },
   {
    "race_id": "ME-SEN",
@@ -841,8 +841,8 @@
    "hi80": 12.5,
    "p_live": 0.885,
    "p_pre": 0.872,
-   "p_market": 0.877,
-   "edge": 0.008
+   "p_market": 0.88,
+   "edge": 0.005
   },
   {
    "race_id": "NC-SEN",
@@ -857,7 +857,7 @@
    "p_live": 0.983,
    "p_pre": 0.972,
    "p_market": 0.976,
-   "edge": 0.008
+   "edge": 0.007
   },
   {
    "race_id": "NE-SEN",
@@ -916,8 +916,8 @@
    "hi80": 15.0,
    "p_live": 0.905,
    "p_pre": 0.894,
-   "p_market": 0.931,
-   "edge": -0.026
+   "p_market": 0.932,
+   "edge": -0.027
   },
   {
    "race_id": "NH-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.086
   }
  ],
- "live_updated": "10:31:47"
+ "live_updated": "10:37:29"
 }
