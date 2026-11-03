@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:21:06-08:00",
+ "updated": "2026-11-03T02:26:19-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -101,8 +101,8 @@
    "poll_avg": 0.8,
    "n_polls": 7,
    "p_final": 0.6175,
-   "p_market": 0.71,
-   "edge": -0.0925,
+   "p_market": 0.707,
+   "edge": -0.0895,
    "edge_lo": -0.1506,
    "edge_hi": -0.083,
    "robust": true
@@ -146,8 +146,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.383,
-   "edge": -0.0653,
+   "p_market": 0.382,
+   "edge": -0.0643,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -161,8 +161,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.632,
-   "edge": 0.0643,
+   "p_market": 0.633,
+   "edge": 0.0633,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -213,21 +213,6 @@
    "robust": true
   },
   {
-   "race_id": "MI-SEN",
-   "office": "Senate",
-   "challenger": "Abdul El-Sayed",
-   "rep": "Mike Rogers",
-   "ind_race": false,
-   "poll_avg": 5.3,
-   "n_polls": 17,
-   "p_final": 0.845,
-   "p_market": 0.801,
-   "edge": 0.044,
-   "edge_lo": 0.0317,
-   "edge_hi": 0.0745,
-   "robust": true
-  },
-  {
    "race_id": "MS-SEN",
    "office": "Senate",
    "challenger": "Scott Colom",
@@ -241,6 +226,21 @@
    "edge_lo": -0.0489,
    "edge_hi": 0.0562,
    "robust": false
+  },
+  {
+   "race_id": "MI-SEN",
+   "office": "Senate",
+   "challenger": "Abdul El-Sayed",
+   "rep": "Mike Rogers",
+   "ind_race": false,
+   "poll_avg": 5.3,
+   "n_polls": 17,
+   "p_final": 0.845,
+   "p_market": 0.805,
+   "edge": 0.04,
+   "edge_lo": 0.0317,
+   "edge_hi": 0.0745,
+   "robust": true
   },
   {
    "race_id": "ME-SEN",
@@ -348,6 +348,21 @@
    "robust": false
   },
   {
+   "race_id": "OH-GOV",
+   "office": "Governor",
+   "challenger": "Amy Acton",
+   "rep": "Vivek Ramaswamy",
+   "ind_race": false,
+   "poll_avg": 4.4,
+   "n_polls": 16,
+   "p_final": 0.8016,
+   "p_market": 0.83,
+   "edge": -0.0284,
+   "edge_lo": -0.0352,
+   "edge_hi": -0.0065,
+   "robust": false
+  },
+  {
    "race_id": "LA-SEN",
    "office": "Senate",
    "challenger": "Jamie Davis",
@@ -375,21 +390,6 @@
    "edge": -0.0252,
    "edge_lo": null,
    "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "OH-GOV",
-   "office": "Governor",
-   "challenger": "Amy Acton",
-   "rep": "Vivek Ramaswamy",
-   "ind_race": false,
-   "poll_avg": 4.4,
-   "n_polls": 16,
-   "p_final": 0.8016,
-   "p_market": 0.826,
-   "edge": -0.0244,
-   "edge_lo": -0.0352,
-   "edge_hi": -0.0065,
    "robust": false
   },
   {
@@ -587,7 +587,7 @@
    "p_live": 0.166,
    "p_pre": 0.183,
    "p_market": 0.367,
-   "edge": -0.201
+   "edge": -0.2
   },
   {
    "race_id": "FL-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.632,
-   "edge": 0.053
+   "p_market": 0.633,
+   "edge": 0.052
   },
   {
    "race_id": "AK-SEN",
@@ -691,8 +691,8 @@
    "hi80": 8.0,
    "p_live": 0.62,
    "p_pre": 0.617,
-   "p_market": 0.71,
-   "edge": -0.09
+   "p_market": 0.707,
+   "edge": -0.087
   },
   {
    "race_id": "AK-GOV",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.383,
-   "edge": -0.069
+   "p_market": 0.382,
+   "edge": -0.068
   },
   {
    "race_id": "TX-SEN",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.801,
-   "edge": 0.04
+   "p_market": 0.805,
+   "edge": 0.036
   },
   {
    "race_id": "MI-GOV",
@@ -901,8 +901,8 @@
    "hi80": 9.7,
    "p_live": 0.809,
    "p_pre": 0.802,
-   "p_market": 0.826,
-   "edge": -0.017
+   "p_market": 0.83,
+   "edge": -0.021
   },
   {
    "race_id": "AZ-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "02:20:57"
+ "live_updated": "02:26:08"
 }
