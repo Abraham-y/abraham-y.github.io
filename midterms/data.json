@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T08:19:45-08:00",
+ "updated": "2026-11-03T08:25:07-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,10 +41,25 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.338,
-   "edge": -0.155,
+   "p_market": 0.34,
+   "edge": -0.157,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
+   "robust": true
+  },
+  {
+   "race_id": "KS-GOV",
+   "office": "Governor",
+   "challenger": "Cindy Holscher",
+   "rep": "Ty Masterson",
+   "ind_race": false,
+   "poll_avg": -0.4,
+   "n_polls": 8,
+   "p_final": 0.4527,
+   "p_market": 0.348,
+   "edge": 0.1047,
+   "edge_lo": 0.0566,
+   "edge_hi": 0.16,
    "robust": true
   },
   {
@@ -63,21 +78,6 @@
    "robust": false
   },
   {
-   "race_id": "KS-GOV",
-   "office": "Governor",
-   "challenger": "Cindy Holscher",
-   "rep": "Ty Masterson",
-   "ind_race": false,
-   "poll_avg": -0.4,
-   "n_polls": 8,
-   "p_final": 0.4527,
-   "p_market": 0.351,
-   "edge": 0.1017,
-   "edge_lo": 0.0566,
-   "edge_hi": 0.16,
-   "robust": true
-  },
-  {
    "race_id": "GA-GOV",
    "office": "Governor",
    "challenger": "Keisha Lance Bottoms",
@@ -86,8 +86,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.669,
-   "edge": -0.0985,
+   "p_market": 0.666,
+   "edge": -0.0955,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -105,6 +105,21 @@
    "edge": -0.0865,
    "edge_lo": -0.1506,
    "edge_hi": -0.083,
+   "robust": true
+  },
+  {
+   "race_id": "WI-GOV",
+   "office": "Governor",
+   "challenger": "David Crowley",
+   "rep": "Tom Tiffany",
+   "ind_race": false,
+   "poll_avg": 4.9,
+   "n_polls": 3,
+   "p_final": 0.7897,
+   "p_market": 0.861,
+   "edge": -0.0713,
+   "edge_lo": -0.0857,
+   "edge_hi": -0.0449,
    "robust": true
   },
   {
@@ -138,21 +153,6 @@
    "robust": true
   },
   {
-   "race_id": "WI-GOV",
-   "office": "Governor",
-   "challenger": "David Crowley",
-   "rep": "Tom Tiffany",
-   "ind_race": false,
-   "poll_avg": 4.9,
-   "n_polls": 3,
-   "p_final": 0.7897,
-   "p_market": 0.856,
-   "edge": -0.0663,
-   "edge_lo": -0.0857,
-   "edge_hi": -0.0449,
-   "robust": true
-  },
-  {
    "race_id": "SC-SEN",
    "office": "Senate",
    "challenger": "Annie Andrews",
@@ -176,8 +176,8 @@
    "poll_avg": 4.5,
    "n_polls": 14,
    "p_final": 0.7685,
-   "p_market": 0.71,
-   "edge": 0.0585,
+   "p_market": 0.709,
+   "edge": 0.0595,
    "edge_lo": 0.0225,
    "edge_hi": 0.0752,
    "robust": false
@@ -191,8 +191,8 @@
    "poll_avg": 5.3,
    "n_polls": 17,
    "p_final": 0.845,
-   "p_market": 0.788,
-   "edge": 0.057,
+   "p_market": 0.786,
+   "edge": 0.059,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
@@ -243,21 +243,6 @@
    "robust": false
   },
   {
-   "race_id": "AZ-GOV",
-   "office": "Governor",
-   "challenger": "Katie Hobbs",
-   "rep": "Andy Biggs",
-   "ind_race": false,
-   "poll_avg": 8.3,
-   "n_polls": 4,
-   "p_final": 0.8939,
-   "p_market": 0.932,
-   "edge": -0.0381,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "AL-GOV",
    "office": "Governor",
    "challenger": "Doug Jones",
@@ -268,6 +253,21 @@
    "p_final": 0.0349,
    "p_market": 0.0723,
    "edge": -0.0374,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "AZ-GOV",
+   "office": "Governor",
+   "challenger": "Katie Hobbs",
+   "rep": "Andy Biggs",
+   "ind_race": false,
+   "poll_avg": 8.3,
+   "n_polls": 4,
+   "p_final": 0.8939,
+   "p_market": 0.931,
+   "edge": -0.0371,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -303,21 +303,6 @@
    "robust": true
   },
   {
-   "race_id": "TX-SEN",
-   "office": "Senate",
-   "challenger": "James Talarico",
-   "rep": "Ken Paxton",
-   "ind_race": false,
-   "poll_avg": 3.3,
-   "n_polls": 25,
-   "p_final": 0.7415,
-   "p_market": 0.71,
-   "edge": 0.0315,
-   "edge_lo": -0.0055,
-   "edge_hi": 0.0242,
-   "robust": false
-  },
-  {
    "race_id": "MT-SEN",
    "office": "Senate",
    "challenger": "Seth Bodnar",
@@ -330,6 +315,21 @@
    "edge": -0.03,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "TX-SEN",
+   "office": "Senate",
+   "challenger": "James Talarico",
+   "rep": "Ken Paxton",
+   "ind_race": false,
+   "poll_avg": 3.3,
+   "n_polls": 25,
+   "p_final": 0.7415,
+   "p_market": 0.714,
+   "edge": 0.0275,
+   "edge_lo": -0.0055,
+   "edge_hi": 0.0242,
    "robust": false
   },
   {
@@ -528,18 +528,18 @@
    "robust": false
   },
   {
-   "race_id": "IA-SEN",
-   "office": "Senate",
-   "challenger": "Josh Turek",
-   "rep": "Ashley Hinson",
+   "race_id": "MI-GOV",
+   "office": "Governor",
+   "challenger": "Jocelyn Benson",
+   "rep": "John James",
    "ind_race": false,
-   "poll_avg": 0.7,
-   "n_polls": 10,
-   "p_final": 0.4935,
-   "p_market": 0.499,
-   "edge": -0.0055,
-   "edge_lo": -0.0556,
-   "edge_hi": -0.0076,
+   "poll_avg": 8.8,
+   "n_polls": 14,
+   "p_final": 0.9472,
+   "p_market": 0.943,
+   "edge": 0.0042,
+   "edge_lo": null,
+   "edge_hi": null,
    "robust": false
   },
   {
@@ -551,25 +551,25 @@
    "poll_avg": -5.9,
    "n_polls": 14,
    "p_final": 0.1006,
-   "p_market": 0.104,
-   "edge": -0.0034,
+   "p_market": 0.097,
+   "edge": 0.0036,
    "edge_lo": -0.0552,
    "edge_hi": -0.0427,
    "robust": true
   },
   {
-   "race_id": "MI-GOV",
-   "office": "Governor",
-   "challenger": "Jocelyn Benson",
-   "rep": "John James",
+   "race_id": "IA-SEN",
+   "office": "Senate",
+   "challenger": "Josh Turek",
+   "rep": "Ashley Hinson",
    "ind_race": false,
-   "poll_avg": 8.8,
-   "n_polls": 14,
-   "p_final": 0.9472,
-   "p_market": 0.947,
-   "edge": 0.0002,
-   "edge_lo": null,
-   "edge_hi": null,
+   "poll_avg": 0.7,
+   "n_polls": 10,
+   "p_final": 0.4935,
+   "p_market": 0.496,
+   "edge": -0.0025,
+   "edge_lo": -0.0556,
+   "edge_hi": -0.0076,
    "robust": false
   }
  ],
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.338,
-   "edge": -0.172
+   "p_market": 0.34,
+   "edge": -0.174
   },
   {
    "race_id": "FL-SEN",
@@ -601,8 +601,8 @@
    "hi80": -0.3,
    "p_live": 0.089,
    "p_pre": 0.101,
-   "p_market": 0.104,
-   "edge": -0.015
+   "p_market": 0.097,
+   "edge": -0.008
   },
   {
    "race_id": "GA-GOV",
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.669,
-   "edge": -0.101
+   "p_market": 0.666,
+   "edge": -0.097
   },
   {
    "race_id": "GA-SEN",
@@ -661,8 +661,8 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.351,
-   "edge": 0.1
+   "p_market": 0.348,
+   "edge": 0.103
   },
   {
    "race_id": "KS-SEN",
@@ -736,8 +736,8 @@
    "hi80": 8.9,
    "p_live": 0.754,
    "p_pre": 0.742,
-   "p_market": 0.71,
-   "edge": 0.044
+   "p_market": 0.714,
+   "edge": 0.041
   },
   {
    "race_id": "WI-GOV",
@@ -751,8 +751,8 @@
    "hi80": 12.0,
    "p_live": 0.795,
    "p_pre": 0.79,
-   "p_market": 0.856,
-   "edge": -0.061
+   "p_market": 0.861,
+   "edge": -0.066
   },
   {
    "race_id": "MI-SEN",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.788,
-   "edge": 0.053
+   "p_market": 0.786,
+   "edge": 0.055
   },
   {
    "race_id": "MI-GOV",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.947,
-   "edge": 0.011
+   "p_market": 0.943,
+   "edge": 0.015
   },
   {
    "race_id": "SC-SEN",
@@ -811,7 +811,7 @@
    "hi80": 9.6,
    "p_live": 0.767,
    "p_pre": 0.768,
-   "p_market": 0.71,
+   "p_market": 0.709,
    "edge": 0.057
   },
   {
@@ -826,8 +826,8 @@
    "hi80": 6.6,
    "p_live": 0.488,
    "p_pre": 0.493,
-   "p_market": 0.499,
-   "edge": -0.011
+   "p_market": 0.496,
+   "edge": -0.009
   },
   {
    "race_id": "IA-GOV",
@@ -916,8 +916,8 @@
    "hi80": 15.0,
    "p_live": 0.905,
    "p_pre": 0.894,
-   "p_market": 0.932,
-   "edge": -0.027
+   "p_market": 0.931,
+   "edge": -0.026
   },
   {
    "race_id": "NH-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "08:19:26"
+ "live_updated": "08:24:47"
 }
