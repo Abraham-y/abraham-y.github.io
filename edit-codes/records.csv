@@ -34,3 +34,5 @@ fixed,3,7,3,83,,2026-10-30,here,local search on the full conflict graph,codes/ed
 fixed,3,10,3,1261,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n10_d3_size1261.txt,09a8e07988f564ba4ebe15e565bc0557de466486c422c4c0f24d766c395b40b0
 fixed,3,10,4,214,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n10_d4_size214.txt,a779abe32f8e9307b7ed1be2c8075f56e1ff3cb3bf7e39673b60005b7b8ddb64
 fixed,3,11,3,3205,,2026-10-30,here,prescribed symmetry (symbol swap and reversal) + local search,codes/edit3_n11_d3_size3205.txt,380e6e628ef3dee2862557887a8793f39225f90b10a409a82941858ba4e2b235
+fixed,3,11,4,525,,2026-11-03,here,prescribed symmetry (all symbol permutations and reversal) + local search,codes/edit3_n11_d4_size525.txt,188b37b46232302bcae04fa73644b223ad8e397ce024e45d629c3f8a4dde4313
+fixed,3,11,5,108,,2026-11-03,here,prescribed symmetry (cyclic symbol shift and reversal) + local search,codes/edit3_n11_d5_size108.txt,b643535c5dc00adecc03c9b8d80a7d4b437d9654163b8c201e34161cffac8a0d
