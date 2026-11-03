@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T03:25:02-08:00",
+ "updated": "2026-11-03T03:30:21-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -161,8 +161,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.377,
-   "edge": -0.0593,
+   "p_market": 0.378,
+   "edge": -0.0603,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -498,6 +498,21 @@
    "robust": false
   },
   {
+   "race_id": "MI-GOV",
+   "office": "Governor",
+   "challenger": "Jocelyn Benson",
+   "rep": "John James",
+   "ind_race": false,
+   "poll_avg": 8.8,
+   "n_polls": 14,
+   "p_final": 0.9472,
+   "p_market": 0.937,
+   "edge": 0.0102,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
    "race_id": "IA-GOV",
    "office": "Governor",
    "challenger": "Rob Sand",
@@ -523,21 +538,6 @@
    "p_final": 0.1154,
    "p_market": 0.107,
    "edge": 0.0085,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "MI-GOV",
-   "office": "Governor",
-   "challenger": "Jocelyn Benson",
-   "rep": "John James",
-   "ind_race": false,
-   "poll_avg": 8.8,
-   "n_polls": 14,
-   "p_final": 0.9472,
-   "p_market": 0.94,
-   "edge": 0.0072,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.377,
-   "edge": -0.063
+   "p_market": 0.378,
+   "edge": -0.064
   },
   {
    "race_id": "TX-SEN",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.94,
-   "edge": 0.018
+   "p_market": 0.937,
+   "edge": 0.021
   },
   {
    "race_id": "SC-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "03:24:45"
+ "live_updated": "03:30:04"
 }
