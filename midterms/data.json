@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T04:55:43-08:00",
+ "updated": "2026-11-03T05:01:06-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.367,
-   "edge": -0.184,
+   "p_market": 0.366,
+   "edge": -0.183,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -63,6 +63,21 @@
    "robust": true
   },
   {
+   "race_id": "KS-GOV",
+   "office": "Governor",
+   "challenger": "Cindy Holscher",
+   "rep": "Ty Masterson",
+   "ind_race": false,
+   "poll_avg": -0.4,
+   "n_polls": 8,
+   "p_final": 0.4527,
+   "p_market": 0.348,
+   "edge": 0.1047,
+   "edge_lo": 0.0566,
+   "edge_hi": 0.16,
+   "robust": true
+  },
+  {
    "race_id": "VT-GOV",
    "office": "Governor",
    "challenger": "Amanda Janoo",
@@ -76,21 +91,6 @@
    "edge_lo": -0.0914,
    "edge_hi": 0.3252,
    "robust": false
-  },
-  {
-   "race_id": "KS-GOV",
-   "office": "Governor",
-   "challenger": "Cindy Holscher",
-   "rep": "Ty Masterson",
-   "ind_race": false,
-   "poll_avg": -0.4,
-   "n_polls": 8,
-   "p_final": 0.4527,
-   "p_market": 0.351,
-   "edge": 0.1017,
-   "edge_lo": 0.0566,
-   "edge_hi": 0.16,
-   "robust": true
   },
   {
    "race_id": "AK-SEN",
@@ -161,8 +161,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.378,
-   "edge": -0.0603,
+   "p_market": 0.376,
+   "edge": -0.0583,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -221,8 +221,8 @@
    "poll_avg": 5.3,
    "n_polls": 17,
    "p_final": 0.845,
-   "p_market": 0.801,
-   "edge": 0.044,
+   "p_market": 0.797,
+   "edge": 0.048,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
@@ -543,21 +543,6 @@
    "robust": false
   },
   {
-   "race_id": "IA-GOV",
-   "office": "Governor",
-   "challenger": "Rob Sand",
-   "rep": "Zach Lahn",
-   "ind_race": false,
-   "poll_avg": 7.5,
-   "n_polls": 7,
-   "p_final": 0.8715,
-   "p_market": 0.876,
-   "edge": -0.0045,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "TX-SEN",
    "office": "Senate",
    "challenger": "James Talarico",
@@ -566,10 +551,25 @@
    "poll_avg": 3.3,
    "n_polls": 25,
    "p_final": 0.7415,
-   "p_market": 0.74,
-   "edge": 0.0015,
+   "p_market": 0.736,
+   "edge": 0.0055,
    "edge_lo": -0.0055,
    "edge_hi": 0.0242,
+   "robust": false
+  },
+  {
+   "race_id": "IA-GOV",
+   "office": "Governor",
+   "challenger": "Rob Sand",
+   "rep": "Zach Lahn",
+   "ind_race": false,
+   "poll_avg": 7.5,
+   "n_polls": 7,
+   "p_final": 0.8715,
+   "p_market": 0.877,
+   "edge": -0.0055,
+   "edge_lo": null,
+   "edge_hi": null,
    "robust": false
   }
  ],
@@ -586,7 +586,7 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.367,
+   "p_market": 0.366,
    "edge": -0.2
   },
   {
@@ -661,8 +661,8 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.351,
-   "edge": 0.1
+   "p_market": 0.348,
+   "edge": 0.103
   },
   {
    "race_id": "KS-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.378,
-   "edge": -0.064
+   "p_market": 0.376,
+   "edge": -0.062
   },
   {
    "race_id": "TX-SEN",
@@ -736,8 +736,8 @@
    "hi80": 8.9,
    "p_live": 0.754,
    "p_pre": 0.742,
-   "p_market": 0.74,
-   "edge": 0.014
+   "p_market": 0.736,
+   "edge": 0.018
   },
   {
    "race_id": "WI-GOV",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.801,
-   "edge": 0.04
+   "p_market": 0.797,
+   "edge": 0.044
   },
   {
    "race_id": "MI-GOV",
@@ -841,8 +841,8 @@
    "hi80": 12.5,
    "p_live": 0.885,
    "p_pre": 0.872,
-   "p_market": 0.876,
-   "edge": 0.009
+   "p_market": 0.877,
+   "edge": 0.008
   },
   {
    "race_id": "NC-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "04:55:22"
+ "live_updated": "05:00:48"
 }
