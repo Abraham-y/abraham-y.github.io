@@ -1,0 +1,35 @@
+# fixed-length edit-metric code, abrahamyeung.com/edit-codes/
+# q = 4
+# n = 7
+# d = 5
+# size = 20
+# sha256(codewords) = 74f19f275251e84fc6cde1a1dc58efedefb314f53d0c830e5021537f7438a553
+# original header:
+# | quaternary edit-metric code, minimum Levenshtein distance d
+# | n = 7
+# | d = 5
+# | q = 4
+# | size = 20
+# | invariant under |H|=4 product [proj|S4|=4] gen~(1, 0, 3, 2)
+# | found by search/editq.py (C ARW local search on the orbit graph)
+# | sha256(codewords) = 74f19f275251e84fc6cde1a1dc58efedefb314f53d0c830e5021537f7438a553
+0003332
+0031211
+0110012
+0222202
+0311320
+1001103
+1112223
+1120300
+1200231
+1333313
+2000020
+2133102
+2213033
+2221110
+2332230
+3022013
+3111131
+3223321
+3302122
+3330001

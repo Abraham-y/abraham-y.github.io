@@ -1,0 +1,40 @@
+# fixed-length edit-metric code, abrahamyeung.com/edit-codes/
+# q = 3
+# n = 9
+# d = 5
+# size = 26
+# sha256(codewords) = d0125f9477a6e8e8f19d2e387e40d11d19a5a1cf72070df5092bb9e7c6ea6dad
+# original header:
+# | ternary edit-metric code, minimum Levenshtein distance 5
+# | n = 9
+# | d = 5
+# | q = 3
+# | method: search/fullgraph_q.py, mis_ils on the full conflict graph, seed 1, 300s
+# | size = 26
+# | sha256(codewords) = d0125f9477a6e8e8f19d2e387e40d11d19a5a1cf72070df5092bb9e7c6ea6dad
+000002200
+000021112
+000101021
+001112222
+002111100
+011202121
+012102002
+020120000
+022222011
+102201111
+110011000
+110100112
+110222202
+111111211
+111220010
+122022100
+122120222
+200220022
+202021220
+202110011
+210012221
+211100220
+211121102
+220010110
+222000201
+222211212

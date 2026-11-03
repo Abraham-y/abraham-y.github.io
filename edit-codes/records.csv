@@ -1,0 +1,36 @@
+family,q,n,d,lower,upper,date,ref,method,code,sha256
+fixed,4,6,3,120,,2026-09,Y26,prescribed symmetry (Klein four-group) + local search,codes/edit4_n6_d3_size120.txt,adeaa3604074f5f2b42ece623e45df96f9521650b98fb11a7182321fbc5c3576
+fixed,4,7,3,364,,2026-09,Y26,prescribed symmetry (C3 x C2) + local search,codes/edit4_n7_d3_size364.txt,dadc469672cd5dfe21dbe551ca884c81851a9cc661440f323cf7c65d895e34e6
+fixed,4,8,3,1148,,2026-09,Y26,prescribed symmetry (Klein four-group) + local search,codes/edit4_n8_d3_size1148.txt,e98fe9d121189c38208634f4b8978be329f6aeee0f2d2bedd97105bb87c57fb8
+fixed,4,9,3,3717,,2025,WH25,ReduMIS on the full conflict graph,,
+fixed,4,9,3,3760,,2026-09,Y26,prescribed symmetry (C4) + local search,codes/edit4_n9_d3_size3760.txt,9c7c0ce7c75fbf30820c6af6863e58b28b867e0320ff2476abe864f29bcffb17
+fixed,4,10,3,12489,,2025,WH25,ReduMIS on the full conflict graph,,
+fixed,4,11,3,42080,,2025,WH25,OnlineMIS on the full conflict graph,,
+fixed,4,12,3,141943,,2026-10-10,here,lexicode,codes/edit4_n12_d3_size141943.txt,19e55fe76f3ca4bcc1d3caa0a823ecf742367782d7230b5368e9322827163960
+fixed,4,13,3,500882,,2026-10-26,here,lexicode,codes/edit4_n13_d3_size500882.txt,3ab0ef6e02273359fb8718e008ecdc180dbffd2453b54085c39f35a77172592c
+fixed,4,6,4,30,,2026-09,Y26,prescribed symmetry + local search,codes/edit4_n6_d4_size30.txt,fc6fb24268384a77f148646c7760bb3049b57258d28386310f392f89675a270f
+fixed,4,7,4,72,,2026-09,Y26,prescribed symmetry + local search,codes/edit4_n7_d4_size72.txt,85cb1ceb68de50ccc1566cddddc8240d28b328cbb2b688e8cc0520bc74aeb391
+fixed,4,8,4,200,,2026-09,Y26,prescribed symmetry + local search,codes/edit4_n8_d4_size200.txt,2083125e16976bdc2c73a6de79fef82e798668ebb92c84ac32b9c3a4c148d251
+fixed,4,9,4,520,,2026-09,Y26,prescribed symmetry + local search,codes/edit4_n9_d4_size520.txt,f48053ee681fc5791c5a4f367cecd8c5bbd3d32c45dd1ffe10c194e5f5746569
+fixed,4,12,4,14522,,2026-10-10,here,lexicode,codes/edit4_n12_d4_size14522.txt,a90753c71c599a6b2f85774a810d884539e7bd05e61b19e043f8e70bd74d5fa1
+fixed,4,13,4,46908,,2026-10-26,here,lexicode,codes/edit4_n13_d4_size46908.txt,4d79e4c843ac7b244eb245775482bdf2e41a2bf7e24cbb50fe001c529635f96a
+fixed,4,14,4,153767,,2026-10-26,here,lexicode,codes/edit4_n14_d4_size153767.txt,9cd1825c0f96bbfc91dc3e0ed31f7758ead587ddcf10ff97fca50b4e34915afa
+fixed,4,7,5,20,,2026-09,Y26,prescribed symmetry + local search,codes/edit4_n7_d5_size20.txt,74f19f275251e84fc6cde1a1dc58efedefb314f53d0c830e5021537f7438a553
+fixed,4,8,5,44,,2026-09,Y26,prescribed symmetry + local search,codes/edit4_n8_d5_size44.txt,b777627b5733905edf22910b860ee33ed56227f5f2e18ba73d090b27b20fdc99
+fixed,4,9,5,100,,2026-09,Y26,prescribed symmetry + local search,codes/edit4_n9_d5_size100.txt,f0647e8c174766334d8c526b705cc53cc77a5d21fb6a959e1f7ec85dd51eea4a
+fixed,4,8,6,16,,2026-09,Y26,prescribed symmetry + local search,codes/edit4_n8_d6_size16.txt,773280cf9dc013ce9337801d25485c142dfa0ca8d2f17d10faa71c9f575d903f
+fixed,4,9,6,32,,2026-09,Y26,prescribed symmetry + local search,codes/edit4_n9_d6_size32.txt,f034a20a9dac757148b2ea2653eca03b60a5f233aa60ddde872f667e20c8ef99
+fixed,3,8,3,201,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n8_d3_size201.txt,4474956503afe82da6f6b4265fb31509c7dde054c1e2d824a19ce128637ff65d
+fixed,3,9,3,503,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n9_d3_size503.txt,83b83addd095089d9597725790d69bb1b95913a3d1b72fcfcb30393477fd1089
+fixed,3,7,4,22,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n7_d4_size22.txt,d12a99d782914093141867e5d7d4ff2079a833407fd7bbee4bcc8ed96b3add43
+fixed,3,8,4,45,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n8_d4_size45.txt,55fb5c48ae32c99ae7dcc45fd53c61a5849e2ef5f96199ece61e6f96daf6dec2
+fixed,3,9,4,97,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n9_d4_size97.txt,84807952f74fb97fc955ecffe59933ac17ebd35f5036de543f92ed9418876bcf
+fixed,3,9,5,26,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n9_d5_size26.txt,d0125f9477a6e8e8f19d2e387e40d11d19a5a1cf72070df5092bb9e7c6ea6dad
+fixed,2,11,3,106,,2026-10-30,here,local search on the full conflict graph,codes/edit2_n11_d3_size106.txt,b4c4f5db49aae0596075f61bdb6c3d8c8e4ea72d7401c5ffd49bc42a0558961f
+fixed,2,11,4,33,,2026-10-30,here,local search on the full conflict graph,codes/edit2_n11_d4_size33.txt,ae414fe2fffabe7f018c5483a7ab6fcced7e1ff0f1e79c1cf5d33cac591f0dc7
+fixed,2,12,3,180,,2026-10-30,here,local search on the full conflict graph,codes/edit2_n12_d3_size180.txt,a0d12eb8b83dac60dedf98108bdbf70eac659ae9faed68998ef3b5212af840ad
+fixed,2,12,4,55,,2026-10-30,here,local search on the full conflict graph,codes/edit2_n12_d4_size55.txt,96075d21863f1270db0fbe01c1596fa85143234d7fafc4ca950f0c9b5f6939f3
+fixed,3,7,3,83,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n7_d3_size83.txt,90d9acbb186355bb33ef4008c695d520bc4fa24a499895438221a4c0aad248bc
+fixed,3,10,3,1261,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n10_d3_size1261.txt,09a8e07988f564ba4ebe15e565bc0557de466486c422c4c0f24d766c395b40b0
+fixed,3,10,4,214,,2026-10-30,here,local search on the full conflict graph,codes/edit3_n10_d4_size214.txt,a779abe32f8e9307b7ed1be2c8075f56e1ff3cb3bf7e39673b60005b7b8ddb64
+fixed,3,11,3,3205,,2026-10-30,here,prescribed symmetry (symbol swap and reversal) + local search,codes/edit3_n11_d3_size3205.txt,380e6e628ef3dee2862557887a8793f39225f90b10a409a82941858ba4e2b235
