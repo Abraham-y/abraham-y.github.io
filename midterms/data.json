@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T12:04:53-08:00",
+ "updated": "2026-11-03T12:10:42-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -26,8 +26,8 @@
    "poll_avg": 0.2,
    "n_polls": 4,
    "p_final": 0.5677,
-   "p_market": 0.82,
-   "edge": -0.2523,
+   "p_market": 0.824,
+   "edge": -0.2563,
    "edge_lo": -0.1933,
    "edge_hi": -0.1722,
    "robust": true
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.393,
-   "edge": -0.21,
+   "p_market": 0.391,
+   "edge": -0.208,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -86,25 +86,10 @@
    "poll_avg": -0.4,
    "n_polls": 8,
    "p_final": 0.4527,
-   "p_market": 0.36,
-   "edge": 0.0927,
+   "p_market": 0.363,
+   "edge": 0.0897,
    "edge_lo": 0.0566,
    "edge_hi": 0.16,
-   "robust": true
-  },
-  {
-   "race_id": "AK-SEN",
-   "office": "Senate",
-   "challenger": "Mary Peltola",
-   "rep": "Dan Sullivan",
-   "ind_race": false,
-   "poll_avg": 0.8,
-   "n_polls": 7,
-   "p_final": 0.6175,
-   "p_market": 0.705,
-   "edge": -0.0875,
-   "edge_lo": -0.1506,
-   "edge_hi": -0.083,
    "robust": true
   },
   {
@@ -120,6 +105,21 @@
    "edge": 0.086,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
+   "robust": true
+  },
+  {
+   "race_id": "AK-SEN",
+   "office": "Senate",
+   "challenger": "Mary Peltola",
+   "rep": "Dan Sullivan",
+   "ind_race": false,
+   "poll_avg": 0.8,
+   "n_polls": 7,
+   "p_final": 0.6175,
+   "p_market": 0.702,
+   "edge": -0.0845,
+   "edge_lo": -0.1506,
+   "edge_hi": -0.083,
    "robust": true
   },
   {
@@ -153,6 +153,21 @@
    "robust": false
   },
   {
+   "race_id": "TX-GOV",
+   "office": "Governor",
+   "challenger": "Gina Hinojosa",
+   "rep": "Greg Abbott",
+   "ind_race": false,
+   "poll_avg": -1.8,
+   "n_polls": 20,
+   "p_final": 0.3177,
+   "p_market": 0.385,
+   "edge": -0.0673,
+   "edge_lo": -0.0748,
+   "edge_hi": -0.0322,
+   "robust": true
+  },
+  {
    "race_id": "KS-SEN",
    "office": "Senate",
    "challenger": "Adam Hamilton",
@@ -180,21 +195,6 @@
    "edge": -0.0635,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
-   "robust": true
-  },
-  {
-   "race_id": "TX-GOV",
-   "office": "Governor",
-   "challenger": "Gina Hinojosa",
-   "rep": "Greg Abbott",
-   "ind_race": false,
-   "poll_avg": -1.8,
-   "n_polls": 20,
-   "p_final": 0.3177,
-   "p_market": 0.378,
-   "edge": -0.0603,
-   "edge_lo": -0.0748,
-   "edge_hi": -0.0322,
    "robust": true
   },
   {
@@ -378,6 +378,21 @@
    "robust": false
   },
   {
+   "race_id": "FL-SEN",
+   "office": "Senate",
+   "challenger": "Angie Nixon",
+   "rep": "Ashley Moody",
+   "ind_race": false,
+   "poll_avg": -5.9,
+   "n_polls": 14,
+   "p_final": 0.1006,
+   "p_market": 0.12,
+   "edge": -0.0194,
+   "edge_lo": -0.0552,
+   "edge_hi": -0.0427,
+   "robust": true
+  },
+  {
    "race_id": "OH-GOV",
    "office": "Governor",
    "challenger": "Amy Acton",
@@ -391,21 +406,6 @@
    "edge_lo": -0.0352,
    "edge_hi": -0.0065,
    "robust": false
-  },
-  {
-   "race_id": "FL-SEN",
-   "office": "Senate",
-   "challenger": "Angie Nixon",
-   "rep": "Ashley Moody",
-   "ind_race": false,
-   "poll_avg": -5.9,
-   "n_polls": 14,
-   "p_final": 0.1006,
-   "p_market": 0.119,
-   "edge": -0.0184,
-   "edge_lo": -0.0552,
-   "edge_hi": -0.0427,
-   "robust": true
   },
   {
    "race_id": "MN-SEN",
@@ -453,21 +453,6 @@
    "robust": false
   },
   {
-   "race_id": "IA-GOV",
-   "office": "Governor",
-   "challenger": "Rob Sand",
-   "rep": "Zach Lahn",
-   "ind_race": false,
-   "poll_avg": 7.5,
-   "n_polls": 7,
-   "p_final": 0.8715,
-   "p_market": 0.883,
-   "edge": -0.0115,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "OH-SEN",
    "office": "Senate",
    "challenger": "Sherrod Brown",
@@ -483,6 +468,21 @@
    "robust": false
   },
   {
+   "race_id": "IA-GOV",
+   "office": "Governor",
+   "challenger": "Rob Sand",
+   "rep": "Zach Lahn",
+   "ind_race": false,
+   "poll_avg": 7.5,
+   "n_polls": 7,
+   "p_final": 0.8715,
+   "p_market": 0.881,
+   "edge": -0.0095,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
    "race_id": "NE-GOV",
    "office": "Governor",
    "challenger": "Lynne Walz",
@@ -495,6 +495,21 @@
    "edge": 0.0085,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.293,
+   "edge": 0.0072,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -543,21 +558,6 @@
    "robust": false
   },
   {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.295,
-   "edge": 0.0052,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
-   "robust": false
-  },
-  {
    "race_id": "TX-SEN",
    "office": "Senate",
    "challenger": "James Talarico",
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.393,
-   "edge": -0.227
+   "p_market": 0.391,
+   "edge": -0.225
   },
   {
    "race_id": "FL-SEN",
@@ -601,7 +601,7 @@
    "hi80": -0.3,
    "p_live": 0.089,
    "p_pre": 0.101,
-   "p_market": 0.119,
+   "p_market": 0.12,
    "edge": -0.03
   },
   {
@@ -646,8 +646,8 @@
    "hi80": 8.2,
    "p_live": 0.55,
    "p_pre": 0.568,
-   "p_market": 0.82,
-   "edge": -0.27
+   "p_market": 0.824,
+   "edge": -0.274
   },
   {
    "race_id": "KS-GOV",
@@ -661,8 +661,8 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.36,
-   "edge": 0.092
+   "p_market": 0.363,
+   "edge": 0.088
   },
   {
    "race_id": "KS-SEN",
@@ -691,8 +691,8 @@
    "hi80": 8.0,
    "p_live": 0.62,
    "p_pre": 0.617,
-   "p_market": 0.705,
-   "edge": -0.085
+   "p_market": 0.702,
+   "edge": -0.082
   },
   {
    "race_id": "AK-GOV",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.378,
-   "edge": -0.064
+   "p_market": 0.385,
+   "edge": -0.071
   },
   {
    "race_id": "TX-SEN",
@@ -841,8 +841,8 @@
    "hi80": 12.5,
    "p_live": 0.885,
    "p_pre": 0.872,
-   "p_market": 0.883,
-   "edge": 0.002
+   "p_market": 0.881,
+   "edge": 0.004
   },
   {
    "race_id": "NC-SEN",
@@ -856,7 +856,7 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.974,
+   "p_market": 0.975,
    "edge": 0.009
   },
   {
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.295,
-   "edge": 0.002
+   "p_market": 0.293,
+   "edge": 0.005
   },
   {
    "race_id": "OH-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.084
   }
  ],
- "live_updated": "12:04:27"
+ "live_updated": "12:10:14"
 }
