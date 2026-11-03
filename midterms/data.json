@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T04:50:19-08:00",
+ "updated": "2026-11-03T04:55:43-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.37,
-   "edge": -0.187,
+   "p_market": 0.367,
+   "edge": -0.184,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.699,
-   "edge": -0.1285,
+   "p_market": 0.695,
+   "edge": -0.1245,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -161,8 +161,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.379,
-   "edge": -0.0613,
+   "p_market": 0.378,
+   "edge": -0.0603,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -363,6 +363,21 @@
    "robust": false
   },
   {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.327,
+   "edge": -0.0268,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
+   "robust": false
+  },
+  {
    "race_id": "LA-SEN",
    "office": "Senate",
    "challenger": "Jamie Davis",
@@ -405,21 +420,6 @@
    "edge": -0.0235,
    "edge_lo": null,
    "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.323,
-   "edge": -0.0228,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.37,
-   "edge": -0.204
+   "p_market": 0.367,
+   "edge": -0.2
   },
   {
    "race_id": "FL-SEN",
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.699,
-   "edge": -0.13
+   "p_market": 0.695,
+   "edge": -0.127
   },
   {
    "race_id": "GA-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.379,
-   "edge": -0.065
+   "p_market": 0.378,
+   "edge": -0.064
   },
   {
    "race_id": "TX-SEN",
@@ -856,8 +856,8 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.974,
-   "edge": 0.009
+   "p_market": 0.972,
+   "edge": 0.011
   },
   {
    "race_id": "NE-SEN",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.323,
-   "edge": -0.026
+   "p_market": 0.327,
+   "edge": -0.029
   },
   {
    "race_id": "OH-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "04:50:00"
+ "live_updated": "04:55:22"
 }
