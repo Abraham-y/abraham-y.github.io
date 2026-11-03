@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T14:40:04-08:00",
+ "updated": "2026-11-03T14:45:20-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -56,8 +56,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.303,
-   "edge": -0.12,
+   "p_market": 0.29,
+   "edge": -0.107,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -146,8 +146,8 @@
    "poll_avg": 4.9,
    "n_polls": 3,
    "p_final": 0.7897,
-   "p_market": 0.854,
-   "edge": -0.0643,
+   "p_market": 0.856,
+   "edge": -0.0663,
    "edge_lo": -0.0857,
    "edge_hi": -0.0449,
    "robust": true
@@ -206,8 +206,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.645,
-   "edge": 0.0513,
+   "p_market": 0.648,
+   "edge": 0.0483,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -266,8 +266,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.353,
-   "edge": -0.0353,
+   "p_market": 0.351,
+   "edge": -0.0333,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -281,8 +281,8 @@
    "poll_avg": 8.3,
    "n_polls": 4,
    "p_final": 0.8939,
-   "p_market": 0.927,
-   "edge": -0.0331,
+   "p_market": 0.926,
+   "edge": -0.0321,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -528,6 +528,21 @@
    "robust": false
   },
   {
+   "race_id": "FL-SEN",
+   "office": "Senate",
+   "challenger": "Angie Nixon",
+   "rep": "Ashley Moody",
+   "ind_race": false,
+   "poll_avg": -5.9,
+   "n_polls": 14,
+   "p_final": 0.1006,
+   "p_market": 0.097,
+   "edge": 0.0036,
+   "edge_lo": -0.0552,
+   "edge_hi": -0.0427,
+   "robust": true
+  },
+  {
    "race_id": "IA-GOV",
    "office": "Governor",
    "challenger": "Rob Sand",
@@ -551,26 +566,11 @@
    "poll_avg": 4.4,
    "n_polls": 16,
    "p_final": 0.8016,
-   "p_market": 0.803,
-   "edge": -0.0014,
+   "p_market": 0.801,
+   "edge": 0.0006,
    "edge_lo": -0.0352,
    "edge_hi": -0.0065,
    "robust": false
-  },
-  {
-   "race_id": "FL-SEN",
-   "office": "Senate",
-   "challenger": "Angie Nixon",
-   "rep": "Ashley Moody",
-   "ind_race": false,
-   "poll_avg": -5.9,
-   "n_polls": 14,
-   "p_final": 0.1006,
-   "p_market": 0.1,
-   "edge": 0.0006,
-   "edge_lo": -0.0552,
-   "edge_hi": -0.0427,
-   "robust": true
   }
  ],
  "live": [
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.303,
-   "edge": -0.137
+   "p_market": 0.29,
+   "edge": -0.124
   },
   {
    "race_id": "FL-SEN",
@@ -601,8 +601,8 @@
    "hi80": -0.3,
    "p_live": 0.089,
    "p_pre": 0.101,
-   "p_market": 0.1,
-   "edge": -0.01
+   "p_market": 0.097,
+   "edge": -0.007
   },
   {
    "race_id": "GA-GOV",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.645,
-   "edge": 0.04
+   "p_market": 0.648,
+   "edge": 0.037
   },
   {
    "race_id": "AK-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.353,
-   "edge": -0.039
+   "p_market": 0.351,
+   "edge": -0.037
   },
   {
    "race_id": "TX-SEN",
@@ -751,8 +751,8 @@
    "hi80": 12.0,
    "p_live": 0.795,
    "p_pre": 0.79,
-   "p_market": 0.854,
-   "edge": -0.059
+   "p_market": 0.856,
+   "edge": -0.061
   },
   {
    "race_id": "MI-SEN",
@@ -901,8 +901,8 @@
    "hi80": 9.7,
    "p_live": 0.809,
    "p_pre": 0.802,
-   "p_market": 0.803,
-   "edge": 0.006
+   "p_market": 0.801,
+   "edge": 0.008
   },
   {
    "race_id": "AZ-GOV",
@@ -916,8 +916,8 @@
    "hi80": 15.0,
    "p_live": 0.905,
    "p_pre": 0.894,
-   "p_market": 0.927,
-   "edge": -0.022
+   "p_market": 0.926,
+   "edge": -0.021
   },
   {
    "race_id": "NH-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.077
   }
  ],
- "live_updated": "14:39:53"
+ "live_updated": "14:45:06"
 }
