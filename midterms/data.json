@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:47:42-08:00",
+ "updated": "2026-11-03T02:53:02-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.724,
-   "edge": -0.1535,
+   "p_market": 0.725,
+   "edge": -0.1545,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -131,8 +131,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.63,
-   "edge": 0.0663,
+   "p_market": 0.627,
+   "edge": 0.0693,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -206,8 +206,8 @@
    "poll_avg": -1.3,
    "n_polls": 9,
    "p_final": 0.3639,
-   "p_market": 0.318,
-   "edge": 0.0459,
+   "p_market": 0.315,
+   "edge": 0.0489,
    "edge_lo": 0.0409,
    "edge_hi": 0.0559,
    "robust": true
@@ -551,8 +551,8 @@
    "poll_avg": 8.8,
    "n_polls": 14,
    "p_final": 0.9472,
-   "p_market": 0.949,
-   "edge": -0.0018,
+   "p_market": 0.95,
+   "edge": -0.0028,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.724,
-   "edge": -0.155
+   "p_market": 0.725,
+   "edge": -0.157
   },
   {
    "race_id": "GA-SEN",
@@ -631,8 +631,8 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.971,
-   "edge": 0.014
+   "p_market": 0.969,
+   "edge": 0.015
   },
   {
    "race_id": "NV-GOV",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.63,
-   "edge": 0.055
+   "p_market": 0.627,
+   "edge": 0.058
   },
   {
    "race_id": "AK-SEN",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.949,
-   "edge": 0.009
+   "p_market": 0.95,
+   "edge": 0.008
   },
   {
    "race_id": "SC-SEN",
@@ -796,8 +796,8 @@
    "hi80": 4.5,
    "p_live": 0.365,
    "p_pre": 0.364,
-   "p_market": 0.318,
-   "edge": 0.046
+   "p_market": 0.315,
+   "edge": 0.05
   },
   {
    "race_id": "ME-SEN",
@@ -932,7 +932,7 @@
    "p_live": 0.093,
    "p_pre": 0.108,
    "p_market": 0.14,
-   "edge": -0.048
+   "edge": -0.047
   },
   {
    "race_id": "VT-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "02:47:23"
+ "live_updated": "02:52:44"
 }
