@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T11:59:23-08:00",
+ "updated": "2026-11-03T12:04:53-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.39,
-   "edge": -0.207,
+   "p_market": 0.393,
+   "edge": -0.21,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.724,
-   "edge": -0.1535,
+   "p_market": 0.725,
+   "edge": -0.1545,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -71,8 +71,8 @@
    "poll_avg": 0.9,
    "n_polls": 2,
    "p_final": 0.4227,
-   "p_market": 0.327,
-   "edge": 0.0957,
+   "p_market": 0.329,
+   "edge": 0.0937,
    "edge_lo": -0.0914,
    "edge_hi": 0.3252,
    "robust": false
@@ -86,8 +86,8 @@
    "poll_avg": -0.4,
    "n_polls": 8,
    "p_final": 0.4527,
-   "p_market": 0.363,
-   "edge": 0.0897,
+   "p_market": 0.36,
+   "edge": 0.0927,
    "edge_lo": 0.0566,
    "edge_hi": 0.16,
    "robust": true
@@ -116,8 +116,8 @@
    "poll_avg": 5.3,
    "n_polls": 17,
    "p_final": 0.845,
-   "p_market": 0.764,
-   "edge": 0.081,
+   "p_market": 0.759,
+   "edge": 0.086,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
@@ -138,21 +138,6 @@
    "robust": true
   },
   {
-   "race_id": "KS-SEN",
-   "office": "Senate",
-   "challenger": "Adam Hamilton",
-   "rep": "Roger Marshall",
-   "ind_race": false,
-   "poll_avg": 3.9,
-   "n_polls": 9,
-   "p_final": 0.6963,
-   "p_market": 0.627,
-   "edge": 0.0693,
-   "edge_lo": 0.038,
-   "edge_hi": 0.1678,
-   "robust": true
-  },
-  {
    "race_id": "ME-SEN",
    "office": "Senate",
    "challenger": "Troy Jackson",
@@ -166,6 +151,21 @@
    "edge_lo": 0.0225,
    "edge_hi": 0.0752,
    "robust": false
+  },
+  {
+   "race_id": "KS-SEN",
+   "office": "Senate",
+   "challenger": "Adam Hamilton",
+   "rep": "Roger Marshall",
+   "ind_race": false,
+   "poll_avg": 3.9,
+   "n_polls": 9,
+   "p_final": 0.6963,
+   "p_market": 0.63,
+   "edge": 0.0663,
+   "edge_lo": 0.038,
+   "edge_hi": 0.1678,
+   "robust": true
   },
   {
    "race_id": "AK-GOV",
@@ -183,21 +183,6 @@
    "robust": true
   },
   {
-   "race_id": "SC-SEN",
-   "office": "Senate",
-   "challenger": "Annie Andrews",
-   "rep": "Darline Graham",
-   "ind_race": false,
-   "poll_avg": -1.3,
-   "n_polls": 9,
-   "p_final": 0.3639,
-   "p_market": 0.303,
-   "edge": 0.0609,
-   "edge_lo": 0.0409,
-   "edge_hi": 0.0559,
-   "robust": true
-  },
-  {
    "race_id": "TX-GOV",
    "office": "Governor",
    "challenger": "Gina Hinojosa",
@@ -210,6 +195,21 @@
    "edge": -0.0603,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
+   "robust": true
+  },
+  {
+   "race_id": "SC-SEN",
+   "office": "Senate",
+   "challenger": "Annie Andrews",
+   "rep": "Darline Graham",
+   "ind_race": false,
+   "poll_avg": -1.3,
+   "n_polls": 9,
+   "p_final": 0.3639,
+   "p_market": 0.305,
+   "edge": 0.0589,
+   "edge_lo": 0.0409,
+   "edge_hi": 0.0559,
    "robust": true
   },
   {
@@ -461,8 +461,8 @@
    "poll_avg": 7.5,
    "n_polls": 7,
    "p_final": 0.8715,
-   "p_market": 0.885,
-   "edge": -0.0135,
+   "p_market": 0.883,
+   "edge": -0.0115,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.39,
-   "edge": -0.224
+   "p_market": 0.393,
+   "edge": -0.227
   },
   {
    "race_id": "FL-SEN",
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.724,
-   "edge": -0.155
+   "p_market": 0.725,
+   "edge": -0.157
   },
   {
    "race_id": "GA-SEN",
@@ -632,7 +632,7 @@
    "p_live": 0.984,
    "p_pre": 0.971,
    "p_market": 0.971,
-   "edge": 0.014
+   "edge": 0.013
   },
   {
    "race_id": "NV-GOV",
@@ -661,8 +661,8 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.363,
-   "edge": 0.088
+   "p_market": 0.36,
+   "edge": 0.092
   },
   {
    "race_id": "KS-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.627,
-   "edge": 0.058
+   "p_market": 0.63,
+   "edge": 0.055
   },
   {
    "race_id": "AK-SEN",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.764,
-   "edge": 0.077
+   "p_market": 0.759,
+   "edge": 0.083
   },
   {
    "race_id": "MI-GOV",
@@ -796,8 +796,8 @@
    "hi80": 4.5,
    "p_live": 0.365,
    "p_pre": 0.364,
-   "p_market": 0.303,
-   "edge": 0.061
+   "p_market": 0.305,
+   "edge": 0.06
   },
   {
    "race_id": "ME-SEN",
@@ -841,8 +841,8 @@
    "hi80": 12.5,
    "p_live": 0.885,
    "p_pre": 0.872,
-   "p_market": 0.885,
-   "edge": 0.0
+   "p_market": 0.883,
+   "edge": 0.002
   },
   {
    "race_id": "NC-SEN",
@@ -946,9 +946,9 @@
    "hi80": 7.5,
    "p_live": 0.413,
    "p_pre": 0.423,
-   "p_market": 0.327,
-   "edge": 0.085
+   "p_market": 0.329,
+   "edge": 0.084
   }
  ],
- "live_updated": "11:59:01"
+ "live_updated": "12:04:27"
 }
