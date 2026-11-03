@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T03:30:21-08:00",
+ "updated": "2026-11-03T03:35:40-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -333,6 +333,21 @@
    "robust": false
   },
   {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.332,
+   "edge": -0.0318,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
+   "robust": false
+  },
+  {
    "race_id": "MT-SEN",
    "office": "Senate",
    "challenger": "Seth Bodnar",
@@ -345,21 +360,6 @@
    "edge": -0.03,
    "edge_lo": null,
    "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.33,
-   "edge": -0.0298,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -506,8 +506,8 @@
    "poll_avg": 8.8,
    "n_polls": 14,
    "p_final": 0.9472,
-   "p_market": 0.937,
-   "edge": 0.0102,
+   "p_market": 0.935,
+   "edge": 0.0122,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.937,
-   "edge": 0.021
+   "p_market": 0.935,
+   "edge": 0.023
   },
   {
    "race_id": "SC-SEN",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.33,
-   "edge": -0.033
+   "p_market": 0.332,
+   "edge": -0.034
   },
   {
    "race_id": "OH-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "03:30:04"
+ "live_updated": "03:35:24"
 }
