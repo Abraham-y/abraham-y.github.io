@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T07:42:19-08:00",
+ "updated": "2026-11-03T07:47:39-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.323,
-   "edge": -0.14,
+   "p_market": 0.335,
+   "edge": -0.152,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -243,21 +243,6 @@
    "robust": false
   },
   {
-   "race_id": "AZ-GOV",
-   "office": "Governor",
-   "challenger": "Katie Hobbs",
-   "rep": "Andy Biggs",
-   "ind_race": false,
-   "poll_avg": 8.3,
-   "n_polls": 4,
-   "p_final": 0.8939,
-   "p_market": 0.932,
-   "edge": -0.0381,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "AL-GOV",
    "office": "Governor",
    "challenger": "Doug Jones",
@@ -268,6 +253,21 @@
    "p_final": 0.0349,
    "p_market": 0.0723,
    "edge": -0.0374,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "AZ-GOV",
+   "office": "Governor",
+   "challenger": "Katie Hobbs",
+   "rep": "Andy Biggs",
+   "ind_race": false,
+   "poll_avg": 8.3,
+   "n_polls": 4,
+   "p_final": 0.8939,
+   "p_market": 0.931,
+   "edge": -0.0371,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -296,8 +296,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.35,
-   "edge": -0.0323,
+   "p_market": 0.349,
+   "edge": -0.0313,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -423,21 +423,6 @@
    "robust": false
   },
   {
-   "race_id": "IA-SEN",
-   "office": "Senate",
-   "challenger": "Josh Turek",
-   "rep": "Ashley Hinson",
-   "ind_race": false,
-   "poll_avg": 0.7,
-   "n_polls": 10,
-   "p_final": 0.4935,
-   "p_market": 0.511,
-   "edge": -0.0175,
-   "edge_lo": -0.0556,
-   "edge_hi": -0.0076,
-   "robust": false
-  },
-  {
    "race_id": "SD-SEN",
    "office": "Senate",
    "challenger": "Brian Bengs",
@@ -450,6 +435,21 @@
    "edge": -0.0172,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "IA-SEN",
+   "office": "Senate",
+   "challenger": "Josh Turek",
+   "rep": "Ashley Hinson",
+   "ind_race": false,
+   "poll_avg": 0.7,
+   "n_polls": 10,
+   "p_final": 0.4935,
+   "p_market": 0.51,
+   "edge": -0.0165,
+   "edge_lo": -0.0556,
+   "edge_hi": -0.0076,
    "robust": false
   },
   {
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.323,
-   "edge": -0.157
+   "p_market": 0.335,
+   "edge": -0.169
   },
   {
    "race_id": "FL-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.35,
-   "edge": -0.036
+   "p_market": 0.349,
+   "edge": -0.035
   },
   {
    "race_id": "TX-SEN",
@@ -812,7 +812,7 @@
    "p_live": 0.767,
    "p_pre": 0.768,
    "p_market": 0.721,
-   "edge": 0.045
+   "edge": 0.046
   },
   {
    "race_id": "IA-SEN",
@@ -826,8 +826,8 @@
    "hi80": 6.6,
    "p_live": 0.488,
    "p_pre": 0.493,
-   "p_market": 0.511,
-   "edge": -0.024
+   "p_market": 0.51,
+   "edge": -0.022
   },
   {
    "race_id": "IA-GOV",
@@ -857,7 +857,7 @@
    "p_live": 0.983,
    "p_pre": 0.972,
    "p_market": 0.975,
-   "edge": 0.009
+   "edge": 0.008
   },
   {
    "race_id": "NE-SEN",
@@ -916,8 +916,8 @@
    "hi80": 15.0,
    "p_live": 0.905,
    "p_pre": 0.894,
-   "p_market": 0.932,
-   "edge": -0.027
+   "p_market": 0.931,
+   "edge": -0.026
   },
   {
    "race_id": "NH-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "07:42:00"
+ "live_updated": "07:47:21"
 }
