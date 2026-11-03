@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T05:01:06-08:00",
+ "updated": "2026-11-03T05:06:27-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -26,8 +26,8 @@
    "poll_avg": 0.2,
    "n_polls": 4,
    "p_final": 0.5677,
-   "p_market": 0.755,
-   "edge": -0.1873,
+   "p_market": 0.753,
+   "edge": -0.1853,
    "edge_lo": -0.1933,
    "edge_hi": -0.1722,
    "robust": true
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.695,
-   "edge": -0.1245,
+   "p_market": 0.693,
+   "edge": -0.1225,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -161,8 +161,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.376,
-   "edge": -0.0583,
+   "p_market": 0.374,
+   "edge": -0.0563,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -468,6 +468,21 @@
    "robust": false
   },
   {
+   "race_id": "MI-GOV",
+   "office": "Governor",
+   "challenger": "Jocelyn Benson",
+   "rep": "John James",
+   "ind_race": false,
+   "poll_avg": 8.8,
+   "n_polls": 14,
+   "p_final": 0.9472,
+   "p_market": 0.932,
+   "edge": 0.0152,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
    "race_id": "OK-GOV",
    "office": "Governor",
    "challenger": "Cyndi Munson",
@@ -478,21 +493,6 @@
    "p_final": 0.1153,
    "p_market": 0.1007,
    "edge": 0.0146,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "MI-GOV",
-   "office": "Governor",
-   "challenger": "Jocelyn Benson",
-   "rep": "John James",
-   "ind_race": false,
-   "poll_avg": 8.8,
-   "n_polls": 14,
-   "p_final": 0.9472,
-   "p_market": 0.933,
-   "edge": 0.0142,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.695,
-   "edge": -0.127
+   "p_market": 0.693,
+   "edge": -0.125
   },
   {
    "race_id": "GA-SEN",
@@ -631,8 +631,8 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.965,
-   "edge": 0.019
+   "p_market": 0.967,
+   "edge": 0.018
   },
   {
    "race_id": "NV-GOV",
@@ -646,8 +646,8 @@
    "hi80": 8.2,
    "p_live": 0.55,
    "p_pre": 0.568,
-   "p_market": 0.755,
-   "edge": -0.205
+   "p_market": 0.753,
+   "edge": -0.203
   },
   {
    "race_id": "KS-GOV",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.376,
-   "edge": -0.062
+   "p_market": 0.374,
+   "edge": -0.06
   },
   {
    "race_id": "TX-SEN",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.933,
-   "edge": 0.025
+   "p_market": 0.932,
+   "edge": 0.026
   },
   {
    "race_id": "SC-SEN",
@@ -857,7 +857,7 @@
    "p_live": 0.983,
    "p_pre": 0.972,
    "p_market": 0.972,
-   "edge": 0.011
+   "edge": 0.012
   },
   {
    "race_id": "NE-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "05:00:48"
+ "live_updated": "05:06:08"
 }
