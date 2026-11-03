@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T12:10:42-08:00",
+ "updated": "2026-11-03T12:17:05-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -26,8 +26,8 @@
    "poll_avg": 0.2,
    "n_polls": 4,
    "p_final": 0.5677,
-   "p_market": 0.824,
-   "edge": -0.2563,
+   "p_market": 0.829,
+   "edge": -0.2613,
    "edge_lo": -0.1933,
    "edge_hi": -0.1722,
    "robust": true
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.391,
-   "edge": -0.208,
+   "p_market": 0.402,
+   "edge": -0.219,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -71,8 +71,8 @@
    "poll_avg": 0.9,
    "n_polls": 2,
    "p_final": 0.4227,
-   "p_market": 0.329,
-   "edge": 0.0937,
+   "p_market": 0.328,
+   "edge": 0.0947,
    "edge_lo": -0.0914,
    "edge_hi": 0.3252,
    "robust": false
@@ -86,8 +86,8 @@
    "poll_avg": -0.4,
    "n_polls": 8,
    "p_final": 0.4527,
-   "p_market": 0.363,
-   "edge": 0.0897,
+   "p_market": 0.365,
+   "edge": 0.0877,
    "edge_lo": 0.0566,
    "edge_hi": 0.16,
    "robust": true
@@ -161,8 +161,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.385,
-   "edge": -0.0673,
+   "p_market": 0.384,
+   "edge": -0.0663,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -176,25 +176,10 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.63,
-   "edge": 0.0663,
+   "p_market": 0.631,
+   "edge": 0.0653,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
-   "robust": true
-  },
-  {
-   "race_id": "AK-GOV",
-   "office": "Governor",
-   "challenger": "Jonathan Kreiss-Tomkins",
-   "rep": "Bernadette Wilson",
-   "ind_race": false,
-   "poll_avg": 6.6,
-   "n_polls": 2,
-   "p_final": 0.8295,
-   "p_market": 0.893,
-   "edge": -0.0635,
-   "edge_lo": -0.1368,
-   "edge_hi": -0.0586,
    "robust": true
   },
   {
@@ -210,6 +195,21 @@
    "edge": 0.0589,
    "edge_lo": 0.0409,
    "edge_hi": 0.0559,
+   "robust": true
+  },
+  {
+   "race_id": "AK-GOV",
+   "office": "Governor",
+   "challenger": "Jonathan Kreiss-Tomkins",
+   "rep": "Bernadette Wilson",
+   "ind_race": false,
+   "poll_avg": 6.6,
+   "n_polls": 2,
+   "p_final": 0.8295,
+   "p_market": 0.884,
+   "edge": -0.0545,
+   "edge_lo": -0.1368,
+   "edge_hi": -0.0586,
    "robust": true
   },
   {
@@ -251,8 +251,8 @@
    "poll_avg": 8.3,
    "n_polls": 4,
    "p_final": 0.8939,
-   "p_market": 0.932,
-   "edge": -0.0381,
+   "p_market": 0.933,
+   "edge": -0.0391,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -453,6 +453,21 @@
    "robust": false
   },
   {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.289,
+   "edge": 0.0112,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
+   "robust": false
+  },
+  {
    "race_id": "OH-SEN",
    "office": "Senate",
    "challenger": "Sherrod Brown",
@@ -498,21 +513,6 @@
    "robust": false
   },
   {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.293,
-   "edge": 0.0072,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
-   "robust": false
-  },
-  {
    "race_id": "NH-SEN",
    "office": "Senate",
    "challenger": "Chris Pappas",
@@ -551,8 +551,8 @@
    "poll_avg": 8.8,
    "n_polls": 14,
    "p_final": 0.9472,
-   "p_market": 0.941,
-   "edge": 0.0062,
+   "p_market": 0.942,
+   "edge": 0.0052,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.391,
-   "edge": -0.225
+   "p_market": 0.402,
+   "edge": -0.236
   },
   {
    "race_id": "FL-SEN",
@@ -602,7 +602,7 @@
    "p_live": 0.089,
    "p_pre": 0.101,
    "p_market": 0.12,
-   "edge": -0.03
+   "edge": -0.031
   },
   {
    "race_id": "GA-GOV",
@@ -646,8 +646,8 @@
    "hi80": 8.2,
    "p_live": 0.55,
    "p_pre": 0.568,
-   "p_market": 0.824,
-   "edge": -0.274
+   "p_market": 0.829,
+   "edge": -0.279
   },
   {
    "race_id": "KS-GOV",
@@ -661,8 +661,8 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.363,
-   "edge": 0.088
+   "p_market": 0.365,
+   "edge": 0.087
   },
   {
    "race_id": "KS-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.63,
-   "edge": 0.055
+   "p_market": 0.631,
+   "edge": 0.054
   },
   {
    "race_id": "AK-SEN",
@@ -706,8 +706,8 @@
    "hi80": 16.2,
    "p_live": 0.831,
    "p_pre": 0.83,
-   "p_market": 0.893,
-   "edge": -0.062
+   "p_market": 0.884,
+   "edge": -0.053
   },
   {
    "race_id": "TX-GOV",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.385,
-   "edge": -0.071
+   "p_market": 0.384,
+   "edge": -0.07
   },
   {
    "race_id": "TX-SEN",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.941,
-   "edge": 0.017
+   "p_market": 0.942,
+   "edge": 0.016
   },
   {
    "race_id": "SC-SEN",
@@ -856,7 +856,7 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.975,
+   "p_market": 0.974,
    "edge": 0.009
   },
   {
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.293,
-   "edge": 0.005
+   "p_market": 0.289,
+   "edge": 0.008
   },
   {
    "race_id": "OH-SEN",
@@ -916,8 +916,8 @@
    "hi80": 15.0,
    "p_live": 0.905,
    "p_pre": 0.894,
-   "p_market": 0.932,
-   "edge": -0.027
+   "p_market": 0.933,
+   "edge": -0.028
   },
   {
    "race_id": "NH-GOV",
@@ -946,9 +946,9 @@
    "hi80": 7.5,
    "p_live": 0.413,
    "p_pre": 0.423,
-   "p_market": 0.329,
+   "p_market": 0.328,
    "edge": 0.084
   }
  ],
- "live_updated": "12:10:14"
+ "live_updated": "12:16:42"
 }
