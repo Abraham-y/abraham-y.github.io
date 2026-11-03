@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T01:50:36-08:00",
+ "updated": "2026-11-03T01:55:43-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.365,
-   "edge": -0.182,
+   "p_market": 0.367,
+   "edge": -0.184,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -468,6 +468,21 @@
    "robust": false
   },
   {
+   "race_id": "OH-SEN",
+   "office": "Senate",
+   "challenger": "Sherrod Brown",
+   "rep": "Jon Husted",
+   "ind_race": false,
+   "poll_avg": 3.1,
+   "n_polls": 18,
+   "p_final": 0.727,
+   "p_market": 0.711,
+   "edge": 0.016,
+   "edge_lo": 0.0071,
+   "edge_hi": 0.0329,
+   "robust": false
+  },
+  {
    "race_id": "OK-GOV",
    "office": "Governor",
    "challenger": "Cyndi Munson",
@@ -480,21 +495,6 @@
    "edge": 0.0146,
    "edge_lo": null,
    "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "OH-SEN",
-   "office": "Senate",
-   "challenger": "Sherrod Brown",
-   "rep": "Jon Husted",
-   "ind_race": false,
-   "poll_avg": 3.1,
-   "n_polls": 18,
-   "p_final": 0.727,
-   "p_market": 0.715,
-   "edge": 0.012,
-   "edge_lo": 0.0071,
-   "edge_hi": 0.0329,
    "robust": false
   },
   {
@@ -566,8 +566,8 @@
    "poll_avg": 8.8,
    "n_polls": 14,
    "p_final": 0.9472,
-   "p_market": 0.947,
-   "edge": 0.0002,
+   "p_market": 0.948,
+   "edge": -0.0008,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.5,
    "p_live": 0.174,
    "p_pre": 0.183,
-   "p_market": 0.365,
-   "edge": -0.191
+   "p_market": 0.367,
+   "edge": -0.193
   },
   {
    "race_id": "FL-SEN",
@@ -781,8 +781,8 @@
    "hi80": 13.8,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.947,
-   "edge": 0.011
+   "p_market": 0.948,
+   "edge": 0.01
   },
   {
    "race_id": "SC-SEN",
@@ -886,8 +886,8 @@
    "hi80": 8.7,
    "p_live": 0.745,
    "p_pre": 0.727,
-   "p_market": 0.715,
-   "edge": 0.03
+   "p_market": 0.711,
+   "edge": 0.034
   },
   {
    "race_id": "OH-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.112
   }
  ],
- "live_updated": "01:50:32"
+ "live_updated": "01:55:38"
 }
