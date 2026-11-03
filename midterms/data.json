@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T04:44:58-08:00",
+ "updated": "2026-11-03T04:50:19-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.367,
-   "edge": -0.184,
+   "p_market": 0.37,
+   "edge": -0.187,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.709,
-   "edge": -0.1385,
+   "p_market": 0.699,
+   "edge": -0.1285,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -468,21 +468,6 @@
    "robust": false
   },
   {
-   "race_id": "MI-GOV",
-   "office": "Governor",
-   "challenger": "Jocelyn Benson",
-   "rep": "John James",
-   "ind_race": false,
-   "poll_avg": 8.8,
-   "n_polls": 14,
-   "p_final": 0.9472,
-   "p_market": 0.931,
-   "edge": 0.0162,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "OK-GOV",
    "office": "Governor",
    "challenger": "Cyndi Munson",
@@ -493,6 +478,21 @@
    "p_final": 0.1153,
    "p_market": 0.1007,
    "edge": 0.0146,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "MI-GOV",
+   "office": "Governor",
+   "challenger": "Jocelyn Benson",
+   "rep": "John James",
+   "ind_race": false,
+   "poll_avg": 8.8,
+   "n_polls": 14,
+   "p_final": 0.9472,
+   "p_market": 0.933,
+   "edge": 0.0142,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.367,
-   "edge": -0.201
+   "p_market": 0.37,
+   "edge": -0.204
   },
   {
    "race_id": "FL-SEN",
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.709,
-   "edge": -0.14
+   "p_market": 0.699,
+   "edge": -0.13
   },
   {
    "race_id": "GA-SEN",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.931,
-   "edge": 0.027
+   "p_market": 0.933,
+   "edge": 0.025
   },
   {
    "race_id": "SC-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "04:44:40"
+ "live_updated": "04:50:00"
 }
