@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T09:40:01-08:00",
+ "updated": "2026-11-03T09:45:21-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -26,8 +26,8 @@
    "poll_avg": 0.2,
    "n_polls": 4,
    "p_final": 0.5677,
-   "p_market": 0.77,
-   "edge": -0.2023,
+   "p_market": 0.774,
+   "edge": -0.2063,
    "edge_lo": -0.1933,
    "edge_hi": -0.1722,
    "robust": true
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.328,
-   "edge": -0.145,
+   "p_market": 0.337,
+   "edge": -0.154,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -71,8 +71,8 @@
    "poll_avg": -0.4,
    "n_polls": 8,
    "p_final": 0.4527,
-   "p_market": 0.349,
-   "edge": 0.1037,
+   "p_market": 0.348,
+   "edge": 0.1047,
    "edge_lo": 0.0566,
    "edge_hi": 0.16,
    "robust": true
@@ -101,8 +101,8 @@
    "poll_avg": 0.8,
    "n_polls": 7,
    "p_final": 0.6175,
-   "p_market": 0.704,
-   "edge": -0.0865,
+   "p_market": 0.703,
+   "edge": -0.0855,
    "edge_lo": -0.1506,
    "edge_hi": -0.083,
    "robust": true
@@ -131,8 +131,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.619,
-   "edge": 0.0773,
+   "p_market": 0.615,
+   "edge": 0.0813,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -146,8 +146,8 @@
    "poll_avg": 5.3,
    "n_polls": 17,
    "p_final": 0.845,
-   "p_market": 0.774,
-   "edge": 0.071,
+   "p_market": 0.771,
+   "edge": 0.074,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
@@ -551,8 +551,8 @@
    "poll_avg": 7.5,
    "n_polls": 7,
    "p_final": 0.8715,
-   "p_market": 0.878,
-   "edge": -0.0065,
+   "p_market": 0.877,
+   "edge": -0.0055,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.328,
-   "edge": -0.162
+   "p_market": 0.337,
+   "edge": -0.17
   },
   {
    "race_id": "FL-SEN",
@@ -632,7 +632,7 @@
    "p_live": 0.984,
    "p_pre": 0.971,
    "p_market": 0.967,
-   "edge": 0.018
+   "edge": 0.017
   },
   {
    "race_id": "NV-GOV",
@@ -646,8 +646,8 @@
    "hi80": 8.2,
    "p_live": 0.55,
    "p_pre": 0.568,
-   "p_market": 0.77,
-   "edge": -0.22
+   "p_market": 0.774,
+   "edge": -0.224
   },
   {
    "race_id": "KS-GOV",
@@ -661,7 +661,7 @@
    "hi80": 6.0,
    "p_live": 0.452,
    "p_pre": 0.453,
-   "p_market": 0.349,
+   "p_market": 0.348,
    "edge": 0.103
   },
   {
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.619,
-   "edge": 0.066
+   "p_market": 0.615,
+   "edge": 0.07
   },
   {
    "race_id": "AK-SEN",
@@ -691,8 +691,8 @@
    "hi80": 8.0,
    "p_live": 0.62,
    "p_pre": 0.617,
-   "p_market": 0.704,
-   "edge": -0.084
+   "p_market": 0.703,
+   "edge": -0.083
   },
   {
    "race_id": "AK-GOV",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.774,
-   "edge": 0.067
+   "p_market": 0.771,
+   "edge": 0.07
   },
   {
    "race_id": "MI-GOV",
@@ -841,8 +841,8 @@
    "hi80": 12.5,
    "p_live": 0.885,
    "p_pre": 0.872,
-   "p_market": 0.878,
-   "edge": 0.007
+   "p_market": 0.877,
+   "edge": 0.008
   },
   {
    "race_id": "NC-SEN",
@@ -856,7 +856,7 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.975,
+   "p_market": 0.976,
    "edge": 0.008
   },
   {
@@ -950,5 +950,5 @@
    "edge": 0.087
   }
  ],
- "live_updated": "09:39:43"
+ "live_updated": "09:45:03"
 }
