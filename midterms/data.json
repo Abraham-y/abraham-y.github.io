@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T14:34:50-08:00",
+ "updated": "2026-11-03T14:40:04-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -56,8 +56,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.311,
-   "edge": -0.128,
+   "p_market": 0.303,
+   "edge": -0.12,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -86,8 +86,8 @@
    "poll_avg": 0.9,
    "n_polls": 2,
    "p_final": 0.4227,
-   "p_market": 0.337,
-   "edge": 0.0857,
+   "p_market": 0.335,
+   "edge": 0.0877,
    "edge_lo": -0.0914,
    "edge_hi": 0.3252,
    "robust": false
@@ -123,21 +123,6 @@
    "robust": false
   },
   {
-   "race_id": "WI-GOV",
-   "office": "Governor",
-   "challenger": "David Crowley",
-   "rep": "Tom Tiffany",
-   "ind_race": false,
-   "poll_avg": 4.9,
-   "n_polls": 3,
-   "p_final": 0.7897,
-   "p_market": 0.86,
-   "edge": -0.0703,
-   "edge_lo": -0.0857,
-   "edge_hi": -0.0449,
-   "robust": true
-  },
-  {
    "race_id": "AK-SEN",
    "office": "Senate",
    "challenger": "Mary Peltola",
@@ -150,6 +135,21 @@
    "edge": -0.0675,
    "edge_lo": -0.1506,
    "edge_hi": -0.083,
+   "robust": true
+  },
+  {
+   "race_id": "WI-GOV",
+   "office": "Governor",
+   "challenger": "David Crowley",
+   "rep": "Tom Tiffany",
+   "ind_race": false,
+   "poll_avg": 4.9,
+   "n_polls": 3,
+   "p_final": 0.7897,
+   "p_market": 0.854,
+   "edge": -0.0643,
+   "edge_lo": -0.0857,
+   "edge_hi": -0.0449,
    "robust": true
   },
   {
@@ -266,8 +266,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.354,
-   "edge": -0.0363,
+   "p_market": 0.353,
+   "edge": -0.0353,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -461,25 +461,10 @@
    "poll_avg": 0.7,
    "n_polls": 10,
    "p_final": 0.4935,
-   "p_market": 0.505,
-   "edge": -0.0115,
+   "p_market": 0.502,
+   "edge": -0.0085,
    "edge_lo": -0.0556,
    "edge_hi": -0.0076,
-   "robust": false
-  },
-  {
-   "race_id": "TX-SEN",
-   "office": "Senate",
-   "challenger": "James Talarico",
-   "rep": "Ken Paxton",
-   "ind_race": false,
-   "poll_avg": 3.3,
-   "n_polls": 25,
-   "p_final": 0.7415,
-   "p_market": 0.751,
-   "edge": -0.0095,
-   "edge_lo": -0.0055,
-   "edge_hi": 0.0242,
    "robust": false
   },
   {
@@ -495,6 +480,21 @@
    "edge": 0.0085,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "TX-SEN",
+   "office": "Senate",
+   "challenger": "James Talarico",
+   "rep": "Ken Paxton",
+   "ind_race": false,
+   "poll_avg": 3.3,
+   "n_polls": 25,
+   "p_final": 0.7415,
+   "p_market": 0.75,
+   "edge": -0.0085,
+   "edge_lo": -0.0055,
+   "edge_hi": 0.0242,
    "robust": false
   },
   {
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.311,
-   "edge": -0.145
+   "p_market": 0.303,
+   "edge": -0.137
   },
   {
    "race_id": "FL-SEN",
@@ -631,8 +631,8 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.973,
-   "edge": 0.012
+   "p_market": 0.974,
+   "edge": 0.011
   },
   {
    "race_id": "NV-GOV",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.354,
-   "edge": -0.04
+   "p_market": 0.353,
+   "edge": -0.039
   },
   {
    "race_id": "TX-SEN",
@@ -736,8 +736,8 @@
    "hi80": 8.9,
    "p_live": 0.754,
    "p_pre": 0.742,
-   "p_market": 0.751,
-   "edge": 0.003
+   "p_market": 0.75,
+   "edge": 0.004
   },
   {
    "race_id": "WI-GOV",
@@ -751,8 +751,8 @@
    "hi80": 12.0,
    "p_live": 0.795,
    "p_pre": 0.79,
-   "p_market": 0.86,
-   "edge": -0.065
+   "p_market": 0.854,
+   "edge": -0.059
   },
   {
    "race_id": "MI-SEN",
@@ -826,8 +826,8 @@
    "hi80": 6.6,
    "p_live": 0.488,
    "p_pre": 0.493,
-   "p_market": 0.505,
-   "edge": -0.017
+   "p_market": 0.502,
+   "edge": -0.015
   },
   {
    "race_id": "IA-GOV",
@@ -856,8 +856,8 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.976,
-   "edge": 0.007
+   "p_market": 0.98,
+   "edge": 0.004
   },
   {
    "race_id": "NE-SEN",
@@ -946,9 +946,9 @@
    "hi80": 7.5,
    "p_live": 0.413,
    "p_pre": 0.423,
-   "p_market": 0.337,
-   "edge": 0.075
+   "p_market": 0.335,
+   "edge": 0.077
   }
  ],
- "live_updated": "14:34:37"
+ "live_updated": "14:39:53"
 }
