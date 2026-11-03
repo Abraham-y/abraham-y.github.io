@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:31:40-08:00",
+ "updated": "2026-11-03T02:37:01-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.722,
-   "edge": -0.1515,
+   "p_market": 0.724,
+   "edge": -0.1535,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -101,8 +101,8 @@
    "poll_avg": 0.8,
    "n_polls": 7,
    "p_final": 0.6175,
-   "p_market": 0.707,
-   "edge": -0.0895,
+   "p_market": 0.705,
+   "edge": -0.0875,
    "edge_lo": -0.1506,
    "edge_hi": -0.083,
    "robust": true
@@ -393,6 +393,21 @@
    "robust": false
   },
   {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.325,
+   "edge": -0.0248,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
+   "robust": false
+  },
+  {
    "race_id": "NM-GOV",
    "office": "Governor",
    "challenger": "Deb Haaland",
@@ -405,21 +420,6 @@
    "edge": -0.0235,
    "edge_lo": null,
    "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.322,
-   "edge": -0.0218,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.722,
-   "edge": -0.153
+   "p_market": 0.724,
+   "edge": -0.155
   },
   {
    "race_id": "GA-SEN",
@@ -691,8 +691,8 @@
    "hi80": 8.0,
    "p_live": 0.62,
    "p_pre": 0.617,
-   "p_market": 0.707,
-   "edge": -0.087
+   "p_market": 0.705,
+   "edge": -0.085
   },
   {
    "race_id": "AK-GOV",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.322,
-   "edge": -0.024
+   "p_market": 0.325,
+   "edge": -0.028
   },
   {
    "race_id": "OH-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "02:31:21"
+ "live_updated": "02:36:42"
 }
