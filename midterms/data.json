@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T08:25:07-08:00",
+ "updated": "2026-11-03T08:30:27-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -86,8 +86,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.666,
-   "edge": -0.0955,
+   "p_market": 0.664,
+   "edge": -0.0935,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -116,8 +116,8 @@
    "poll_avg": 4.9,
    "n_polls": 3,
    "p_final": 0.7897,
-   "p_market": 0.861,
-   "edge": -0.0713,
+   "p_market": 0.859,
+   "edge": -0.0693,
    "edge_lo": -0.0857,
    "edge_hi": -0.0449,
    "robust": true
@@ -191,8 +191,8 @@
    "poll_avg": 5.3,
    "n_polls": 17,
    "p_final": 0.845,
-   "p_market": 0.786,
-   "edge": 0.059,
+   "p_market": 0.788,
+   "edge": 0.057,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
@@ -476,25 +476,10 @@
    "poll_avg": 7.5,
    "n_polls": 7,
    "p_final": 0.8715,
-   "p_market": 0.881,
-   "edge": -0.0095,
+   "p_market": 0.883,
+   "edge": -0.0115,
    "edge_lo": null,
    "edge_hi": null,
-   "robust": false
-  },
-  {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.309,
-   "edge": -0.0088,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -508,6 +493,21 @@
    "p_final": 0.1154,
    "p_market": 0.107,
    "edge": 0.0085,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "MI-GOV",
+   "office": "Governor",
+   "challenger": "Jocelyn Benson",
+   "rep": "John James",
+   "ind_race": false,
+   "poll_avg": 8.8,
+   "n_polls": 14,
+   "p_final": 0.9472,
+   "p_market": 0.94,
+   "edge": 0.0072,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -528,18 +528,18 @@
    "robust": false
   },
   {
-   "race_id": "MI-GOV",
-   "office": "Governor",
-   "challenger": "Jocelyn Benson",
-   "rep": "John James",
-   "ind_race": false,
-   "poll_avg": 8.8,
-   "n_polls": 14,
-   "p_final": 0.9472,
-   "p_market": 0.943,
-   "edge": 0.0042,
-   "edge_lo": null,
-   "edge_hi": null,
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.306,
+   "edge": -0.0058,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -566,8 +566,8 @@
    "poll_avg": 0.7,
    "n_polls": 10,
    "p_final": 0.4935,
-   "p_market": 0.496,
-   "edge": -0.0025,
+   "p_market": 0.495,
+   "edge": -0.0015,
    "edge_lo": -0.0556,
    "edge_hi": -0.0076,
    "robust": false
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.666,
-   "edge": -0.097
+   "p_market": 0.664,
+   "edge": -0.096
   },
   {
    "race_id": "GA-SEN",
@@ -631,8 +631,8 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.966,
-   "edge": 0.019
+   "p_market": 0.968,
+   "edge": 0.017
   },
   {
    "race_id": "NV-GOV",
@@ -751,8 +751,8 @@
    "hi80": 12.0,
    "p_live": 0.795,
    "p_pre": 0.79,
-   "p_market": 0.861,
-   "edge": -0.066
+   "p_market": 0.859,
+   "edge": -0.064
   },
   {
    "race_id": "MI-SEN",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.786,
-   "edge": 0.055
+   "p_market": 0.788,
+   "edge": 0.053
   },
   {
    "race_id": "MI-GOV",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.943,
-   "edge": 0.015
+   "p_market": 0.94,
+   "edge": 0.018
   },
   {
    "race_id": "SC-SEN",
@@ -826,8 +826,8 @@
    "hi80": 6.6,
    "p_live": 0.488,
    "p_pre": 0.493,
-   "p_market": 0.496,
-   "edge": -0.009
+   "p_market": 0.495,
+   "edge": -0.007
   },
   {
    "race_id": "IA-GOV",
@@ -841,8 +841,8 @@
    "hi80": 12.5,
    "p_live": 0.885,
    "p_pre": 0.872,
-   "p_market": 0.881,
-   "edge": 0.004
+   "p_market": 0.883,
+   "edge": 0.002
   },
   {
    "race_id": "NC-SEN",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.309,
-   "edge": -0.012
+   "p_market": 0.306,
+   "edge": -0.008
   },
   {
    "race_id": "OH-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "08:24:47"
+ "live_updated": "08:30:09"
 }
