@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T07:10:12-08:00",
+ "updated": "2026-11-03T07:15:33-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.335,
-   "edge": -0.152,
+   "p_market": 0.327,
+   "edge": -0.144,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -131,8 +131,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.627,
-   "edge": 0.0693,
+   "p_market": 0.628,
+   "edge": 0.0683,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -243,36 +243,6 @@
    "robust": false
   },
   {
-   "race_id": "TX-GOV",
-   "office": "Governor",
-   "challenger": "Gina Hinojosa",
-   "rep": "Greg Abbott",
-   "ind_race": false,
-   "poll_avg": -1.8,
-   "n_polls": 20,
-   "p_final": 0.3177,
-   "p_market": 0.359,
-   "edge": -0.0413,
-   "edge_lo": -0.0748,
-   "edge_hi": -0.0322,
-   "robust": true
-  },
-  {
-   "race_id": "AZ-GOV",
-   "office": "Governor",
-   "challenger": "Katie Hobbs",
-   "rep": "Andy Biggs",
-   "ind_race": false,
-   "poll_avg": 8.3,
-   "n_polls": 4,
-   "p_final": 0.8939,
-   "p_market": 0.932,
-   "edge": -0.0381,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "AL-GOV",
    "office": "Governor",
    "challenger": "Doug Jones",
@@ -301,6 +271,36 @@
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
+  },
+  {
+   "race_id": "AZ-GOV",
+   "office": "Governor",
+   "challenger": "Katie Hobbs",
+   "rep": "Andy Biggs",
+   "ind_race": false,
+   "poll_avg": 8.3,
+   "n_polls": 4,
+   "p_final": 0.8939,
+   "p_market": 0.929,
+   "edge": -0.0351,
+   "edge_lo": null,
+   "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "TX-GOV",
+   "office": "Governor",
+   "challenger": "Gina Hinojosa",
+   "rep": "Greg Abbott",
+   "ind_race": false,
+   "poll_avg": -1.8,
+   "n_polls": 20,
+   "p_final": 0.3177,
+   "p_market": 0.352,
+   "edge": -0.0343,
+   "edge_lo": -0.0748,
+   "edge_hi": -0.0322,
+   "robust": true
   },
   {
    "race_id": "OH-GOV",
@@ -408,21 +408,6 @@
    "robust": false
   },
   {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.322,
-   "edge": -0.0218,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
-   "robust": false
-  },
-  {
    "race_id": "NY-GOV",
    "office": "Governor",
    "challenger": "Kathy Hochul",
@@ -435,6 +420,21 @@
    "edge": 0.0208,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.32,
+   "edge": -0.0198,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.335,
-   "edge": -0.169
+   "p_market": 0.327,
+   "edge": -0.16
   },
   {
    "race_id": "FL-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.627,
-   "edge": 0.058
+   "p_market": 0.628,
+   "edge": 0.057
   },
   {
    "race_id": "AK-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.359,
-   "edge": -0.045
+   "p_market": 0.352,
+   "edge": -0.038
   },
   {
    "race_id": "TX-SEN",
@@ -857,7 +857,7 @@
    "p_live": 0.983,
    "p_pre": 0.972,
    "p_market": 0.974,
-   "edge": 0.01
+   "edge": 0.009
   },
   {
    "race_id": "NE-SEN",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.322,
-   "edge": -0.024
+   "p_market": 0.32,
+   "edge": -0.023
   },
   {
    "race_id": "OH-SEN",
@@ -916,8 +916,8 @@
    "hi80": 15.0,
    "p_live": 0.905,
    "p_pre": 0.894,
-   "p_market": 0.932,
-   "edge": -0.027
+   "p_market": 0.929,
+   "edge": -0.024
   },
   {
    "race_id": "NH-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "07:09:31"
+ "live_updated": "07:15:14"
 }
