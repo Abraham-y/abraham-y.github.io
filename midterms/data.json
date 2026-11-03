@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T09:24:01-08:00",
+ "updated": "2026-11-03T09:29:21-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -116,8 +116,8 @@
    "poll_avg": 4.5,
    "n_polls": 14,
    "p_final": 0.7685,
-   "p_market": 0.69,
-   "edge": 0.0785,
+   "p_market": 0.688,
+   "edge": 0.0805,
    "edge_lo": 0.0225,
    "edge_hi": 0.0752,
    "robust": false
@@ -251,8 +251,8 @@
    "poll_avg": 8.3,
    "n_polls": 4,
    "p_final": 0.8939,
-   "p_market": 0.934,
-   "edge": -0.0401,
+   "p_market": 0.933,
+   "edge": -0.0391,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -318,21 +318,6 @@
    "robust": false
   },
   {
-   "race_id": "TX-SEN",
-   "office": "Senate",
-   "challenger": "James Talarico",
-   "rep": "Ken Paxton",
-   "ind_race": false,
-   "poll_avg": 3.3,
-   "n_polls": 25,
-   "p_final": 0.7415,
-   "p_market": 0.715,
-   "edge": 0.0265,
-   "edge_lo": -0.0055,
-   "edge_hi": 0.0242,
-   "robust": false
-  },
-  {
    "race_id": "LA-SEN",
    "office": "Senate",
    "challenger": "Jamie Davis",
@@ -390,6 +375,21 @@
    "edge": -0.0235,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "TX-SEN",
+   "office": "Senate",
+   "challenger": "James Talarico",
+   "rep": "Ken Paxton",
+   "ind_race": false,
+   "poll_avg": 3.3,
+   "n_polls": 25,
+   "p_final": 0.7415,
+   "p_market": 0.719,
+   "edge": 0.0225,
+   "edge_lo": -0.0055,
+   "edge_hi": 0.0242,
    "robust": false
   },
   {
@@ -513,6 +513,21 @@
    "robust": false
   },
   {
+   "race_id": "FL-SEN",
+   "office": "Senate",
+   "challenger": "Angie Nixon",
+   "rep": "Ashley Moody",
+   "ind_race": false,
+   "poll_avg": -5.9,
+   "n_polls": 14,
+   "p_final": 0.1006,
+   "p_market": 0.109,
+   "edge": -0.0084,
+   "edge_lo": -0.0552,
+   "edge_hi": -0.0427,
+   "robust": true
+  },
+  {
    "race_id": "NH-SEN",
    "office": "Senate",
    "challenger": "Chris Pappas",
@@ -556,21 +571,6 @@
    "edge_lo": -0.0281,
    "edge_hi": 0.0467,
    "robust": false
-  },
-  {
-   "race_id": "FL-SEN",
-   "office": "Senate",
-   "challenger": "Angie Nixon",
-   "rep": "Ashley Moody",
-   "ind_race": false,
-   "poll_avg": -5.9,
-   "n_polls": 14,
-   "p_final": 0.1006,
-   "p_market": 0.097,
-   "edge": 0.0036,
-   "edge_lo": -0.0552,
-   "edge_hi": -0.0427,
-   "robust": true
   }
  ],
  "live": [
@@ -601,8 +601,8 @@
    "hi80": -0.3,
    "p_live": 0.089,
    "p_pre": 0.101,
-   "p_market": 0.097,
-   "edge": -0.008
+   "p_market": 0.109,
+   "edge": -0.02
   },
   {
    "race_id": "GA-GOV",
@@ -736,8 +736,8 @@
    "hi80": 8.9,
    "p_live": 0.754,
    "p_pre": 0.742,
-   "p_market": 0.715,
-   "edge": 0.039
+   "p_market": 0.719,
+   "edge": 0.036
   },
   {
    "race_id": "WI-GOV",
@@ -811,8 +811,8 @@
    "hi80": 9.6,
    "p_live": 0.767,
    "p_pre": 0.768,
-   "p_market": 0.69,
-   "edge": 0.077
+   "p_market": 0.688,
+   "edge": 0.078
   },
   {
    "race_id": "IA-SEN",
@@ -856,8 +856,8 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.976,
-   "edge": 0.007
+   "p_market": 0.975,
+   "edge": 0.008
   },
   {
    "race_id": "NE-SEN",
@@ -916,8 +916,8 @@
    "hi80": 15.0,
    "p_live": 0.905,
    "p_pre": 0.894,
-   "p_market": 0.934,
-   "edge": -0.029
+   "p_market": 0.933,
+   "edge": -0.028
   },
   {
    "race_id": "NH-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.093
   }
  ],
- "live_updated": "09:23:43"
+ "live_updated": "09:29:04"
 }
