@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midterms 2026 · Abraham Yeung</title>
+<meta name="description" content="A polls-and-fundamentals model of the 2026 US midterms compared against Kalshi and Polymarket prices, with a live county-level projection on election night.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=6">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥕</text></svg>">
+<style>
+  main { max-width: 980px; }
+  .stamp { font-family: var(--mono); font-size: 12px; color: var(--fg-3); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .card { border: 1px solid var(--line); border-radius: 10px; background: var(--card); padding: 14px 16px; }
+  .card .lbl { font-family: var(--mono); font-size: 12px; color: var(--fg-3); }
+  .card .big { font-family: var(--serif); font-size: 40px; line-height: 1.1; margin: 4px 0 2px; }
+  .card .sub { font-size: 13px; color: var(--fg-2); margin-bottom: 10px; }
+  .tw { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th { font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--fg-3); text-align: right; padding: 10px 10px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; position: sticky; top: 0; background: var(--card); }
+  td { text-align: right; padding: 9px 10px; border-top: 1px solid var(--line); white-space: nowrap; vertical-align: top; }
+  tbody tr:first-child td { border-top: 0; }
+  tbody tr { background: color-mix(in srgb, var(--accent) calc(var(--t, 0) * 1%), transparent); }
+  th.l, td.l { text-align: left; }
+  td b { font-weight: 600; }
+  .mu { font-size: 12px; color: var(--fg-3); }
+  .pty { color: var(--fg-3); }
+  .num { font-variant-numeric: tabular-nums; }
+  .gap { font-weight: 600; font-variant-numeric: tabular-nums; }
+  tr.fragile .gap { color: var(--fg-2); font-weight: 400; }
+  .tag { font-family: var(--mono); font-size: 11px; color: var(--fg-3); border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; }
+  .tag.ok { color: var(--accent); border-color: var(--accent); }
+  td.bar, th.bar { width: 150px; min-width: 120px; }
+  .track { position: relative; height: 14px; margin-top: 4px; background: linear-gradient(var(--line), var(--line)) center / 100% 2px no-repeat; }
+  .track .span { position: absolute; top: 5px; height: 4px; background: var(--accent); opacity: .35; border-radius: 2px; }
+  .track .mk { position: absolute; top: 0; width: 2px; height: 14px; margin-left: -1px; background: var(--fg-2); }
+  .track .md { position: absolute; top: 2px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--accent); }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12px; color: var(--fg-3); margin: 10px 0 0; }
+  .legend i { display: inline-block; vertical-align: -1px; margin-right: 6px; }
+  .legend .d { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+  .legend .m { width: 2px; height: 12px; background: var(--fg-2); }
+  .method li { font-size: 15px; color: var(--fg-2); }
+  @media (max-width: 600px) { main { padding: 40px 16px 64px; } h1 { font-size: 34px; } }
+</style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="../">← abrahamyeung.com</a></p>
+  <h1 style="margin-top:28px">Midterms 2026: model vs. markets</h1>
+  <p class="lede">A polls-and-fundamentals model of every Senate and governor race, compared against Kalshi and Polymarket prices, plus a county-level projection that updates as votes are counted. Probabilities are for the Democrat, or the independent where one is the main challenger. Model output only, not betting advice.</p>
+  <p class="stamp">Updated <span id="updated">–</span></p>
+
+  <section id="control">
+    <h2>Chamber control</h2>
+    <div class="cards" id="chambers"></div>
+  </section>
+
+  <section>
+    <h2>Election night</h2>
+    <p class="lede" id="live-note"></p>
+    <div id="live"></div>
+    <div class="legend"><span><i class="d"></i>model</span><span><i class="m"></i>market</span><span>Gap = model − market, in points</span></div>
+  </section>
+
+  <section>
+    <h2>Before the count: where the model and the market disagree</h2>
+    <p class="lede">Races the market prices between 4% and 96%, sorted by the size of the gap. "Holds" means the gap kept its sign and stayed above 3 points under all 11 alternative model settings.</p>
+    <div id="races"></div>
+  </section>
+
+  <section class="method">
+    <h2>Method</h2>
+    <ul>
+      <li>Poll average weighted by recency, sample size and likely-voter screens, with partisan sponsors down-weighted and shifted 2 points; blended with published averages and a fundamentals prior (2024 presidential margin, a D+8.7 generic-ballot environment, and each candidate's past over- or under-performance).</li>
+      <li>Error sizes come from 646 Senate and governor races in 538's archived polls (1998–2022): about 5.6 points on the margin, 3 of it shared nationally, with fatter-than-normal tails.</li>
+      <li>Blended with forecaster probabilities and expert ratings, weighted by source quality. Chamber control uses a correlated simulation across all races.</li>
+      <li>On election night, county results are compared with each county's 2024 baseline and expected turnout, corrected for which ballot types each state counts first, and the uncounted vote is simulated.</li>
+      <li>Not yet backtested against past market prices, so the gaps are disagreements with the market, not a proven edge.</li>
+    </ul>
+  </section>
+
+  <footer>Abraham Yeung · <a href="mailto:ayeung16@stanford.edu">ayeung16@stanford.edu</a></footer>
+</main>
+<script src="app.js"></script>
+<script>
+  async function load() {
+    try {
+      const r = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
+      renderMidterms(await r.json(), document);
+    } catch (e) {
+      document.getElementById("updated").textContent = "data unavailable";
+    }
+  }
+  load();
+  setInterval(load, 120000);
+</script>
+</body>
+</html>
