@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T04:12:58-08:00",
+ "updated": "2026-11-03T04:18:18-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -26,8 +26,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.375,
-   "edge": -0.192,
+   "p_market": 0.374,
+   "edge": -0.191,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -146,8 +146,8 @@
    "poll_avg": 6.6,
    "n_polls": 2,
    "p_final": 0.8295,
-   "p_market": 0.895,
-   "edge": -0.0655,
+   "p_market": 0.896,
+   "edge": -0.0665,
    "edge_lo": -0.1368,
    "edge_hi": -0.0586,
    "robust": true
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.375,
-   "edge": -0.209
+   "p_market": 0.374,
+   "edge": -0.208
   },
   {
    "race_id": "FL-SEN",
@@ -631,7 +631,7 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.964,
+   "p_market": 0.965,
    "edge": 0.02
   },
   {
@@ -706,8 +706,8 @@
    "hi80": 16.2,
    "p_live": 0.831,
    "p_pre": 0.83,
-   "p_market": 0.895,
-   "edge": -0.064
+   "p_market": 0.896,
+   "edge": -0.065
   },
   {
    "race_id": "TX-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "04:12:40"
+ "live_updated": "04:18:00"
 }
