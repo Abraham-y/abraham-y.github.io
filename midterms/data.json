@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T04:28:57-08:00",
+ "updated": "2026-11-03T04:34:18-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -26,8 +26,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.374,
-   "edge": -0.191,
+   "p_market": 0.373,
+   "edge": -0.19,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -251,8 +251,8 @@
    "poll_avg": 4.5,
    "n_polls": 14,
    "p_final": 0.7685,
-   "p_market": 0.73,
-   "edge": 0.0385,
+   "p_market": 0.729,
+   "edge": 0.0395,
    "edge_lo": 0.0225,
    "edge_hi": 0.0752,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.374,
-   "edge": -0.208
+   "p_market": 0.373,
+   "edge": -0.207
   },
   {
    "race_id": "FL-SEN",
@@ -602,7 +602,7 @@
    "p_live": 0.089,
    "p_pre": 0.101,
    "p_market": 0.15,
-   "edge": -0.061
+   "edge": -0.06
   },
   {
    "race_id": "GA-GOV",
@@ -631,7 +631,7 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.965,
+   "p_market": 0.964,
    "edge": 0.02
   },
   {
@@ -811,8 +811,8 @@
    "hi80": 9.6,
    "p_live": 0.767,
    "p_pre": 0.768,
-   "p_market": 0.73,
-   "edge": 0.037
+   "p_market": 0.729,
+   "edge": 0.038
   },
   {
    "race_id": "IA-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "04:28:39"
+ "live_updated": "04:33:59"
 }
