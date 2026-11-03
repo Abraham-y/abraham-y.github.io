@@ -78,7 +78,8 @@
       <li>Error sizes come from 646 Senate and governor races in 538's archived polls (1998–2022): about 5.6 points on the margin, 3 of it shared nationally, with fatter-than-normal tails.</li>
       <li>Blended with forecaster probabilities and expert ratings, weighted by source quality. Chamber control uses a correlated simulation across all races.</li>
       <li>On election night, county results are compared with each county's 2024 baseline and expected turnout, corrected for which ballot types each state counts first, and the uncounted vote is simulated.</li>
-      <li>Not yet backtested against past market prices, so the gaps are disagreements with the market, not a proven edge.</li>
+      <li>Backtested on 2022 and 2024 Senate and governor races. Across both cycles the model was slightly less accurate than professional forecasters (Brier score 0.098 vs 0.090; lower is better). Against Polymarket on the morning of Election Day 2024 (18 races) it roughly tied the market (0.059 vs 0.062, within noise), and buying every side it favored by 3 or more points would have lost about 3%.</li>
+      <li>The largest gap in 2024 was 8 points, so gaps above 10 points, like several this year, are outside anything the backtest covered. Treat them as disagreements with the market, not a proven edge.</li>
     </ul>
   </section>
 
