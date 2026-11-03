@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:37:01-08:00",
+ "updated": "2026-11-03T02:42:21-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -123,6 +123,21 @@
    "robust": true
   },
   {
+   "race_id": "KS-SEN",
+   "office": "Senate",
+   "challenger": "Adam Hamilton",
+   "rep": "Roger Marshall",
+   "ind_race": false,
+   "poll_avg": 3.9,
+   "n_polls": 9,
+   "p_final": 0.6963,
+   "p_market": 0.63,
+   "edge": 0.0663,
+   "edge_lo": 0.038,
+   "edge_hi": 0.1678,
+   "robust": true
+  },
+  {
    "race_id": "AK-GOV",
    "office": "Governor",
    "challenger": "Jonathan Kreiss-Tomkins",
@@ -150,21 +165,6 @@
    "edge": -0.0643,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
-   "robust": true
-  },
-  {
-   "race_id": "KS-SEN",
-   "office": "Senate",
-   "challenger": "Adam Hamilton",
-   "rep": "Roger Marshall",
-   "ind_race": false,
-   "poll_avg": 3.9,
-   "n_polls": 9,
-   "p_final": 0.6963,
-   "p_market": 0.633,
-   "edge": 0.0633,
-   "edge_lo": 0.038,
-   "edge_hi": 0.1678,
    "robust": true
   },
   {
@@ -632,7 +632,7 @@
    "p_live": 0.984,
    "p_pre": 0.971,
    "p_market": 0.971,
-   "edge": 0.013
+   "edge": 0.014
   },
   {
    "race_id": "NV-GOV",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.633,
-   "edge": 0.052
+   "p_market": 0.63,
+   "edge": 0.055
   },
   {
    "race_id": "AK-SEN",
@@ -856,7 +856,7 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.975,
+   "p_market": 0.974,
    "edge": 0.009
   },
   {
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "02:36:42"
+ "live_updated": "02:42:03"
 }
