@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T11:20:39-08:00",
+ "updated": "2026-11-03T11:26:05-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -26,8 +26,8 @@
    "poll_avg": 0.2,
    "n_polls": 4,
    "p_final": 0.5677,
-   "p_market": 0.81,
-   "edge": -0.2423,
+   "p_market": 0.815,
+   "edge": -0.2473,
    "edge_lo": -0.1933,
    "edge_hi": -0.1722,
    "robust": true
@@ -41,8 +41,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.363,
-   "edge": -0.18,
+   "p_market": 0.365,
+   "edge": -0.182,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.698,
-   "edge": -0.1275,
+   "p_market": 0.709,
+   "edge": -0.1385,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -131,10 +131,25 @@
    "poll_avg": 4.9,
    "n_polls": 3,
    "p_final": 0.7897,
-   "p_market": 0.861,
-   "edge": -0.0713,
+   "p_market": 0.863,
+   "edge": -0.0733,
    "edge_lo": -0.0857,
    "edge_hi": -0.0449,
+   "robust": true
+  },
+  {
+   "race_id": "KS-SEN",
+   "office": "Senate",
+   "challenger": "Adam Hamilton",
+   "rep": "Roger Marshall",
+   "ind_race": false,
+   "poll_avg": 3.9,
+   "n_polls": 9,
+   "p_final": 0.6963,
+   "p_market": 0.624,
+   "edge": 0.0723,
+   "edge_lo": 0.038,
+   "edge_hi": 0.1678,
    "robust": true
   },
   {
@@ -151,21 +166,6 @@
    "edge_lo": 0.0225,
    "edge_hi": 0.0752,
    "robust": false
-  },
-  {
-   "race_id": "KS-SEN",
-   "office": "Senate",
-   "challenger": "Adam Hamilton",
-   "rep": "Roger Marshall",
-   "ind_race": false,
-   "poll_avg": 3.9,
-   "n_polls": 9,
-   "p_final": 0.6963,
-   "p_market": 0.63,
-   "edge": 0.0663,
-   "edge_lo": 0.038,
-   "edge_hi": 0.1678,
-   "robust": true
   },
   {
    "race_id": "AK-GOV",
@@ -236,8 +236,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.36,
-   "edge": -0.0423,
+   "p_market": 0.357,
+   "edge": -0.0393,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -363,21 +363,6 @@
    "robust": false
   },
   {
-   "race_id": "OH-GOV",
-   "office": "Governor",
-   "challenger": "Amy Acton",
-   "rep": "Vivek Ramaswamy",
-   "ind_race": false,
-   "poll_avg": 4.4,
-   "n_polls": 16,
-   "p_final": 0.8016,
-   "p_market": 0.823,
-   "edge": -0.0214,
-   "edge_lo": -0.0352,
-   "edge_hi": -0.0065,
-   "robust": false
-  },
-  {
    "race_id": "NY-GOV",
    "office": "Governor",
    "challenger": "Kathy Hochul",
@@ -390,6 +375,21 @@
    "edge": 0.0208,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "OH-GOV",
+   "office": "Governor",
+   "challenger": "Amy Acton",
+   "rep": "Vivek Ramaswamy",
+   "ind_race": false,
+   "poll_avg": 4.4,
+   "n_polls": 16,
+   "p_final": 0.8016,
+   "p_market": 0.82,
+   "edge": -0.0184,
+   "edge_lo": -0.0352,
+   "edge_hi": -0.0065,
    "robust": false
   },
   {
@@ -551,8 +551,8 @@
    "poll_avg": 8.8,
    "n_polls": 14,
    "p_final": 0.9472,
-   "p_market": 0.942,
-   "edge": 0.0052,
+   "p_market": 0.941,
+   "edge": 0.0062,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.363,
-   "edge": -0.197
+   "p_market": 0.365,
+   "edge": -0.199
   },
   {
    "race_id": "FL-SEN",
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.698,
-   "edge": -0.13
+   "p_market": 0.709,
+   "edge": -0.14
   },
   {
    "race_id": "GA-SEN",
@@ -631,7 +631,7 @@
    "hi80": 17.2,
    "p_live": 0.984,
    "p_pre": 0.971,
-   "p_market": 0.968,
+   "p_market": 0.969,
    "edge": 0.016
   },
   {
@@ -646,8 +646,8 @@
    "hi80": 8.2,
    "p_live": 0.55,
    "p_pre": 0.568,
-   "p_market": 0.81,
-   "edge": -0.26
+   "p_market": 0.815,
+   "edge": -0.265
   },
   {
    "race_id": "KS-GOV",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.63,
-   "edge": 0.055
+   "p_market": 0.624,
+   "edge": 0.061
   },
   {
    "race_id": "AK-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.36,
-   "edge": -0.046
+   "p_market": 0.357,
+   "edge": -0.043
   },
   {
    "race_id": "TX-SEN",
@@ -751,8 +751,8 @@
    "hi80": 12.0,
    "p_live": 0.795,
    "p_pre": 0.79,
-   "p_market": 0.861,
-   "edge": -0.066
+   "p_market": 0.863,
+   "edge": -0.068
   },
   {
    "race_id": "MI-SEN",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.942,
-   "edge": 0.016
+   "p_market": 0.941,
+   "edge": 0.017
   },
   {
    "race_id": "SC-SEN",
@@ -901,8 +901,8 @@
    "hi80": 9.7,
    "p_live": 0.809,
    "p_pre": 0.802,
-   "p_market": 0.823,
-   "edge": -0.014
+   "p_market": 0.82,
+   "edge": -0.011
   },
   {
    "race_id": "AZ-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.086
   }
  ],
- "live_updated": "11:20:17"
+ "live_updated": "11:25:41"
 }
