@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T06:31:54-08:00",
+ "updated": "2026-11-03T06:37:14-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -41,10 +41,25 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.317,
-   "edge": -0.134,
+   "p_market": 0.327,
+   "edge": -0.144,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
+   "robust": true
+  },
+  {
+   "race_id": "GA-GOV",
+   "office": "Governor",
+   "challenger": "Keisha Lance Bottoms",
+   "rep": "Rick Jackson",
+   "ind_race": false,
+   "poll_avg": 0.5,
+   "n_polls": 7,
+   "p_final": 0.5705,
+   "p_market": 0.675,
+   "edge": -0.1045,
+   "edge_lo": -0.1615,
+   "edge_hi": -0.1406,
    "robust": true
   },
   {
@@ -75,21 +90,6 @@
    "edge": 0.1027,
    "edge_lo": 0.0566,
    "edge_hi": 0.16,
-   "robust": true
-  },
-  {
-   "race_id": "GA-GOV",
-   "office": "Governor",
-   "challenger": "Keisha Lance Bottoms",
-   "rep": "Rick Jackson",
-   "ind_race": false,
-   "poll_avg": 0.5,
-   "n_polls": 7,
-   "p_final": 0.5705,
-   "p_market": 0.671,
-   "edge": -0.1005,
-   "edge_lo": -0.1615,
-   "edge_hi": -0.1406,
    "robust": true
   },
   {
@@ -131,8 +131,8 @@
    "poll_avg": 3.9,
    "n_polls": 9,
    "p_final": 0.6963,
-   "p_market": 0.626,
-   "edge": 0.0703,
+   "p_market": 0.627,
+   "edge": 0.0693,
    "edge_lo": 0.038,
    "edge_hi": 0.1678,
    "robust": true
@@ -191,8 +191,8 @@
    "poll_avg": 5.3,
    "n_polls": 17,
    "p_final": 0.845,
-   "p_market": 0.796,
-   "edge": 0.049,
+   "p_market": 0.798,
+   "edge": 0.047,
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
@@ -206,8 +206,8 @@
    "poll_avg": 4.5,
    "n_polls": 14,
    "p_final": 0.7685,
-   "p_market": 0.721,
-   "edge": 0.0475,
+   "p_market": 0.725,
+   "edge": 0.0435,
    "edge_lo": 0.0225,
    "edge_hi": 0.0752,
    "robust": false
@@ -281,8 +281,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.354,
-   "edge": -0.0363,
+   "p_market": 0.353,
+   "edge": -0.0353,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -506,8 +506,8 @@
    "poll_avg": 8.8,
    "n_polls": 14,
    "p_final": 0.9472,
-   "p_market": 0.933,
-   "edge": 0.0142,
+   "p_market": 0.934,
+   "edge": 0.0132,
    "edge_lo": null,
    "edge_hi": null,
    "robust": false
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.317,
-   "edge": -0.15
+   "p_market": 0.327,
+   "edge": -0.16
   },
   {
    "race_id": "FL-SEN",
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.671,
-   "edge": -0.102
+   "p_market": 0.675,
+   "edge": -0.107
   },
   {
    "race_id": "GA-SEN",
@@ -676,8 +676,8 @@
    "hi80": 9.1,
    "p_live": 0.685,
    "p_pre": 0.696,
-   "p_market": 0.626,
-   "edge": 0.059
+   "p_market": 0.627,
+   "edge": 0.058
   },
   {
    "race_id": "AK-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.354,
-   "edge": -0.04
+   "p_market": 0.353,
+   "edge": -0.039
   },
   {
    "race_id": "TX-SEN",
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.796,
-   "edge": 0.045
+   "p_market": 0.798,
+   "edge": 0.043
   },
   {
    "race_id": "MI-GOV",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.933,
-   "edge": 0.025
+   "p_market": 0.934,
+   "edge": 0.024
   },
   {
    "race_id": "SC-SEN",
@@ -811,8 +811,8 @@
    "hi80": 9.6,
    "p_live": 0.767,
    "p_pre": 0.768,
-   "p_market": 0.721,
-   "edge": 0.045
+   "p_market": 0.725,
+   "edge": 0.042
   },
   {
    "race_id": "IA-SEN",
@@ -856,8 +856,8 @@
    "hi80": 17.4,
    "p_live": 0.983,
    "p_pre": 0.972,
-   "p_market": 0.971,
-   "edge": 0.012
+   "p_market": 0.973,
+   "edge": 0.01
   },
   {
    "race_id": "NE-SEN",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "06:31:36"
+ "live_updated": "06:36:56"
 }
