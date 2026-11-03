@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T03:35:40-08:00",
+ "updated": "2026-11-03T03:41:00-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -56,8 +56,8 @@
    "poll_avg": 0.5,
    "n_polls": 7,
    "p_final": 0.5705,
-   "p_market": 0.724,
-   "edge": -0.1535,
+   "p_market": 0.716,
+   "edge": -0.1455,
    "edge_lo": -0.1615,
    "edge_hi": -0.1406,
    "robust": true
@@ -333,21 +333,6 @@
    "robust": false
   },
   {
-   "race_id": "NE-SEN",
-   "office": "Senate",
-   "challenger": "Dan Osborn",
-   "rep": "Pete Ricketts",
-   "ind_race": true,
-   "poll_avg": -1.5,
-   "n_polls": 8,
-   "p_final": 0.3002,
-   "p_market": 0.332,
-   "edge": -0.0318,
-   "edge_lo": -0.0281,
-   "edge_hi": 0.0467,
-   "robust": false
-  },
-  {
    "race_id": "MT-SEN",
    "office": "Senate",
    "challenger": "Seth Bodnar",
@@ -360,6 +345,21 @@
    "edge": -0.03,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "NE-SEN",
+   "office": "Senate",
+   "challenger": "Dan Osborn",
+   "rep": "Pete Ricketts",
+   "ind_race": true,
+   "poll_avg": -1.5,
+   "n_polls": 8,
+   "p_final": 0.3002,
+   "p_market": 0.33,
+   "edge": -0.0298,
+   "edge_lo": -0.0281,
+   "edge_hi": 0.0467,
    "robust": false
   },
   {
@@ -468,21 +468,6 @@
    "robust": false
   },
   {
-   "race_id": "OH-SEN",
-   "office": "Senate",
-   "challenger": "Sherrod Brown",
-   "rep": "Jon Husted",
-   "ind_race": false,
-   "poll_avg": 3.1,
-   "n_polls": 18,
-   "p_final": 0.727,
-   "p_market": 0.711,
-   "edge": 0.016,
-   "edge_lo": 0.0071,
-   "edge_hi": 0.0329,
-   "robust": false
-  },
-  {
    "race_id": "OK-GOV",
    "office": "Governor",
    "challenger": "Cyndi Munson",
@@ -506,10 +491,25 @@
    "poll_avg": 8.8,
    "n_polls": 14,
    "p_final": 0.9472,
-   "p_market": 0.935,
-   "edge": 0.0122,
+   "p_market": 0.934,
+   "edge": 0.0132,
    "edge_lo": null,
    "edge_hi": null,
+   "robust": false
+  },
+  {
+   "race_id": "OH-SEN",
+   "office": "Senate",
+   "challenger": "Sherrod Brown",
+   "rep": "Jon Husted",
+   "ind_race": false,
+   "poll_avg": 3.1,
+   "n_polls": 18,
+   "p_final": 0.727,
+   "p_market": 0.715,
+   "edge": 0.012,
+   "edge_lo": 0.0071,
+   "edge_hi": 0.0329,
    "robust": false
   },
   {
@@ -616,8 +616,8 @@
    "hi80": 7.6,
    "p_live": 0.568,
    "p_pre": 0.57,
-   "p_market": 0.724,
-   "edge": -0.155
+   "p_market": 0.716,
+   "edge": -0.148
   },
   {
    "race_id": "GA-SEN",
@@ -632,7 +632,7 @@
    "p_live": 0.984,
    "p_pre": 0.971,
    "p_market": 0.965,
-   "edge": 0.019
+   "edge": 0.02
   },
   {
    "race_id": "NV-GOV",
@@ -781,8 +781,8 @@
    "hi80": 13.5,
    "p_live": 0.958,
    "p_pre": 0.947,
-   "p_market": 0.935,
-   "edge": 0.023
+   "p_market": 0.934,
+   "edge": 0.024
   },
   {
    "race_id": "SC-SEN",
@@ -871,8 +871,8 @@
    "hi80": 4.8,
    "p_live": 0.297,
    "p_pre": 0.3,
-   "p_market": 0.332,
-   "edge": -0.034
+   "p_market": 0.33,
+   "edge": -0.033
   },
   {
    "race_id": "OH-SEN",
@@ -886,8 +886,8 @@
    "hi80": 8.7,
    "p_live": 0.728,
    "p_pre": 0.727,
-   "p_market": 0.711,
-   "edge": 0.017
+   "p_market": 0.715,
+   "edge": 0.013
   },
   {
    "race_id": "OH-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "03:35:24"
+ "live_updated": "03:40:42"
 }
