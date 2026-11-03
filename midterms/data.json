@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T02:26:19-08:00",
+ "updated": "2026-11-03T02:31:40-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -213,6 +213,21 @@
    "robust": true
   },
   {
+   "race_id": "MI-SEN",
+   "office": "Senate",
+   "challenger": "Abdul El-Sayed",
+   "rep": "Mike Rogers",
+   "ind_race": false,
+   "poll_avg": 5.3,
+   "n_polls": 17,
+   "p_final": 0.845,
+   "p_market": 0.801,
+   "edge": 0.044,
+   "edge_lo": 0.0317,
+   "edge_hi": 0.0745,
+   "robust": true
+  },
+  {
    "race_id": "MS-SEN",
    "office": "Senate",
    "challenger": "Scott Colom",
@@ -226,21 +241,6 @@
    "edge_lo": -0.0489,
    "edge_hi": 0.0562,
    "robust": false
-  },
-  {
-   "race_id": "MI-SEN",
-   "office": "Senate",
-   "challenger": "Abdul El-Sayed",
-   "rep": "Mike Rogers",
-   "ind_race": false,
-   "poll_avg": 5.3,
-   "n_polls": 17,
-   "p_final": 0.845,
-   "p_market": 0.805,
-   "edge": 0.04,
-   "edge_lo": 0.0317,
-   "edge_hi": 0.0745,
-   "robust": true
   },
   {
    "race_id": "ME-SEN",
@@ -303,21 +303,6 @@
    "robust": false
   },
   {
-   "race_id": "NH-GOV",
-   "office": "Governor",
-   "challenger": "Cinde Warmington",
-   "rep": "Kelly Ayotte",
-   "ind_race": false,
-   "poll_avg": -6.9,
-   "n_polls": 6,
-   "p_final": 0.108,
-   "p_market": 0.141,
-   "edge": -0.033,
-   "edge_lo": null,
-   "edge_hi": null,
-   "robust": false
-  },
-  {
    "race_id": "IA-SEN",
    "office": "Senate",
    "challenger": "Josh Turek",
@@ -330,6 +315,21 @@
    "edge": -0.0325,
    "edge_lo": -0.0556,
    "edge_hi": -0.0076,
+   "robust": false
+  },
+  {
+   "race_id": "NH-GOV",
+   "office": "Governor",
+   "challenger": "Cinde Warmington",
+   "rep": "Kelly Ayotte",
+   "ind_race": false,
+   "poll_avg": -6.9,
+   "n_polls": 6,
+   "p_final": 0.108,
+   "p_market": 0.14,
+   "edge": -0.032,
+   "edge_lo": null,
+   "edge_hi": null,
    "robust": false
   },
   {
@@ -766,8 +766,8 @@
    "hi80": 10.5,
    "p_live": 0.841,
    "p_pre": 0.845,
-   "p_market": 0.805,
-   "edge": 0.036
+   "p_market": 0.801,
+   "edge": 0.04
   },
   {
    "race_id": "MI-GOV",
@@ -931,7 +931,7 @@
    "hi80": -0.2,
    "p_live": 0.093,
    "p_pre": 0.108,
-   "p_market": 0.141,
+   "p_market": 0.14,
    "edge": -0.048
   },
   {
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "02:26:08"
+ "live_updated": "02:31:21"
 }
