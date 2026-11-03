@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T03:46:19-08:00",
+ "updated": "2026-11-03T03:51:38-08:00",
  "chambers": [
   {
    "name": "Senate",
@@ -26,8 +26,8 @@
    "poll_avg": -4.0,
    "n_polls": 14,
    "p_final": 0.183,
-   "p_market": 0.373,
-   "edge": -0.19,
+   "p_market": 0.375,
+   "edge": -0.192,
    "edge_lo": -0.198,
    "edge_hi": -0.1799,
    "robust": true
@@ -161,8 +161,8 @@
    "poll_avg": -1.8,
    "n_polls": 20,
    "p_final": 0.3177,
-   "p_market": 0.376,
-   "edge": -0.0583,
+   "p_market": 0.374,
+   "edge": -0.0563,
    "edge_lo": -0.0748,
    "edge_hi": -0.0322,
    "robust": true
@@ -228,21 +228,6 @@
    "robust": false
   },
   {
-   "race_id": "ME-SEN",
-   "office": "Senate",
-   "challenger": "Troy Jackson",
-   "rep": "Susan Collins",
-   "ind_race": false,
-   "poll_avg": 4.5,
-   "n_polls": 14,
-   "p_final": 0.7685,
-   "p_market": 0.728,
-   "edge": 0.0405,
-   "edge_lo": 0.0225,
-   "edge_hi": 0.0752,
-   "robust": false
-  },
-  {
    "race_id": "MI-SEN",
    "office": "Senate",
    "challenger": "Abdul El-Sayed",
@@ -256,6 +241,21 @@
    "edge_lo": 0.0317,
    "edge_hi": 0.0745,
    "robust": true
+  },
+  {
+   "race_id": "ME-SEN",
+   "office": "Senate",
+   "challenger": "Troy Jackson",
+   "rep": "Susan Collins",
+   "ind_race": false,
+   "poll_avg": 4.5,
+   "n_polls": 14,
+   "p_final": 0.7685,
+   "p_market": 0.73,
+   "edge": 0.0385,
+   "edge_lo": 0.0225,
+   "edge_hi": 0.0752,
+   "robust": false
   },
   {
    "race_id": "AL-GOV",
@@ -586,8 +586,8 @@
    "hi80": 1.4,
    "p_live": 0.166,
    "p_pre": 0.183,
-   "p_market": 0.373,
-   "edge": -0.207
+   "p_market": 0.375,
+   "edge": -0.209
   },
   {
    "race_id": "FL-SEN",
@@ -721,8 +721,8 @@
    "hi80": 3.6,
    "p_live": 0.314,
    "p_pre": 0.318,
-   "p_market": 0.376,
-   "edge": -0.062
+   "p_market": 0.374,
+   "edge": -0.06
   },
   {
    "race_id": "TX-SEN",
@@ -811,8 +811,8 @@
    "hi80": 9.6,
    "p_live": 0.767,
    "p_pre": 0.768,
-   "p_market": 0.728,
-   "edge": 0.038
+   "p_market": 0.73,
+   "edge": 0.037
   },
   {
    "race_id": "IA-SEN",
@@ -932,7 +932,7 @@
    "p_live": 0.093,
    "p_pre": 0.108,
    "p_market": 0.14,
-   "edge": -0.047
+   "edge": -0.048
   },
   {
    "race_id": "VT-GOV",
@@ -950,5 +950,5 @@
    "edge": 0.094
   }
  ],
- "live_updated": "03:46:02"
+ "live_updated": "03:51:21"
 }
