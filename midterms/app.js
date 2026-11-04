@@ -37,9 +37,12 @@
 
   function liveTable(d) {
     const ind = Object.fromEntries((d.races || []).map(r => [r.race_id, r.ind_race]));
+    // held: the projection is still learning how Election Day votes differ from early votes, so its gap isn't ranked
+    const key = r => (r.held ? 0 : Math.abs(r.edge ?? 0));
     const rows = [...(d.live || [])].map(r => ({ ...r, ind_race: r.ind_race ?? ind[r.race_id] }))
-      .sort((a, b) => Math.abs(b.edge ?? 0) - Math.abs(a.edge ?? 0));
+      .sort((a, b) => key(b) - key(a));
     const counting = rows.some(r => (r.pct_counted || 0) > 0);
+    const held = rows.some(r => r.held);
     const body = rows.map(r => {
       const side = r.ind_race ? "I" : "D";
       const pre = !(r.pct_counted > 0);
@@ -48,12 +51,12 @@
         `<td>${pre ? '<span class="tag">not yet</span>' : r.pct_counted.toFixed(0) + "%"}</td>`,
         `<td>${pre ? "–" : margin(r.counted_margin, side)}</td>`,
         `<td>${margin(r.proj_margin, side)}<div class="mu">${margin(r.lo80, side)} to ${margin(r.hi80, side)}</div></td>`,
-        `<td class="num">${pct(r.p_live)}</td><td class="num">${pct(r.p_market)}</td>`,
+        `<td class="num">${pct(r.p_live)}${r.held ? `<div class="mu"><span class="tag">held</span> E-day gap: ${r.gap_counties ?? 0} of 5 counties</div>` : ""}</td><td class="num">${pct(r.p_market)}</td>`,
         `<td class="num gap">${gap(r.edge)}</td>`,
         `<td class="bar">${bar(r.p_live, r.p_market)}</td>`,
-      ], r.edge);
+      ], r.held ? null : r.edge);
     }).join("");
-    return { counting, html: `<div class="tw"><table><thead><tr><th class="l">Race</th><th>Counted</th><th>Count margin</th>
+    return { counting, held, html: `<div class="tw"><table><thead><tr><th class="l">Race</th><th>Counted</th><th>Count margin</th>
       <th>Projected (80% range)</th><th>Live</th><th>Market</th><th>Gap</th><th class="bar"></th></tr></thead><tbody>${body}</tbody></table></div>` };
   }
 
@@ -77,7 +80,8 @@
     root.querySelector("#updated").textContent = when + (d.live_updated ? ` · live pass ${d.live_updated}` : "");
     root.querySelector("#chambers").innerHTML = chambers(d);
     root.querySelector("#live-note").textContent = lt.counting
-      ? "Sorted by the gap between the live projection and the market. Shading grows with the gap."
+      ? "Sorted by the gap between the live projection and the market. Shading grows with the gap." +
+        (lt.held ? " Rows marked held are still learning how much the Election Day vote differs from the early vote (it needs Election Day votes from 5 counties), so they sit at the bottom unshaded." : "")
       : "No votes counted yet. Until results arrive, the live column equals the pre-election model. Rows sort by gap; shading grows with it.";
     root.querySelector("#live").innerHTML = lt.html;
     root.querySelector("#races").innerHTML = raceTable(d);
