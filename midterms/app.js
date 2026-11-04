@@ -31,7 +31,7 @@
   function chambers(d) {
     return d.chambers.map(c => `<div class="card"><div class="lbl">${esc(c.name)} · Democratic control</div>
       <div class="big">${pct(c.p_model)}</div>
-      <div class="sub">model · forecasters ${pct(c.p_forecasters)} · market ${pct(c.p_market)}</div>
+      <div class="sub">pre-election model · forecasters ${pct(c.p_forecasters)} · market now ${pct(c.p_market)}</div>
       ${bar(c.p_model, c.p_market)}</div>`).join("");
   }
 
