@@ -45,3 +45,6 @@ fixed,3,12,5,219,,2026-11-05,here,prescribed symmetry (all symbol permutations a
 fixed,3,12,6,63,,2026-11-05,here,prescribed symmetry (all symbol permutations and reversal) + local search,codes/edit3_n12_d6_size63.txt,568131647b5068f19244e21db17f6fdfa1e4b50df031d6da1df55aa58d18c1ff
 fixed,4,8,4,204,,2026-11-05,here,"prescribed symmetry (dihedral symbol group, reflections combined with reversal) + local search",codes/edit4_n8_d4_size204.txt,eaa89bde408b5c68de97e75bf10c02b0dfd386c026c4516ed3c9d69be724f84b
 fixed,4,10,4,1520,,2026-11-05,here,"prescribed symmetry (dihedral symbol group, quarter turns and two reflections combined with reversal) + local search",codes/edit4_n10_d4_size1520.txt,100524bdc0698e3c04f25a1bf2c5dd45e3731137e9778789296ef3dc9b1755ab
+fixed,4,10,6,68,,2026-11-05,here,"prescribed symmetry (dihedral symbol group, reflections combined with reversal) + local search",codes/edit4_n10_d6_size68.txt,eb867a52ebe6e6487de4a1238c11888e6ec98145a12691f795775456a4b978a7
+fixed,4,14,5,16440,,2026-11-05,here,lexicode,codes/edit4_n14_d5_size16440.txt,aa888ba53bf8cd9db0d41ce90e7cc15e64c9fe0779b9a4b7e982c4b89982ca11
+fixed,4,14,6,2346,,2026-11-05,here,lexicode,codes/edit4_n14_d6_size2346.txt,92a4f972ecb53ad77104ee145de604859c9e93a9894e787639adcaa2fa0129ba
