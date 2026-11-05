@@ -43,3 +43,4 @@ fixed,3,12,3,8238,,2026-11-05,here,prescribed symmetry (cyclic symbol shift and 
 fixed,3,12,4,1227,,2026-11-05,here,prescribed symmetry (all symbol permutations and reversal) + local search,codes/edit3_n12_d4_size1227.txt,84a706f14405ad90b39f10738729098f1d976fc5920d9cbdd819de52d34e5db4
 fixed,3,12,5,219,,2026-11-05,here,prescribed symmetry (all symbol permutations and reversal) + local search,codes/edit3_n12_d5_size219.txt,567f156e035f7d4ea0e1f8ea9ff04ab037729107fe54f802bd0640d5e932226e
 fixed,3,12,6,63,,2026-11-05,here,prescribed symmetry (all symbol permutations and reversal) + local search,codes/edit3_n12_d6_size63.txt,568131647b5068f19244e21db17f6fdfa1e4b50df031d6da1df55aa58d18c1ff
+fixed,4,8,4,204,,2026-11-05,here,"prescribed symmetry (dihedral symbol group, reflections combined with reversal) + local search",codes/edit4_n8_d4_size204.txt,eaa89bde408b5c68de97e75bf10c02b0dfd386c026c4516ed3c9d69be724f84b
