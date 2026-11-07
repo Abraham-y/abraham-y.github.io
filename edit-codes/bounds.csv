@@ -509,7 +509,7 @@ fixed,4,16,1,4294967296,4294967296,houghten,houghten
 fixed,4,16,2,1073741824,1073741824,houghten,houghten
 fixed,4,16,3,1782677,,"derived:E4(15,3)",
 fixed,4,16,4,1712330,,here,
-fixed,4,16,5,49992,,"derived:E4(15,5)",
+fixed,4,16,5,154463,,here,
 fixed,4,16,6,6486,,"derived:E4(15,6)",
 fixed,4,16,7,1107,,"derived:E4(15,7)",
 fixed,4,16,8,251,,"derived:E4(15,8)",
@@ -522,7 +522,7 @@ fixed,4,17,1,17179869184,17179869184,houghten,houghten
 fixed,4,17,2,4294967296,4294967296,houghten,houghten
 fixed,4,17,3,1782677,,"derived:E4(16,3)",
 fixed,4,17,4,1712330,,"derived:E4(16,4)",
-fixed,4,17,5,49992,,"derived:E4(16,5)",
+fixed,4,17,5,154463,,"derived:E4(16,5)",
 fixed,4,17,6,6486,,"derived:E4(16,6)",
 fixed,4,17,7,1107,,"derived:E4(16,7)",
 fixed,4,17,8,322,,houghten,
