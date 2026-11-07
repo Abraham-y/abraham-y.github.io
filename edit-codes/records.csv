@@ -68,3 +68,5 @@ fixed,4,14,10,14,,2026-11-06,here,lexicode,codes/edit4_n14_d10_size14.txt,9910b2
 fixed,4,15,7,1107,,2026-11-06,here,lexicode,codes/edit4_n15_d7_size1107.txt,15ae5c445ac0576191518032e11fce90ca12b08836d623fd4327438768231c3e
 fixed,4,15,8,251,,2026-11-06,here,lexicode,codes/edit4_n15_d8_size251.txt,bc117447c9227237312611d6673a401a557574d073cb72cad9735e47e066a2b8
 fixed,4,16,5,154463,,2026-11-06,here,lexicode,codes/edit4_n16_d5_size154463.txt,7b1cc9895641e05276bc4b54bf82e81343e1e33dffb189e727632bbef8b3a16e
+fixed,4,11,9,8,,2026-11-06,here,tabu search on the codewords,codes/edit4_n11_d9_size8.txt,112c4bfe71490116a659b57fb9377c61e2d437d699d77871d2d4edb17871b043
+fixed,4,12,10,8,,2026-11-06,here,tabu search on the codewords,codes/edit4_n12_d10_size8.txt,667bb68f90a12c9fc2f4e681a7e9d65a9a390d97f7dc8717cf6b9c507dbf5ff6
