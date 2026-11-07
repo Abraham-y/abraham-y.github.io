@@ -1,0 +1,28 @@
+# fixed-length edit-metric code, abrahamyeung.com/edit-codes/
+# q = 4
+# n = 14
+# d = 10
+# size = 14
+# sha256(codewords) = 9910b299225cb87639c02c06f207d4a3da36e3257d15efe61fe1a89643ee0cd0
+# original header:
+# | quaternary edit-metric code, minimum Levenshtein distance 10
+# | n = 14
+# | d = 10
+# | q = 4
+# | size = 14
+# | found by search/lex_pairwise.c order=lex seed=0
+# | sha256(codewords) = 9910b299225cb87639c02c06f207d4a3da36e3257d15efe61fe1a89643ee0cd0
+00000000000000
+00001111111111
+00002222222222
+00003333333333
+01110001112223
+01111113330002
+01112220003331
+01113332221110
+02220012210132
+02231302032021
+03320233311200
+10310310012312
+12030221130303
+13331123022133
