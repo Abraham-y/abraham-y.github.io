@@ -1,0 +1,26 @@
+# fixed-length edit-metric code, abrahamyeung.com/edit-codes/
+# q = 4
+# n = 13
+# d = 10
+# size = 12
+# sha256(codewords) = 083645394017e65d165e81137108fc1ed2f466449fe742359b8104cd80e32bb7
+# original header:
+# | quaternary edit-metric code, minimum Levenshtein distance 10
+# | n = 13
+# | d = 10
+# | q = 4
+# | size = 12
+# | found by search/word_tabu.c seed=1 secs=120 k0=2
+# | sha256(codewords) = 083645394017e65d165e81137108fc1ed2f466449fe742359b8104cd80e32bb7
+0000222222010
+0003113301133
+0122021002322
+0211233330001
+1033333232222
+1111111122203
+1130000333330
+1332221111111
+2222332223333
+2223003111200
+3311102233112
+3333310000000
