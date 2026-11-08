@@ -136,7 +136,7 @@ def root(cells, key, attr):
 
 def name(key):
     fam, q, n, d = key
-    return f"E<sub>{q}</sub>({n},{d})"
+    return f"E<sub>{q}</sub>({n},{d})" + (", variable length" if fam == "variable" else "")
 
 
 def fmt(v, q, d, fam):
@@ -418,7 +418,7 @@ def page(cells, recs):
     <pre class="cmd">python3 check.py codes/edit4_n13_d3_size500882.txt</pre>
     <p>Before it was listed, each code here was also accepted by three verifiers that share no code: a ball-marking check, a sort-based ball-collision check and a pairwise bit-parallel Levenshtein check.</p>
     <h3 style="margin:14px 0 6px">How the new codes were found</h3>
-    <p>The entries from Yeung 2026 came from searching for codes invariant under a chosen group of symbol permutations and reversal, which shrinks the search to orbits of words. Of the entries first published here, the large quaternary ones are lexicodes: take the words in lexicographic order and keep each one that is far enough from every word kept so far. The binary and ternary ones come from iterated local search for a maximum independent set in the conflict graph, whose vertices are all q<sup>n</sup> words, with an edge between two words closer than d. Where that graph is too large, the search runs on the graph of orbits under a small group of symbol permutations and reversal, which the paper uses for the quaternary cells. The same search reproduces every exact value it was run on before any open cell was believed. All of these searches were run by an LLM coding agent under the protocol in the paper, which also describes what went wrong along the way.</p>
+    <p>The entries from Yeung 2026 came from searching for codes invariant under a chosen group of symbol permutations and reversal, which shrinks the search to orbits of words. Of the entries first published here, the large quaternary ones are lexicodes: take the words in lexicographic order and keep each one that is far enough from every word kept so far. Most binary and ternary ones come from iterated local search for a maximum independent set in the conflict graph, whose vertices are all q<sup>n</sup> words, with an edge between two words closer than d. Where that graph is too large, the search runs on the graph of orbits under a small group of symbol permutations and reversal, which the paper uses for the quaternary cells. The same search reproduces every exact value it was run on before any open cell was believed. The small codes at large d come from tabu search on the codewords themselves: random words are changed one symbol at a time, always making the change that most reduces how far the close pairs fall short of d, and a word is added whenever no pair is too close. All of these searches were run by an LLM coding agent under the protocol in the paper, which also describes what went wrong along the way.</p>
     <h3 style="margin:14px 0 6px">Sources</h3>
     <ul class="refs">
       <li>S. Houghten, tables of bounds on edit-metric codes, Brock University: <a href="{BROCK}edit.html" target="_blank" rel="noopener">index</a>, with the five tables linked above. They first appeared in S. K. Houghten, D. Ashlock and J. Lenarz, Construction of optimal edit metric codes, <i>Proc. 2006 IEEE Information Theory Workshop</i>, 259&ndash;263, and S. Baker, R. Flack and S. Houghten, Optimal variable-length insertion-deletion correcting codes and edit metric codes, <i>Congressus Numerantium</i> 186 (2008), 65&ndash;80. Houghten's pages list the later improvements and their sources.</li>
