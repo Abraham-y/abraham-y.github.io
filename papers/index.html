@@ -28,9 +28,9 @@
   </div>
 
   <div class="paper">
-    <a class="thumb" href="activation-cache-compression.pdf" target="_blank"><img src="../figures/papers/sae.png" alt="" loading="lazy"></a>
+    <a class="thumb" href="https://arxiv.org/abs/2611.08551" target="_blank" rel="noopener"><img src="../figures/papers/sae.png" alt="" loading="lazy"></a>
     <div>
-      <h3><a href="activation-cache-compression.pdf" target="_blank">How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training</a></h3>
+      <h3><a href="https://arxiv.org/abs/2611.08551" target="_blank" rel="noopener">How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training</a></h3>
       <div class="authors"><b>Abraham Yeung</b></div>
       <div class="meta"><a class="venue" href="https://interpscience.github.io/" target="_blank" rel="noopener">NeurIPS 2026, InterpScience Workshop</a></div>
       <p>Training a sparse autoencoder needs a large cache of model activations, and compressing that cache changes which features the SAE learns. The paper shows that the obvious measurement is not meaningful on its own: retraining on a cache with one value in a million perturbed by the smallest fp32 step keeps only 70 percent of features, while changing the random seed keeps 23 percent. So it calibrates each site instead, with retraining on identical bytes as the ceiling and a reseed as the floor, and measures every codec against that. On GPT-2 small and Pythia-1.4B, naive per-token int4 loses more features than a reseed, standardizing channels before quantizing brings int4 back above the floor at the same file size, and a bf16 forward pass loses slightly more than rotated 8-bit storage. About 170 GPU-hours of pre-registered experiments, with every number regenerating from committed artifacts.</p>
