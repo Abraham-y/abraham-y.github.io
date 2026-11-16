@@ -1,0 +1,46 @@
+# variable-length edit-metric code, abrahamyeung.com/edit-codes/
+# family = variable
+# words of every length 0 .. n; '-' is the empty word
+# q = 3
+# n = 9
+# d = 5
+# size = 28
+# sha256(codewords) = 0c6487c81ea86e2a09fcaf55dd6e7b36422dea96916987848973380427b7942b
+# original header:
+# | ternary variable-length edit-metric code, minimum Levenshtein distance 5
+# | family = variable
+# | n = 9
+# | d = 5
+# | q = 3
+# | size = 28
+# | words of every length 0 .. n are allowed; '-' is the empty word
+# | found by search/var_extend.py: the 26 length-9 words of q3_n9_d5_union_size27.txt, plus mis_ils (seed=0 secs=300) on the 126 shorter words compatible with them
+# | sha256(codewords) = 0c6487c81ea86e2a09fcaf55dd6e7b36422dea96916987848973380427b7942b
+000002200
+000021112
+000101021
+001112222
+002111100
+0022
+011202121
+012102002
+020120000
+022222011
+102201111
+110011000
+110100112
+110222202
+111111211
+111220010
+12101
+122022100
+122120222
+200220022
+202021220
+202110011
+210012221
+211100220
+211121102
+220010110
+222000201
+222211212

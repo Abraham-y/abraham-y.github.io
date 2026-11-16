@@ -40,9 +40,12 @@ REFS = {
     "WH25": ("F. Weindel and R. Heckel, <i>LLM-Guided Search for Deletion-Correcting Codes</i>, "
              "arXiv:2504.00613, Table 3. The codewords are not published.",
              "https://arxiv.org/abs/2504.00613", False),
+    "R26": ("Theresa Rainaldi (Velorin Intelligence), personal communication, November 2026. "
+            "The codewords are published on this page.", None, True),
     "here": ("First published on this page.", None, True),
 }
-REF_SHORT = {"Y26": "Yeung 2026", "WH25": "Weindel &amp; Heckel 2025", "here": "this page"}
+REF_SHORT = {"Y26": "Yeung 2026", "WH25": "Weindel &amp; Heckel 2025", "R26": "Rainaldi 2026",
+             "here": "this page"}
 
 
 class Cell:
@@ -369,8 +372,8 @@ def page(cells, recs):
                     f'{table_html(cells, recs, fam, q)}{note}</section>')
     nav = " ".join(f'<a href="#{anc}">{title.lower()}</a>' for _, _, anc, title, _ in TABLES)
     refs = "".join(
-        f'<li>{txt} <a href="{url}" target="_blank" rel="noopener">{url.split("//")[1]}</a></li>'
-        for key, (txt, url, _) in REFS.items() if url)
+        f'<li>{txt}' + (f' <a href="{url}" target="_blank" rel="noopener">{url.split("//")[1]}</a>' if url else "")
+        + "</li>" for key, (txt, url, _) in REFS.items() if key != "here")
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -394,18 +397,18 @@ def page(cells, recs):
     <p>The tables start from <a href="{BROCK}edit.html" target="_blank" rel="noopener">Sheridan Houghten's tables</a> at Brock University, copied on 27 October 2026, and record improvements found since then. {n_new} cells have a better lower bound than Houghten's table, and {n_der} more follow from those.{own_txt} Every new lower bound that comes with a code links to the codewords and their SHA-256, and <a href="check.py">check.py</a> checks any of them. This page is maintained separately from Houghten's.</p>
     <p class="small muted">Last updated {today}. Corrections and new codes are welcome at <a href="mailto:ayeung16@stanford.edu">ayeung16@stanford.edu</a>. Data: <a href="bounds.csv">bounds.csv</a> (every cell, with its source), <a href="records.csv">records.csv</a> (every claim beyond Houghten's table).</p>
   </div>
-  <nav class="nav"><a href="#changes">improvements</a> {nav} <a href="#notes">notes</a></nav>
+  <nav class="nav">{nav} <a href="#changes">improvements</a> <a href="#notes">notes</a></nav>
+
+  <section id="key" style="margin-top:44px">
+    <div class="legend"><span class="new">new code, linked</span><span class="rep">reported in the literature, codewords not public</span><span class="der">follows from an improved cell</span></div>
+  </section>
+  {"".join(secs)}
 
   <section id="changes">
     <h2>Improvements</h2>
     <p class="sub">Cells where the best known bound differs from Houghten's table, newest first.</p>
     {changes}
   </section>
-
-  <section id="key" style="margin-top:44px">
-    <div class="legend"><span class="new">new code, linked</span><span class="rep">reported in the literature, codewords not public</span><span class="der">follows from an improved cell</span></div>
-  </section>
-  {"".join(secs)}
 
   <section id="notes" class="prose">
     <h2>Notes</h2>
@@ -416,7 +419,7 @@ def page(cells, recs):
     <h3 style="margin:14px 0 6px">Checking a code</h3>
     <p>Each code file has a short header declaring q, n, d, the size and the SHA-256 of the sorted codewords, followed by one word per line. check.py needs only Python 3 and checks one file at a time:</p>
     <pre class="cmd">python3 check.py codes/edit4_n13_d3_size500882.txt</pre>
-    <p>Before it was listed, each code here was also accepted by three verifiers that share no code: a ball-marking check, a sort-based ball-collision check and a pairwise bit-parallel Levenshtein check.</p>
+    <p>Before it was listed, each code here was also accepted by at least three verifiers that share no code. Which ones depends on the code's size and d: a ball-marking check, a sort-based ball-collision check, and pairwise Levenshtein checks, plain and bit-parallel.</p>
     <h3 style="margin:14px 0 6px">How the new codes were found</h3>
     <p>The entries from Yeung 2026 came from searching for codes invariant under a chosen group of symbol permutations and reversal, which shrinks the search to orbits of words. Of the entries first published here, the large quaternary ones are lexicodes: take the words in lexicographic order and keep each one that is far enough from every word kept so far. Most binary and ternary ones come from iterated local search for a maximum independent set in the conflict graph, whose vertices are all q<sup>n</sup> words, with an edge between two words closer than d. Where that graph is too large, the search runs on the graph of orbits under a small group of symbol permutations and reversal, which the paper uses for the quaternary cells. The same search reproduces every exact value it was run on before any open cell was believed. The small codes at large d come from tabu search on the codewords themselves: random words are changed one symbol at a time, always making the change that most reduces how far the close pairs fall short of d, and a word is added whenever no pair is too close. All of these searches were run by an LLM coding agent under the protocol in the paper, which also describes what went wrong along the way.</p>
     <h3 style="margin:14px 0 6px">Sources</h3>

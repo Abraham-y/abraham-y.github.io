@@ -1,0 +1,28 @@
+# fixed-length edit-metric code, abrahamyeung.com/edit-codes/
+# q = 3
+# n = 12
+# d = 8
+# size = 12
+# sha256(codewords) = 7cec0c303acdc6cbc1bf7018ad9af0ab96f89e9d4c37e18c5b4d54887c42b102
+# original header:
+# | ternary edit-metric code, minimum Levenshtein distance 8
+# | n = 12
+# | d = 8
+# | q = 3
+# | size = 12
+# | found by Theresa Rainaldi (Velorin Intelligence), sent to A. Yeung by email, November 2026; in their words, AI-assisted seeded orbit search and exact compatibility repair
+# | four generators, each with its two cyclic alphabet shifts 0 -> 1 -> 2 -> 0: 000002222211 000111111222 002120201010 022222002222
+# | checked here 2026-11-16: results/external/verify_E3_n12_d8_rainaldi_2026-11-16.log
+# | sha256(codewords) = 7cec0c303acdc6cbc1bf7018ad9af0ab96f89e9d4c37e18c5b4d54887c42b102
+000002222211
+000111111222
+002120201010
+022222002222
+100000110000
+110201012121
+111110000022
+111222222000
+211111221111
+221012120202
+222000000111
+222221111100

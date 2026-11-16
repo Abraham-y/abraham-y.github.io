@@ -1,0 +1,42 @@
+# variable-length edit-metric code, abrahamyeung.com/edit-codes/
+# family = variable
+# words of every length 0 .. n; '-' is the empty word
+# q = 3
+# n = 7
+# d = 4
+# size = 24
+# sha256(codewords) = 863aae8fb36b4ef9737332151ec67d9e6947b3c31d3ec44e080d1f51a183c3da
+# original header:
+# | ternary variable-length edit-metric code, minimum Levenshtein distance 4
+# | family = variable
+# | n = 7
+# | d = 4
+# | q = 3
+# | size = 24
+# | words of every length 0 .. n are allowed; '-' is the empty word
+# | found by search/var_mis_run.py (var_graph + mis_ils) seed=0 secs=300 init=q3_n7_d4_union_size23.txt
+# | sha256(codewords) = 863aae8fb36b4ef9737332151ec67d9e6947b3c31d3ec44e080d1f51a183c3da
+-
+0001111
+0011200
+0022102
+0100220
+0112121
+0202000
+0210112
+1000122
+1010
+1020211
+1100001
+1111222
+1121100
+1122012
+1222220
+2001002
+2002221
+2111011
+2122
+2201210
+2210201
+2220022
+2222111

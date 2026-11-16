@@ -79,3 +79,47 @@ fixed,4,14,10,18,,2026-11-07,here,tabu search on the codewords,codes/edit4_n14_d
 fixed,3,11,7,13,,2026-11-07,here,tabu search on the codewords,codes/edit3_n11_d7_size13.txt,b2a5e0c24ae8ad7aae030d48ba5f1f07f1c6fea104acbd6a83349d79c2f8096a
 fixed,3,11,8,8,,2026-11-07,here,tabu search on the codewords,codes/edit3_n11_d8_size8.txt,888fa44709567236bfd0a2f0b769742e6203aca4eabf34e7156c15f3c19b2e6d
 fixed,3,12,8,11,,2026-11-07,here,tabu search on the codewords,codes/edit3_n12_d8_size11.txt,7a7d5ef9364252869c65d29f1f4cb81ab75e83d30d51a5979e4fd30403bcb4a7
+fixed,4,14,11,11,,2026-11-07,here,tabu search on the codewords,codes/edit4_n14_d11_size11.txt,7aaf4e1bc2d0c6049ec135dd484c854fe9bbe76371e60b0bb4475ca28edf483a
+fixed,4,14,12,7,,2026-11-07,here,tabu search on the codewords,codes/edit4_n14_d12_size7.txt,ce4c68d8decc79ff059eef82aea71e742b25adda205e15f5bd6bbb9aea3d0606
+fixed,4,15,9,75,,2026-11-06,here,lexicode,codes/edit4_n15_d9_size75.txt,31586d4e6c6876f66e737b23023073521beb95d589cfc22f9100c95e0476b3b9
+fixed,4,15,10,30,,2026-11-06,here,lexicode,codes/edit4_n15_d10_size30.txt,93f35d4e1a61d965d97106f6dc05d6e601dae6bd67b98992c0ac051f61b71d50
+fixed,4,15,11,15,,2026-11-07,here,tabu search on the codewords,codes/edit4_n15_d11_size15.txt,5199d67e597ade170843e8a4e66baaaa3f2bdff001a7577177df3261a1ee4b57
+fixed,4,15,12,9,,2026-11-07,here,tabu search on the codewords,codes/edit4_n15_d12_size9.txt,6bed115e90e62fd2f6da78796b39c01e8a34ae3435c289cf68dd6c419aaec842
+fixed,4,15,13,6,,2026-11-07,here,tabu search on the codewords,codes/edit4_n15_d13_size6.txt,ce9344d454f22de658d3ee0f38b8a9e612ba34fc591d301565b756538eb00405
+fixed,4,16,7,2849,,2026-11-06,here,lexicode,codes/edit4_n16_d7_size2849.txt,a41ed48a8ced81e865c5e0719dc23d6b66be72b5869ab754795cd4ec1d227795
+fixed,4,16,8,576,,2026-11-06,here,lexicode,codes/edit4_n16_d8_size576.txt,d0690ab4e45547d0c4eab1354d4dbdc3c888f8c8e3dffc81655bcac5d69cc45d
+fixed,4,16,9,153,,2026-11-06,here,lexicode,codes/edit4_n16_d9_size153.txt,a65d95cc4303da9664b0555ac839a444b49d090447c29d3be3a1a6fe5d022fd0
+fixed,4,16,10,53,,2026-11-06,here,lexicode,codes/edit4_n16_d10_size53.txt,d3e32fe8b7cd46e1f25e70e78c0b8c3d527b7470906a8942ae7492f93f29908d
+fixed,4,16,11,23,,2026-11-06,here,lexicode,codes/edit4_n16_d11_size23.txt,8897a37ed84d63812e6305ad78d1bd1f94761aac9b8c44c4d09f989f8588d42c
+fixed,4,16,12,13,,2026-11-07,here,tabu search on the codewords,codes/edit4_n16_d12_size13.txt,127d361559858761e485297906ff2c1dc41262b513ba074eabf8b814f6f36e47
+fixed,4,16,13,9,,2026-11-07,here,tabu search on the codewords,codes/edit4_n16_d13_size9.txt,7ebdd87cd8b6229ee93b973f69fb17e01ec8333aa4393488c7f72f328f763e44
+fixed,4,17,8,1373,,2026-11-06,here,lexicode,codes/edit4_n17_d8_size1373.txt,c13fa138be97f7ccd419df4027d076fdf65b8fbd2848f9aed1514b2c8b9c8ef1
+fixed,4,17,9,328,,2026-11-06,here,lexicode,codes/edit4_n17_d9_size328.txt,6140f5ab6e94f39bb3d5e336bec95fe69b82ba6dc7dcf5994e0e0396714883a1
+fixed,4,17,10,101,,2026-11-06,here,lexicode,codes/edit4_n17_d10_size101.txt,aec31047f5941f110c6164c48f2fd418d9947eba645d9ffa304ef6cea6746afb
+fixed,4,17,11,38,,2026-11-06,here,lexicode,codes/edit4_n17_d11_size38.txt,b29c7da39ecf3d838ecbbbbb17963f91a424b442a5071b5b4980349d01875682
+fixed,4,17,12,18,,2026-11-06,here,lexicode,codes/edit4_n17_d12_size18.txt,23a6bf92d70554e5938060fe88fdb07a3e950ba2911425c2c21b695754091ff8
+fixed,4,17,13,12,,2026-11-06,here,lexicode,codes/edit4_n17_d13_size12.txt,d24422f41d6f50271d84ba0a08c426cb35cdeb88f8e554a7724825d269f91113
+variable,2,8,3,25,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar2_n8_d3_size25.txt,dc34b29f0cec5e8986e3f17df2ca99c28166ef1f3166e0e4f07aa13eb1f4ade8
+variable,2,9,3,44,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar2_n9_d3_size44.txt,93656572dff3d62ac10c224772f188bb35b2a6f8dbbc5f0a4363ba384db82e7c
+variable,2,10,3,75,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar2_n10_d3_size75.txt,ca3c711a71a1045a379d2453985d8186e1c4c77a6ab994804c6a62f1922758d9
+variable,2,10,4,26,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar2_n10_d4_size26.txt,0042cad7f9d04331b717b991242974e19dc15274d10b9d57df2d5f6b02a3d47f
+variable,2,11,3,132,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar2_n11_d3_size132.txt,e7d009ed00d4b055ed1ff21368bb13970120aadfb634d7ac19583f8bcd9565d4
+variable,2,11,4,40,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar2_n11_d4_size40.txt,5efb9919b211504d3dad068e56146f9decaaee8dbe293f7008151c5035ff3f6e
+variable,2,11,5,15,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar2_n11_d5_size15.txt,5a93880942377b4d7542fc2364a17ce576b379de20bf13ed082c747caaa8847c
+variable,2,12,3,225,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar2_n12_d3_size225.txt,eab220ebe22025371b3f322d0023b511533e7d9cf6ded0d00e72cea333dce4c7
+variable,2,12,4,67,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar2_n12_d4_size67.txt,3866a18418c4779db07b846482d803538b2ec0ba7c2b2740e796d4f33de22151
+variable,2,12,5,20,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar2_n12_d5_size20.txt,7014762d71c9aa442acadbff384e7fa1ebb679dd51f2a9459ee09b4ac373c621
+variable,3,6,3,39,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar3_n6_d3_size39.txt,2e928bf950953d8dcbcfa01ffa5917815fc62e8b419a4b4380d6737c2b8d3c0b
+variable,3,7,3,91,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar3_n7_d3_size91.txt,487ef98ed375818c4468558e1ba1268895dc72f045e30acd25a264f399791d92
+variable,3,7,4,24,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar3_n7_d4_size24.txt,863aae8fb36b4ef9737332151ec67d9e6947b3c31d3ec44e080d1f51a183c3da
+variable,3,8,3,221,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar3_n8_d3_size221.txt,7442412a85b947066b20c0a1afb94e5e36cfab2e1d929452350465b52c8bdeb5
+variable,3,8,4,49,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar3_n8_d4_size49.txt,07bb4ae2427f7f49b01df246cf1016d69545c806dadf62ea0c0ff325021c7cba
+variable,3,9,3,542,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar3_n9_d3_size542.txt,97eae11a29d92948b1e0293ce69d5f6058fd3bc0cb78b4f59935df204fce10c3
+variable,3,9,4,103,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar3_n9_d4_size103.txt,9ba458f9db395a4c6c2aff95f08183dcab3aa8463447f2631ef59a2982f53aed
+variable,3,9,5,28,,2026-11-06,here,"the length-n words of a union of fixed-length codes, then local search for the shorter words",codes/editvar3_n9_d5_size28.txt,0c6487c81ea86e2a09fcaf55dd6e7b36422dea96916987848973380427b7942b
+variable,3,10,3,1355,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ..., then local search on the conflict graph of all words of length 0 to n",codes/editvar3_n10_d3_size1355.txt,23a1c71023c256e0eb1d3ab4b88c0f1f7db1286134f52c89854735488b212eec
+variable,3,10,4,228,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar3_n10_d4_size228.txt,664ae91e04601488b1159d651aadfe57cc32a7cd6dce89661797cfd0d927878c
+variable,3,10,5,59,,2026-11-06,here,"the length-n words of a union of fixed-length codes, then local search for the shorter words",codes/editvar3_n10_d5_size59.txt,a500b381cf2a4d1e3fb5af3a9658d2a93079ba513e88260db96eeeb43517b293
+variable,3,10,6,20,,2026-11-06,here,"union of fixed-length codes of lengths n, n-d, n-2d, ...",codes/editvar3_n10_d6_size20.txt,242cca91d9593c27cf9919aed745912070ff6fbe102f08b8f5c922b57450c3cd
+fixed,4,16,6,18336,,2026-11-07,here,lexicode,codes/edit4_n16_d6_size18336.txt,163f48fa384c24e2bab803d771f0d6edce12067cfbeed8206455dcf8e1807239
+fixed,3,12,8,12,,2026-11-16,R26,"AI-assisted orbit search under cyclic alphabet shifts, with exact compatibility repair; sent in by Theresa Rainaldi (Velorin Intelligence)",codes/edit3_n12_d8_size12.txt,7cec0c303acdc6cbc1bf7018ad9af0ab96f89e9d4c37e18c5b4d54887c42b102

@@ -1,0 +1,33 @@
+# variable-length edit-metric code, abrahamyeung.com/edit-codes/
+# family = variable
+# words of every length 0 .. n; '-' is the empty word
+# q = 2
+# n = 11
+# d = 5
+# size = 15
+# sha256(codewords) = 5a93880942377b4d7542fc2364a17ce576b379de20bf13ed082c747caaa8847c
+# original header:
+# | binary variable-length edit-metric code, minimum Levenshtein distance 5
+# | family = variable
+# | n = 11
+# | d = 5
+# | q = 2
+# | size = 15
+# | words of every length 0 .. n are allowed; '-' is the empty word
+# | found by search/var_mis_run.py (var_graph + mis_ils) seed=0 secs=300 init=q2_n11_d5_union_size14.txt
+# | sha256(codewords) = 5a93880942377b4d7542fc2364a17ce576b379de20bf13ed082c747caaa8847c
+-
+00000111111
+00001100000
+00011
+00110001101
+00111110011
+01010010010
+01111111100
+10000000011
+1001010100
+11011011111
+11100
+11100001110
+11100110001
+11111000000
