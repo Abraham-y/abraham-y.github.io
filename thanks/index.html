@@ -136,6 +136,28 @@
   #missing { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 2rem; }
   #missing p { color: var(--soft); max-width: 28rem; }
 
+  /* ---------- save as PDF / print ---------- */
+  .save {
+    display: block; margin: .9rem auto 0; padding: .45rem 1.1rem; cursor: pointer;
+    font: inherit; font-size: .9rem; color: var(--soft);
+    background: none; border: 1px solid var(--kraft); border-radius: 999px;
+  }
+  .save:hover, .save:focus-visible { color: var(--ink); border-color: var(--ink); outline: none; }
+  @page { margin: 12mm; }
+  @media print {
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    html, body { background: #fff; }
+    #stage, #lightbox, #missing, .save { display: none !important; }
+    #card, #card[hidden] { display: block !important; animation: none; max-width: none; padding: 0; }
+    .sheet { box-shadow: none; padding: 0; background: none; }
+    .photos { gap: 1rem .9rem; margin-bottom: 1.6rem; }
+    .photos li { break-inside: avoid; padding: 10px 0; }
+    .polaroid { width: 210px; break-inside: avoid; box-shadow: 0 0 0 1px #d9cfc0; }
+    .note p { break-inside: avoid; font-size: 12pt; }
+    h1 { font-size: 30pt; }
+    .sign { break-before: avoid; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
   }
@@ -162,6 +184,7 @@
     <p class="sign" id="sign"></p>
   </article>
   <p class="footer">made just for you</p>
+  <button class="save" id="save" type="button">Save as PDF</button>
 </main>
 
 <div id="lightbox" hidden role="dialog" aria-label="Photo">
@@ -237,6 +260,15 @@
   const closeLb = () => { $('lightbox').hidden = true; };
   $('lightbox').addEventListener('click', closeLb);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+  // Saving as PDF goes through the browser's print dialog ("Save as PDF" / "Save to Files").
+  // Photos load lazily, so make sure every one is in before the page is laid out for print.
+  const loadAll = () => Promise.all([...document.querySelectorAll('.polaroid img')].map(i => {
+    i.loading = 'eager';
+    return i.decode().catch(() => {});
+  }));
+  addEventListener('beforeprint', loadAll);
+  $('save').addEventListener('click', async () => { await loadAll(); print(); });
 
   $('stage').hidden = false;
   $('envelope').addEventListener('click', () => {
