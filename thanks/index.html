@@ -105,7 +105,7 @@
   .rule { text-align: center; color: var(--kraft-dark); letter-spacing: .5em; margin: .6rem 0 2rem; }
 
   .photos {
-    display: flex; flex-wrap: wrap; justify-content: center;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
     gap: 1.4rem 1.2rem; margin: 0 0 2.4rem; padding: 0; list-style: none;
   }
   .polaroid {
@@ -116,13 +116,10 @@
   }
   .polaroid:hover, .polaroid:focus-visible { transform: rotate(0deg) scale(1.04); z-index: 2; outline: none;
     box-shadow: 0 18px 34px -10px rgba(60, 35, 10, .5); }
-  .polaroid img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #eadfce; }
+  .polaroid img { display: block; width: 100%; height: auto; background: #eadfce; }
   .polaroid span { display: block; font-family: var(--hand); font-size: 1.3rem; line-height: 1.2; padding: .5rem .2rem .2rem; min-height: 2.2rem; }
 
   .note p { font-size: clamp(1.05rem, 2.6vw, 1.2rem); margin: 0 0 1.1em; }
-  .note p:first-child::first-letter {
-    font-size: 3.1em; float: left; line-height: .85; padding: .08em .1em 0 0; color: var(--accent); font-weight: 600;
-  }
   .sign { font-family: var(--hand); font-size: 2rem; text-align: right; margin: 1.6rem 0 0; }
   .footer { text-align: center; color: var(--soft); font-size: .85rem; font-style: italic; margin-top: 2rem; }
 
