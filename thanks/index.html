@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>A Thanksgiving card for you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f3e9d8;
+    --paper: #fffaf1;
+    --ink: #3b2a1e;
+    --soft: #7a6250;
+    --kraft: #c9a274;
+    --kraft-dark: #b38a5b;
+    --accent: #b5482a;
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --hand: "Caveat", "Bradley Hand", "Segoe Script", cursive;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    background:
+      radial-gradient(ellipse at 20% 0%, #f9f1e2 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 100%, #ecd9bd 0%, transparent 55%),
+      var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    line-height: 1.65;
+  }
+  [hidden] { display: none !important; }
+
+  /* ---------- envelope ---------- */
+  #stage {
+    min-height: 100vh; min-height: 100dvh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 2rem; padding: 2rem 1rem;
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  #stage.leaving { opacity: 0; transform: translateY(-24px) scale(.97); }
+  #envelope {
+    position: relative; width: min(340px, 86vw); aspect-ratio: 3 / 2;
+    border: 0; padding: 0; cursor: pointer; background: none;
+    perspective: 900px; font: inherit; color: inherit;
+    filter: drop-shadow(0 18px 24px rgba(90, 55, 20, .28));
+    transition: transform .25s ease;
+  }
+  #envelope:hover { transform: translateY(-4px) rotate(-1deg); }
+  #envelope:focus-visible { outline: 3px solid var(--accent); outline-offset: 8px; border-radius: 8px; }
+  .env-body {
+    position: absolute; inset: 0; border-radius: 8px;
+    background: linear-gradient(160deg, var(--kraft) 0%, var(--kraft-dark) 100%);
+    display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12%;
+  }
+  .env-body::before { /* lower fold lines */
+    content: ""; position: absolute; inset: 0; border-radius: 8px;
+    background:
+      linear-gradient(to top right, rgba(0,0,0,.07) 49.6%, transparent 50%) left / 50% 100% no-repeat,
+      linear-gradient(to top left, rgba(0,0,0,.07) 49.6%, transparent 50%) right / 50% 100% no-repeat;
+    opacity: .6;
+  }
+  .env-name { position: relative; font-family: var(--hand); font-size: clamp(1.7rem, 7vw, 2.2rem); font-weight: 700; }
+  .env-flap {
+    position: absolute; left: 0; right: 0; top: 0; height: 58%;
+    background: linear-gradient(180deg, #d4ae82, #c0976a);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top center; transition: transform .7s cubic-bezier(.5,.1,.3,1);
+    border-radius: 8px 8px 0 0;
+  }
+  .env-seal {
+    position: absolute; left: 50%; top: 47%; width: 54px; height: 54px; margin: -27px 0 0 -27px;
+    border-radius: 50%; background: radial-gradient(circle at 35% 30%, #d0613e, #8f3219);
+    color: #ffe9d6; display: grid; place-items: center;
+    font-family: var(--serif); font-weight: 600; font-size: 1.4rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3), inset 0 -2px 3px rgba(0,0,0,.2);
+    transition: opacity .3s ease, transform .3s ease;
+  }
+  #envelope.open .env-flap { transform: rotateX(180deg); }
+  #envelope.open .env-seal { opacity: 0; transform: scale(.6); }
+  .hint { font-style: italic; color: var(--soft); margin: 0; }
+
+  /* ---------- card ---------- */
+  #card {
+    max-width: 760px; margin: 0 auto; padding: clamp(1.5rem, 5vw, 4rem) 1.1rem 5rem;
+    animation: rise .9s cubic-bezier(.2,.7,.2,1) both;
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(40px); } }
+  .sheet {
+    background: var(--paper); border-radius: 6px;
+    padding: clamp(1.6rem, 6vw, 3.5rem);
+    box-shadow: 0 1px 0 #fff inset, 0 24px 50px -20px rgba(90, 55, 20, .35), 0 2px 6px rgba(90,55,20,.12);
+  }
+  .eyebrow {
+    text-align: center; letter-spacing: .28em; text-transform: uppercase;
+    font-size: .72rem; color: var(--accent); margin: 0 0 .6rem;
+  }
+  h1 {
+    text-align: center; font-weight: 400; font-style: italic;
+    font-size: clamp(2rem, 8vw, 3.2rem); line-height: 1.15; margin: 0 0 .4rem;
+  }
+  .rule { text-align: center; color: var(--kraft-dark); letter-spacing: .5em; margin: .6rem 0 2rem; }
+
+  .photos {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 1.4rem 1.2rem; margin: 0 0 2.4rem; padding: 0; list-style: none;
+  }
+  .polaroid {
+    background: #fff; padding: 10px 10px 8px; width: min(250px, 78vw);
+    box-shadow: 0 10px 22px -8px rgba(60, 35, 10, .45), 0 1px 3px rgba(0,0,0,.15);
+    transform: rotate(var(--tilt, 0deg)); transition: transform .25s ease, box-shadow .25s ease;
+    cursor: zoom-in; border: 0; font: inherit; color: inherit; text-align: center;
+  }
+  .polaroid:hover, .polaroid:focus-visible { transform: rotate(0deg) scale(1.04); z-index: 2; outline: none;
+    box-shadow: 0 18px 34px -10px rgba(60, 35, 10, .5); }
+  .polaroid img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #eadfce; }
+  .polaroid span { display: block; font-family: var(--hand); font-size: 1.3rem; line-height: 1.2; padding: .5rem .2rem .2rem; min-height: 2.2rem; }
+
+  .note p { font-size: clamp(1.05rem, 2.6vw, 1.2rem); margin: 0 0 1.1em; }
+  .note p:first-child::first-letter {
+    font-size: 3.1em; float: left; line-height: .85; padding: .08em .1em 0 0; color: var(--accent); font-weight: 600;
+  }
+  .sign { font-family: var(--hand); font-size: 2rem; text-align: right; margin: 1.6rem 0 0; }
+  .footer { text-align: center; color: var(--soft); font-size: .85rem; font-style: italic; margin-top: 2rem; }
+
+  /* ---------- lightbox ---------- */
+  #lightbox {
+    position: fixed; inset: 0; background: rgba(40, 24, 12, .88); z-index: 10;
+    display: grid; place-items: center; padding: 1rem; cursor: zoom-out;
+  }
+  #lightbox figure { margin: 0; text-align: center; }
+  #lightbox img { max-width: 94vw; max-height: 82vh; border: 8px solid #fff; border-radius: 2px; }
+  #lightbox figcaption { color: #fbeedd; font-family: var(--hand); font-size: 1.6rem; margin-top: .6rem; }
+
+  /* ---------- fallback ---------- */
+  #missing { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 2rem; }
+  #missing p { color: var(--soft); max-width: 28rem; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<main id="stage" hidden>
+  <button id="envelope" aria-label="Open your card">
+    <div class="env-body"><span class="env-name" id="env-name"></span></div>
+    <div class="env-flap"></div>
+    <div class="env-seal" id="env-seal"></div>
+  </button>
+  <p class="hint">tap to open</p>
+</main>
+
+<main id="card" hidden>
+  <article class="sheet">
+    <p class="eyebrow">Thanksgiving 2026</p>
+    <h1 id="greeting"></h1>
+    <div class="rule" aria-hidden="true">· · ·</div>
+    <ul class="photos" id="photos"></ul>
+    <div class="note" id="note"></div>
+    <p class="sign" id="sign"></p>
+  </article>
+  <p class="footer">made just for you</p>
+</main>
+
+<div id="lightbox" hidden role="dialog" aria-label="Photo">
+  <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+</div>
+
+<main id="missing" hidden>
+  <div>
+    <h1>Happy Thanksgiving</h1>
+    <p>This card opens from a personal link. If someone sent you one, try opening it again from their message.</p>
+  </div>
+</main>
+
+<script>
+(async function () {
+  const $ = id => document.getElementById(id);
+  // The link looks like /thanks/#<file id>.<key>. The part after # never leaves the
+  // browser, so the site only ever stores and serves an encrypted file.
+  const [id = '', k = ''] = location.hash.slice(1).split('.');
+  const fail = () => { $('missing').hidden = false; };
+  addEventListener('hashchange', () => location.reload());
+  if (!/^[a-f0-9]{16}$/.test(id) || !/^[A-Za-z0-9_-]{43}$/.test(k)) return fail();
+
+  let card;
+  try {
+    const res = await fetch(`cards/${id}.bin`, { cache: 'no-store' });
+    if (!res.ok) return fail();
+    const blob = new Uint8Array(await res.arrayBuffer());
+    const raw = Uint8Array.from(atob(k.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+    const key = await crypto.subtle.importKey('raw', raw, 'AES-GCM', false, ['decrypt']);
+    const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: blob.slice(0, 12) }, key, blob.slice(12));
+    card = JSON.parse(new TextDecoder().decode(plain));
+  } catch { return fail(); }
+
+  const to = card.to || 'friend';
+  document.title = `A Thanksgiving card for ${to}`;
+  $('env-name').textContent = to;
+  $('env-seal').textContent = (card.from || '♥').trim().charAt(0).toUpperCase();
+  $('greeting').textContent = card.greeting || `Happy Thanksgiving, ${to}`;
+  $('sign').textContent = card.signoff || (card.from ? `— ${card.from}` : '');
+
+  // note: blank lines separate paragraphs
+  for (const para of String(card.note || '').split(/\n\s*\n/)) {
+    if (!para.trim()) continue;
+    const p = document.createElement('p');
+    p.textContent = para.trim();
+    $('note').appendChild(p);
+  }
+
+  const tilts = [-3.5, 2.5, -1.5, 3, -2.5, 1.5];
+  (card.photos || []).forEach((ph, i) => {
+    const li = document.createElement('li');
+    const btn = document.createElement('button');
+    btn.className = 'polaroid';
+    btn.style.setProperty('--tilt', tilts[i % tilts.length] + 'deg');
+    const img = document.createElement('img');
+    img.src = ph.src;
+    img.alt = ph.alt || ph.caption || `Photo of ${to} and ${card.from || 'me'}`;
+    img.loading = 'lazy';
+    const cap = document.createElement('span');
+    cap.textContent = ph.caption || '';
+    btn.append(img, cap);
+    btn.addEventListener('click', () => {
+      $('lb-img').src = img.src; $('lb-img').alt = img.alt;
+      $('lb-cap').textContent = ph.caption || '';
+      $('lightbox').hidden = false;
+    });
+    li.appendChild(btn);
+    $('photos').appendChild(li);
+  });
+  if (!(card.photos || []).length) $('photos').hidden = true;
+
+  const closeLb = () => { $('lightbox').hidden = true; };
+  $('lightbox').addEventListener('click', closeLb);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+  $('stage').hidden = false;
+  $('envelope').addEventListener('click', () => {
+    const quick = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    $('envelope').classList.add('open');
+    setTimeout(() => $('stage').classList.add('leaving'), quick ? 0 : 750);
+    setTimeout(() => { $('stage').hidden = true; $('card').hidden = false; scrollTo(0, 0); }, quick ? 0 : 1350);
+  }, { once: true });
+})();
+</script>
+</body>
+</html>
